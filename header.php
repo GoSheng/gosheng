@@ -13,7 +13,7 @@ if ( isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
 global $GoSheng;
 get_template_part( 'template-parts/head/head-default' );
 ?>
-<body <?php body_class( 'bg-body' ); ?> style="min-height:110vh;">
+<body <?php body_class( 'bg-body' ); ?>>
     <header>
         <div id="top-header" class="container-fluid bg-top_header text-black-50">
             <div class="container d-flex justify-content-between align-items-center">
@@ -34,7 +34,7 @@ get_template_part( 'template-parts/head/head-default' );
 		get_template_part( 'template-parts/navigation/navigation-bar' );
 		?>
     </header>
-<main class="" style="overflow: hidden;">
+<main class="" style="overflow: hidden;min-height: 110vh;">
     <div class="p-relative">
 		<?php if ( ! $GoSheng['mobile_sidebar_left'] ) {
 			get_template_part( 'template-parts/navigation/mobile-sidebar-left' );
