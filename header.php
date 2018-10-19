@@ -13,7 +13,7 @@ if ( isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
 global $GoSheng;
 get_template_part( 'template-parts/head/head-default' );
 ?>
-<body <?php body_class( 'bg-body' ); ?>>
+<body <?php body_class( 'bg-body' ); ?> style="min-height:110vh;">
     <header>
         <div id="top-header" class="container-fluid bg-top_header text-black-50">
             <div class="container d-flex justify-content-between align-items-center">
