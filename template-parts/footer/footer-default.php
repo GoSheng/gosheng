@@ -38,7 +38,7 @@ global $GoSheng;
 				if ( $GoSheng['website_statistics'] ) {
 					?>
                     <p class="mb-1 mb-lg-2 text-center text-lg-right font-8 font-lg-9"><?php echo $GoSheng['website_statistics_code']; ?></p>
-                    <p id="gosheng_time" class="mb-1 mb-lg-2 text-center text-lg-right font-8 font-lg-9">1</p>
+                    <p id="gosheng_time" class="mb-1 mb-lg-2 text-center text-lg-right font-8 font-lg-9"></p>
 					<?php
 				}
 				?>
