@@ -9,7 +9,7 @@ if ( ! function_exists( 'GoSheng_breadcrumbs' ) ) {
 		$before    = '<span>';//在当前链接前插入
 		$after     = '</span>';//在当前链接后插入
 		if ( ! is_home() && ! is_front_page() || is_paged() ) {
-			echo '<div itemscope itemtype="http://schema.org/WebPage" id="gosheng_breadcrumbs" class="px-2 py-1 bg-light font-8 font-lg-10">' . esc_html( '当前位置：', 'GoSheng-framework' );
+			echo '<div itemscope itemtype="http://schema.org/WebPage" id="gosheng_breadcrumbs" class="container py-1 bg-light font-8 font-lg-10">' . esc_html( '当前位置：', 'GoSheng-framework' );
 			global $post;
 			$homeLink = home_url();
 			echo '<i class="font-8 font-lg-10 fas fa-home"></i><a class="font-8 font-lg-10" itemprop="breadcrumb" href="' . $homeLink . '">' . esc_html( '首页', 'GoSheng-framework' ) . '</a> ' . $delimiter . ' ';
