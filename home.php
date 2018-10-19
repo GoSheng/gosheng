@@ -8,4 +8,5 @@ if ( have_posts() ) :
 		get_template_part( 'template-parts/other/page', 'list' );
 	endwhile;
 endif;
+GoSheng_pagination();
 get_footer();
