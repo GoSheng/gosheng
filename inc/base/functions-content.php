@@ -196,7 +196,7 @@ if ( ! function_exists( 'GoSheng_post_nav_1' ) ) {
 }
 if ( ! function_exists( 'GoSheng_post_nav' ) ) {
 	function GoSheng_post_nav() {
-		$post_nav_before = '<nav class="navigation post-navigation d-flex justify-content-between" role="' . esc_attr__( '文章导航', 'GoSheng-framework' ) . '">';
+		$post_nav_before = '<nav class="mb-3 navigation post-navigation d-flex justify-content-between" role="' . esc_attr__( '文章导航', 'GoSheng-framework' ) . '">';
 		$post_nav_desc   = '<span class="sr-only">' . esc_attr__( '文章导航', 'GoSheng-framework' ) . '</span>';
 		$post_nav_after  = '</nav>';
 		echo $post_nav_before;
