@@ -265,12 +265,15 @@ if ( ! function_exists( 'GoSheng_posted_title' ) ) {
 	}
 }
 if ( ! function_exists( 'GoSheng_posted_excerpt' ) ) {
-	function GoSheng_posted_excerpt() {
+	function GoSheng_posted_excerpt( $num_words = '' ) {
 		if ( has_excerpt() ) {
 			echo the_excerpt();
 		} else {
+			if ( empty( $num_words ) ) {
+				$num_words = 38;
+			}
 			global $post;
-			echo wp_trim_words( strip_tags( $post->post_content ), 38, '......' );
+			echo wp_trim_words( strip_tags( $post->post_content ), $num_words, '......' );
 		}
 	}
 }
