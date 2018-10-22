@@ -17,8 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
             <a class="text-body font-8 font-lg-10" title="<?php GoSheng_posted_title( 100 ); ?>"
                href="<?php GoSheng_posted_permalink(); ?>"><?php GoSheng_posted_title(); ?></a>
         </h5>
-        <div class="p-absolute d-none d-lg-block b-0 text-indent text-muted font-8 font-lg-9">
-            <span><?php GoSheng_posted_excerpt( 120 ); ?></span>
+        <div class="p-absolute d-none d-lg-block b--2 text-indent text-muted font-8 font-lg-9">
+            <span><?php GoSheng_posted_excerpt(85); ?></span>
         </div>
         <div class="p-absolute t-0 t-lg-4 d-flex justify-content-start align-items-center">
             <span class="mr-3 mr-lg-4">

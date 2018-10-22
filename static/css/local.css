@@ -192,6 +192,9 @@ body::-webkit-scrollbar { display:none; }
     .t-xl-4 { top:1.5rem; }
     .t-xl-5 { top:3rem; }
 }
+.b--1 { bottom:-.25rem; }
+.b--2 { bottom:-.5rem; }
+.b--3 { bottom:-1rem; }
 .b-0 { bottom:0; }
 .b-1 { bottom:.25rem; }
 .b-2 { bottom:.5rem; }
