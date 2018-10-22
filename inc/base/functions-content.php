@@ -257,8 +257,11 @@ if ( ! function_exists( 'GoSheng_posted_permalink' ) ) {
 	}
 }
 if ( ! function_exists( 'GoSheng_posted_title' ) ) {
-	function GoSheng_posted_title() {
-		echo wp_trim_words( get_the_title(), 25, '......' );
+	function GoSheng_posted_title( $num_words = '' ) {
+		if ( empty( $num_words ) ) {
+			$num_words = 25;
+		}
+		echo wp_trim_words( get_the_title(), $num_words, '......' );
 	}
 }
 if ( ! function_exists( 'GoSheng_posted_excerpt' ) ) {
