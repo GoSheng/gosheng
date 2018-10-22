@@ -3,8 +3,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'd-flex justify-content-start align-items-center border rounded shadow-sm mb-1 mb-lg-2' ); ?>>
-    <div class="col-3 p-1 rounded img-linear-gradient">
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'd-flex justify-content-start align-items-center border rounded shadow-sm bg-light mb-1 mb-lg-2' ); ?>>
+    <div class="col-3 p-1 rounded">
         <a href="<?php GoSheng_posted_permalink() ?>" class="d-block rounded">
             <img class="rounded img-fluid" src="<?php GoSheng_posted_thumbnail_url(); ?>"
                  alt="<?php GoSheng_posted_title(); ?>" title="<?php echo GoSheng_posted_title(); ?>">
