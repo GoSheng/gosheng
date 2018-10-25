@@ -24,8 +24,16 @@ get_header();
 			?>
         </div>
 
-		<?php GoSheng_posted_share(); ?>
-		<?php GoSheng_posted_tags(); ?>
+		<?php
+		if ( $GoSheng['posted_share'] ) {
+			GoSheng_posted_share();
+		}
+		?>
+        <?php
+		if ( $GoSheng['posted_tags'] ) {
+			GoSheng_posted_tags();
+		}
+		?>
 
 		<?php GoSheng_post_nav(); ?>
 		<?php

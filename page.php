@@ -37,7 +37,11 @@ get_header(); ?>
 					}
 					?>
                 </div>
-				<?php GoSheng_posted_share(); ?>
+				<?php
+				if ( $GoSheng['posted_share'] ) {
+					GoSheng_posted_share();
+				}
+				?>
 				<?php GoSheng_edit_post_link(); ?>
             </footer>
         </article>

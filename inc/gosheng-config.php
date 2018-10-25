@@ -143,20 +143,20 @@ Redux::setExtensions( $opt_name, dirname( __FILE__ ) . '/redux/extension/redux-v
 $tabs = array(
 	array(
 		'id'      => 'redux-help-tab-1',
-		'title'   => __( 'Theme Information 1', 'GoSheng-framework' ),
-		'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'GoSheng-framework' )
+		'title'   => __( '', 'GoSheng-framework' ),
+		'content' => __( '<p></p>', 'GoSheng-framework' )
 	),
 	array(
 		'id'      => 'redux-help-tab-2',
-		'title'   => __( 'Theme Information 2', 'GoSheng-framework' ),
-		'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'GoSheng-framework' )
+		'title'   => __( '', 'GoSheng-framework' ),
+		'content' => __( '<p></p>', 'GoSheng-framework' )
 	)
 );
-Redux::setHelpTab( $opt_name, $tabs );
+//Redux::setHelpTab( $opt_name, $tabs );
 
 // Set the help sidebar
-$content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'GoSheng-framework' );
-Redux::setHelpSidebar( $opt_name, $content );
+$content = __( '<p></p>', 'GoSheng-framework' );
+//Redux::setHelpSidebar( $opt_name, $content );
 
 
 /*
@@ -301,7 +301,25 @@ Redux::setSection( $opt_name, array(
 			'subtitle' => __( '是否开启文章和页面点赞功能。', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
 			'off'      => __( '关闭', 'GoSheng-framework' ),
-			'default'  => false,
+			'default'  => true,
+		),
+		array(
+			'id'       => 'posted_share',
+			'type'     => 'switch',
+			'title'    => __( '文章分享功能', 'GoSheng-framework' ),
+			'subtitle' => __( '是否开启文章分享功能。', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
+		),
+		array(
+			'id'       => 'posted_tags',
+			'type'     => 'switch',
+			'title'    => __( '文章标签功能', 'GoSheng-framework' ),
+			'subtitle' => __( '是否开启文章标签功能。', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
 		),
 		array(
 			'id'       => 'notification',
@@ -1158,6 +1176,9 @@ Redux::setSection( $opt_name, array(
 //注销仪表盘redux-framework新闻信息
 class reduxDashboardWidget {
 }
+
+//class reduxNewsflash {
+//}
 
 /*
  * 隐藏Redux Framework 欢迎页面
