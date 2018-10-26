@@ -38,6 +38,8 @@ if ( ! function_exists( 'GoSheng_comments_list_callback_start' ) ) {
                                 class="fas fa-user text-muted"></i><?php comment_author_link(); ?></span>
                     <time class="time font-6 font-lg-8 mr-1" pubdate="pubdate"><i
                                 class="fas fa-clock text-muted"></i><?php comment_time( 'Y-m-d H:i:s' ); ?></time>
+                    <span class="author font-6 font-lg-8 mr-1"><i
+                                class="fab fa-qq text-muted"></i><?php echo get_comment_meta( $comment->comment_ID, 'qq', true ) ?></span>
                 </span>
                 <span>
 	                <?php
