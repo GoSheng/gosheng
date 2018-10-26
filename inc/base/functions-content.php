@@ -494,7 +494,7 @@ if ( ! function_exists( 'GoSheng_like' ) ) {
 		$action = $_POST["um_action"];
 		if ( $action == 'thumbs_up' ) {
 			$like_number = get_post_meta( $id, 'thumbs_up', true );
-			$expire      = time() + 99999999;
+			$expire      = time() + 3600;
 			$domain      = ( $_SERVER['HTTP_HOST'] != 'localhost' ) ? $_SERVER['HTTP_HOST'] : false; // make cookies work with localhost
 			setcookie( 'thumbs_up_' . $id, $id, $expire, '/', $domain, false );
 			if ( ! $like_number || ! is_numeric( $like_number ) ) {

@@ -474,7 +474,7 @@ $(document).ready(function () {
     $.fn.postLike = function () {
         if ($(this).hasClass('done')) {
             layer.open({
-                content: '您已经赞过哦！',
+                content: '一小时只能赞一次哦',
                 skin: 'msg',
                 time: 3,
             });
@@ -613,6 +613,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     let respond = document.querySelector("#respond");
     if (respond) {
-        respond.classList.add("pb-2","mb-1");
+        respond.classList.add("pb-2", "mb-1");
     }
 });
