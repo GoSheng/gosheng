@@ -616,3 +616,10 @@ $(document).ready(function () {
         respond.classList.add("pb-2", "mb-1");
     }
 });
+//获取用户UA
+$(document).ready(function () {
+    let gosheng_user_agent = document.querySelector("#gosheng_user_agent");
+    if (gosheng_user_agent) {
+        gosheng_user_agent.value = navigator.userAgent;
+    }
+});

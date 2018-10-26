@@ -547,13 +547,16 @@ if ( ! function_exists( 'GoSheng_avatar_form_qq_info' ) ) {
 
 add_action( 'wp_insert_comment', 'wp_insert_tel', 10, 2 );
 function wp_insert_tel( $comment_ID, $commmentdata ) {
-	$qq = isset( $_POST['qq'] ) ? $_POST['qq'] : false;
+	$qq                 = isset( $_POST['qq'] ) ? $_POST['qq'] : false;
+	$gosheng_user_agent = isset( $_POST['gosheng_user_agent'] ) ? $_POST['gosheng_user_agent'] : false;
+	update_comment_meta( $comment_ID, 'gosheng_user_agent', $gosheng_user_agent );
 	update_comment_meta( $comment_ID, 'qq', $qq );
 }
 
 add_filter( 'manage_edit-comments_columns', 'my_comments_columns' );
 function my_comments_columns( $columns ) {
-	$columns['qq'] = __( 'QQ号', 'GoSheng-framework' );
+	$columns['qq']                 = __( 'QQ号', 'GoSheng-framework' );
+	$columns['gosheng_user_agent'] = __( '用户UA', 'GoSheng-framework' );
 
 	return $columns;
 }
@@ -561,6 +564,9 @@ function my_comments_columns( $columns ) {
 add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
 function output_my_comments_columns( $column_name, $comment_id ) {
 	switch ( $column_name ) {
+		case "gosheng_user_agent" :
+			echo get_comment_meta( $comment_id, 'gosheng_user_agent', true );
+			break;
 		case "qq" :
 			echo get_comment_meta( $comment_id, 'qq', true );
 			break;
