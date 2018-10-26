@@ -17,6 +17,7 @@ get_template_part( 'inc/base/functions', 'shortcode' );
 get_template_part( 'inc/base/functions', 'comment_form' );
 get_template_part( 'inc/base/functions', 'comment_navigation' );
 get_template_part( 'inc/base/functions', 'comments_list' );
+get_template_part( 'inc/base/functions', 'link_submit' );
 get_template_part( 'inc/redux' );
 
 get_template_part( 'inc/class/class', 'gosheng_owl_carousel' );

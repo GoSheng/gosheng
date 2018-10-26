@@ -204,6 +204,51 @@ Redux::setSection( $opt_name, array(
 
 
 Redux::setSection( $opt_name, array(
+	'id'    => 'linkSubmit',
+	'title' => __( '链接推送', 'GoSheng-framework' ),
+	'desc'  => __( '', 'GoSheng-framework' ),
+	'icon'  => 'el el-cog'
+) );
+Redux::setSection( $opt_name, array(
+	'id'         => 'linkSubmit_baidu',
+	'title'      => __( '百度', 'GoSheng-framework' ),
+	'desc'       => __( '', 'GoSheng-framework' ),
+	'subsection' => true,
+	'icon'       => 'el el-cogs',
+	'fields'     => array(
+		array(
+			'id'       => 'linkSubmit_baidu_switch',
+			'type'     => 'switch',
+			'title'    => __( '启用百度自动推送。', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'       => 'linkSubmit_baidu_site',
+			'type'     => 'text',
+			'required' => array( 'linkSubmit_baidu_switch', '=', '1' ),
+			'title'    => __( 'site', 'GoSheng-framework' ),
+			'subtitle' => __( '您站点的域名', 'GoSheng-framework' ),
+			'desc'     => __( '例如：www.gosheng.net', 'GoSheng-framework' ),
+			'validate' => 'txt',
+			'default'  => '',
+		),
+		array(
+			'id'       => 'linkSubmit_baidu_token',
+			'type'     => 'text',
+			'required' => array( 'linkSubmit_baidu_switch', '=', '1' ),
+			'title'    => __( 'token', 'GoSheng-framework' ),
+			'subtitle' => __( '您站点在百度站长平台的token值', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'validate' => 'txt',
+			'default'  => '',
+		),
+	)
+) );
+
+Redux::setSection( $opt_name, array(
 	'id'    => 'sidebar',
 	'title' => __( '侧边栏', 'GoSheng-framework' ),
 	'desc'  => __( '', 'GoSheng-framework' ),
