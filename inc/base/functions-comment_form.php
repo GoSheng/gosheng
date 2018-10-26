@@ -2,16 +2,23 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
+	add_action( 'comment_id_fields', 'gosheng_comment_id_fields' );
+	function gosheng_comment_id_fields( $result ) {
+		$result .= '<input type="hidden" name="gosheng_user_agent" id="gosheng_user_agent">';
+
+		return $result;
+	}
+}
 if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 	function GoSheng_comment_form() {
 		$commenter = wp_get_current_commenter();
 		$fields    = array(
-			'author'     => '<div class="d-sm-flex justify-content-sm-between"><div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text far fa-lg fa-user"></i></div><input class="form-control" placeholder="昵称" id="comment_author_nickname" name="author" type="text" required="required" autocomplete="off" maxlength="20" value="' . esc_attr( $commenter['comment_author_author'] ) . '" size="30"></div></div>',
-			'email'      => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text far fa-lg fa-envelope"></i></div><input class="form-control" placeholder="邮箱" id="comment_author_email" name="email" type="email" required="required" autocomplete="off" maxlength="80" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"></div></div></div>',
-			'url'        => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text fas fa-lg fa-link"></i></div><input class="form-control" placeholder="网站" id="comment_author_url" name="url" type="url" autocomplete="off" maxlength="100" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"></div></div>',
-			'qq'         => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text fab fa-lg fa-qq"></i></div><input class="form-control" placeholder="填写QQ号码自动填写昵称和邮箱" id="comment_author_qq" name="qq" type="number" autocomplete="off" minlength="5" maxlength="11" value="' . esc_attr( $commenter['comment_author_qq'] ) . '" size="30"></div></div>',
-			'qq_avatar'  => '<div><img alt="" id="comment_author_qq_avatar"></div>',
-			'user_agent' => '<div><input type="hidden" name="gosheng_user_agent" id="gosheng_user_agent"></div>',
+			'author'    => '<div class="d-sm-flex justify-content-sm-between"><div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text far fa-lg fa-user"></i></div><input class="form-control" placeholder="昵称" id="comment_author_nickname" name="author" type="text" required="required" autocomplete="off" maxlength="20" value="' . esc_attr( $commenter['comment_author_author'] ) . '" size="30"></div></div>',
+			'email'     => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text far fa-lg fa-envelope"></i></div><input class="form-control" placeholder="邮箱" id="comment_author_email" name="email" type="email" required="required" autocomplete="off" maxlength="80" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"></div></div></div>',
+			'url'       => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text fas fa-lg fa-link"></i></div><input class="form-control" placeholder="网站" id="comment_author_url" name="url" type="url" autocomplete="off" maxlength="100" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"></div></div>',
+			'qq'        => '<div class="form-group"><div class="input-group"><div class="input-group-prepend"><i class="form-control d-flex align-self-center input-group-text fab fa-lg fa-qq"></i></div><input class="form-control" placeholder="填写QQ号码自动填写昵称和邮箱" id="comment_author_qq" name="qq" type="number" autocomplete="off" minlength="5" maxlength="11" value="' . esc_attr( $commenter['comment_author_qq'] ) . '" size="30"></div></div>',
+			'qq_avatar' => '<div><img alt="" id="comment_author_qq_avatar"></div>',
 		);
 		if ( get_option( 'show_comments_cookies_opt_in' ) ) {
 			$cookies           = '<div class="form-group"><div class="form-check"><input class="form-check-input" type="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent"><label class="form-check-label" for="wp-comment-cookies-consent">%1$s</label></div></div>';
