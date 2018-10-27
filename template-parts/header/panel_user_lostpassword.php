@@ -8,9 +8,9 @@ global $GoSheng;
     <div class="form-group form-row justify-content-center">
         <label for="modal_lostPassword" class="col-sm-2 text-dark">账号</label>
         <div class="col-sm-6">
-            <input type="text" name="user_login" id="modal_lostPassword"
+            <input type="email" name="user_login" id="modal_lostPassword"
                    class="form-control form-control-sm border border-dark" minlength="5" maxlength="20"
-                   required="required" autocomplete="off" placeholder="邮箱/用户名" title="请输入要找回密码的账号">
+                   required="required" autocomplete="off" placeholder="邮箱" title="请输入要找回密码的账号邮箱">
         </div>
     </div>
     <div class="form-group form-row justify-content-center">
