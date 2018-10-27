@@ -537,69 +537,72 @@ $(document).ready(function () {
 });
 //评论，QQ填写后自动写昵称和邮箱
 $(document).ready(function () {
-    let comment_author_qq = document.querySelector("#comment_author_qq");
-    let comment_author_qq_avatar = document.querySelector("#comment_author_qq_avatar");
-    let comment_author_nickname = document.querySelector("#comment_author_nickname");
-    let comment_author_email = document.querySelector("#comment_author_email");
-    if (comment_author_qq) {
-        comment_author_qq.addEventListener("blur", GoSheng_get_author_info);
-    }
-
-    function GoSheng_get_author_info() {
-        if (comment_author_qq.value.length >= 5 && comment_author_qq.value.length < 12) {
-            GoSheng_set_author_email();
-            GoSheng_set_author_nickname();
-            GoSheng_set_author_avatar();
+    let respond = document.querySelector("#respond");
+    if (respond) {
+        let comment_author = respond.querySelector("#comment_author");
+        let comment_author_email = respond.querySelector("#comment_author_email");
+        let comment_author_qq = respond.querySelector("#comment_author_qq");
+        let comment_author_qq_avatar = respond.querySelector("#comment_author_qq_avatar");
+        if (comment_author_qq) {
+            comment_author_qq.addEventListener("blur", GoSheng_get_author_info);
         }
-    }
 
-    function GoSheng_set_author_email() {
-        let qq_number = comment_author_qq.value;
-        comment_author_email.value = qq_number + "@qq.com";
-    }
-
-    function GoSheng_set_author_nickname() {
-        let qq_number = comment_author_qq.value;
-        let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-        let data = {
-            action: "nickname_form_qq_info",
-            qq_number: qq_number
-        };
-        $.ajax({
-            type: "post",
-            url: url,
-            data: data,
-            dataType: "jsonp",
-            jsonpCallback: "portraitCallBack",
-            success: function (data) {
-                comment_author_nickname.value = data[qq_number][6];
-            },
-            error: function () {
-                comment_author_nickname.value = "昵称获取失败";
+        function GoSheng_get_author_info() {
+            if (comment_author_qq.value.length >= 5 && comment_author_qq.value.length < 12) {
+                GoSheng_set_author_email();
+                GoSheng_set_author_nickname();
+                GoSheng_set_author_avatar();
             }
-        });
-    }
+        }
 
-    function GoSheng_set_author_avatar() {
-        let qq_number = comment_author_qq.value;
-        let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-        let data = {
-            action: "avatar_form_qq_info",
-            qq_number: qq_number
-        };
-        $.ajax({
-            type: "post",
-            url: url,
-            data: data,
-            dataType: "jsonp",
-            jsonpCallback: "qq_avatarCallBack",
-            success: function (data) {
-                comment_author_qq_avatar.src = data[qq_number];
-            },
-            error: function (data) {
-                console.log(data);
-            }
-        });
+        function GoSheng_set_author_email() {
+            let qq_number = comment_author_qq.value;
+            comment_author_email.value = qq_number + "@qq.com";
+        }
+
+        function GoSheng_set_author_nickname() {
+            let qq_number = comment_author_qq.value;
+            let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+            let data = {
+                action: "nickname_form_qq_info",
+                qq_number: qq_number
+            };
+            $.ajax({
+                type: "post",
+                url: url,
+                data: data,
+                dataType: "jsonp",
+                jsonpCallback: "portraitCallBack",
+                success: function (data) {
+                    comment_author.value = data[qq_number][6];
+                },
+                error: function () {
+                    comment_author.value = "昵称获取失败";
+                }
+            });
+        }
+
+        function GoSheng_set_author_avatar() {
+            let qq_number = comment_author_qq.value;
+            let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+            let data = {
+                action: "avatar_form_qq_info",
+                qq_number: qq_number
+            };
+            $.ajax({
+                type: "post",
+                url: url,
+                data: data,
+                dataType: "jsonp",
+                jsonpCallback: "qq_avatarCallBack",
+                success: function (data) {
+                    comment_author_qq_avatar.src = data[qq_number];
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        }
     }
 });
 //评论内容需要验证

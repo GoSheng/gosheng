@@ -356,10 +356,11 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 			'weibo'         => __( '微博', 'GoSheng-framework' ),
 			'weixin'        => __( '微信', 'GoSheng-framework' ),
 			'qq'            => __( 'QQ好友', 'GoSheng-framework' ),
+			'alipay'            => __( '支付宝', 'GoSheng-framework' ),
 			'tencent-weibo' => __( '腾讯微博', 'GoSheng-framework' ),
 			'facebook'      => __( 'Facebook', 'GoSheng-framework' ),
-			'twitter'       => __( 'Twitter', 'GoSheng-framework' ),
-			'google-plus'   => __( 'Google Plus', 'GoSheng-framework' ),
+			'twitter'       => __( '推特', 'GoSheng-framework' ),
+			'google-plus'   => __( '谷歌 Plus', 'GoSheng-framework' ),
 		);
 		echo $share_before;
 		foreach ( $share_type as $item => $value ) {

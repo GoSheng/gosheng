@@ -25,7 +25,7 @@ global $GoSheng;
         <div class="col-sm-2"><p class="sr-only">服务条款</p></div>
         <div class="col-sm-10">
             <div class="form-check text-dark">
-                <label class="form-check-label" for="modal_register_tos">
+                <label class="form-check-label font-6 font-lg-8" for="modal_register_tos">
                     <input type="checkbox" class="form-check-input" name="modal_register_tos"
                            id="modal_register_tos" required>
                     <span>如果同意并接受</span>
