@@ -25,7 +25,7 @@ global $GoSheng;
         <div class="col-sm-2"><p class="sr-only">记住登录状态</p></div>
         <div class="col-sm-6">
             <div class="form-check">
-                <label class="form-check-label" for="modal_login_rememberme">
+                <label class="form-check-label font-6 font-lg-8" for="modal_login_rememberme">
                     <input type="checkbox" class="form-check-input text-dark" name="rememberme"
                            id="modal_login_rememberme" checked="checked">记住登录状态</label>
             </div>
@@ -41,3 +41,17 @@ global $GoSheng;
         </div>
     </div>
 </form>
+<div class="text-center">
+    <span class="my-2 text-muted font-6 font-lg-8">更多登录方式</span>
+    <div class="my-2">
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('QQ登录','GoSheng-framework'); ?>" id="oauth_qq"><i class="font-10 font-lg-12 fab fa-fw fa-qq"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('微博登录','GoSheng-framework'); ?>" id="oauth_weibo"><i class="font-10 font-lg-12 fab fa-fw fa-weibo"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('微信登录','GoSheng-framework');?>" id="oauth_weixin"><i class="font-10 font-lg-12 fab fa-fw fa-weixin"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('支付宝登录','GoSheng-framework');?>" id="oauth_alipay"><i class="font-10 font-lg-12 fab fa-fw fa-alipay"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('谷歌登录','GoSheng-framework');?>" id="oauth_google"><i class="font-10 font-lg-12 fab fa-fw fa-google"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('GitHub登录','GoSheng-framework');?>" id="oauth_github"><i class="font-10 font-lg-12 fab fa-fw fa-github"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('Facebook登录','GoSheng-framework');?>" id="oauth_facebook"><i class="font-10 font-lg-12 fab fa-fw fa-facebook"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('推特登录','GoSheng-framework');?>" id="oauth_twitter"><i class="font-10 font-lg-12 fab fa-fw fa-twitter"></i></a>
+        <a href="javascript:;" class="mr-1" title="<?php esc_html_e('领英登录','GoSheng-framework');?>" id="oauth_linkedin"><i class="font-10 font-lg-12 fab fa-fw fa-linkedin"></i></a>
+    </div>
+</div>

@@ -221,16 +221,30 @@ if ( ! function_exists( 'GoSheng_remove_privacy' ) ) {
 	}
 }
 add_filter( 'robots_txt', 'GoSheng_robots', 10, 2 );
-function GoSheng_robots( $robots_txt ) {
-	global $GoSheng;
-	if ( $GoSheng['robots_switch'] ) {
-		$robots_txt = $GoSheng['robots_textarea'];
-	} else {
-		$robots_txt .= '';
-	}
+if ( ! function_exists( 'GoSheng_robots' ) ) {
+	function GoSheng_robots( $robots_txt ) {
+		global $GoSheng;
+		if ( $GoSheng['robots_switch'] ) {
+			$robots_txt = $GoSheng['robots_textarea'];
+		} else {
+			$robots_txt .= '';
+		}
 
-	return $robots_txt;
+		return $robots_txt;
+	}
 }
+add_action( 'redux/options/GoSheng/settings/change', 'GoSheng_users_can_register' );
+if ( ! function_exists( 'GoSheng_users_can_register' ) ) {
+	function GoSheng_users_can_register() {
+		global $GoSheng;
+		if ( $GoSheng['gosheng_user_register'] ) {
+			update_option( 'users_can_register', '1' );
+		} else {
+			update_option( 'users_can_register', '0' );
+		}
+	}
+}
+
 
 //获取主题信息
 $my_theme = wp_get_theme();
