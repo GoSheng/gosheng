@@ -308,6 +308,17 @@ Redux::setSection( $opt_name, array(
 			'off'      => __( '关闭', 'GoSheng-framework' ),
 			'default'  => false,
 		),
+		array(
+			'id'          => 'oauth_qq_key',
+			'type'        => 'text',
+			'required'    => array( 'oauth_qq', '=', '1' ),
+//			'validate'    => '',
+			'title'       => __( 'QQ登录站点Key', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
 	)
 ) );
 
@@ -626,7 +637,7 @@ Redux::setSection( $opt_name, array(
 			'type'        => 'color',
 			'title'       => __( 'theme-color', 'GoSheng-framework' ),
 			'subtitle'    => __( '移动端浏览器颜色', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
 			'validate'    => 'color',
 			'transparent' => false,
 			'default'     => '#343A40',
@@ -636,7 +647,7 @@ Redux::setSection( $opt_name, array(
 			'type'        => 'color',
 			'title'       => __( 'msapplication-navbutton-color', 'GoSheng-framework' ),
 			'subtitle'    => __( 'Windows Phone移动端颜色', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
 			'validate'    => 'color',
 			'transparent' => false,
 			'default'     => '#343A40',
@@ -1272,7 +1283,7 @@ Redux::setSection( $opt_name, array(
 			'data'        => 'elusive-icons',
 			'title'       => __( '图标演示', 'GoSheng-framework' ),
 			'subtitle'    => __( '', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
 			'placeholder' => __( '请选择一个图标', 'GoSheng-framework' ),
 		),
 		array(
