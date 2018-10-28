@@ -36,21 +36,25 @@ get_template_part( 'template-parts/head/head-default' );
     </header>
 <main style="overflow: hidden;min-height: 110vh;">
     <div class="p-relative">
-		<?php if ( ! $GoSheng['mobile_sidebar_left'] ) {
+		<?php if ( $GoSheng['mobile_sidebar_left'] ) {
 			get_template_part( 'template-parts/navigation/mobile-sidebar-left' );
 		} ?>
     </div>
     <div class="p-relative">
-		<?php if ( ! $GoSheng['mobile_sidebar_right'] ) {
+		<?php if ( $GoSheng['mobile_sidebar_right'] ) {
 			get_template_part( 'template-parts/navigation/mobile-sidebar-right' );
 		} ?>
     </div>
+<?php
+if ( is_home() ) {
+	$GoSheng_owl_carousel = new GoSheng_owl_carousel();
+	$GoSheng_owl_carousel->gosheng_owl( $GoSheng['owl_carousel_top'], $GoSheng['owl_carousel_top_slides'], 'bannerTop' );
+}
+?>
     <div class="container">
 <?php
 if ( is_home() ) {
-	$test = new GoSheng_owl_carousel();
-	$test->gosheng_owl( $GoSheng['owl_carousel_top'], $GoSheng['owl_carousel_top_slides'], 'bannerTop' );
-	$test->gosheng_owl( $GoSheng['owl_carousel_top_small'], $GoSheng['owl_carousel_top_small_slides'], 'bannerTop-small' );
+	$GoSheng_owl_carousel->gosheng_owl( $GoSheng['owl_carousel_top_small'], $GoSheng['owl_carousel_top_small_slides'], 'bannerTop-small' );
 }
 ?>
 

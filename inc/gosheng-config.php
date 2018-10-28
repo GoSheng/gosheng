@@ -959,7 +959,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'owl_carousel_top',
 			'type'     => 'switch',
-			'title'    => __( '顶部轮播图开关', 'GoSheng-framework' ),
+			'title'    => __( '顶部全宽轮播图开关', 'GoSheng-framework' ),
 			'subtitle' => __( '', 'GoSheng-framework' ),
 			'desc'     => __( '', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
@@ -970,9 +970,9 @@ Redux::setSection( $opt_name, array(
 			'id'       => 'owl_carousel_top_slides',
 			'type'     => 'slides',
 			'required' => array( 'owl_carousel_top', '=', '1' ),
-			'title'    => __( '顶部轮播图', 'GoSheng-framework' ),
+			'title'    => __( '顶部全宽轮播图', 'GoSheng-framework' ),
 			'subtitle' => __( '2张以上', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'     => __( '宽度1920px，高度自定义，太高影响页面效果，建议350px以内。', 'GoSheng-framework' ),
 		),
 	),
 ) );

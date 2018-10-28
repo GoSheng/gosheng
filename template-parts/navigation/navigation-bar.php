@@ -7,18 +7,23 @@ if ( ! defined( 'ABSPATH' ) ) {
      id="headerNav">
     <div class="container">
         <div>
-            <button class="navbar-toggler border-0 ml-1" type="button">
-            <span class="fas fa-bars text-light" id="mobile_sidebar_left-button">
+			<?php if ( $GoSheng['mobile_sidebar_left'] ) {
+				?>
+                <button class="navbar-toggler border-0 ml-1" type="button">
+                <span class="fas fa-bars text-light" id="mobile_sidebar_left-button">
                 <b class="sr-only"><?php esc_html_e( '左侧边栏按钮:', 'GoSheng-framework' ) ?></b>
             </span>
-            </button>
-            <button class="navbar-toggler border-0 ml-1" type="button">
-            <span class="fas fa-bars text-light" id="mobile_sidebar_right-button">
-                <b class="sr-only"><?php esc_html_e( '左侧边栏按钮:', 'GoSheng-framework' ) ?></b>
+                </button><?php
+			} ?>
+			<?php if ( $GoSheng['mobile_sidebar_right'] ) {
+				?>
+                <button class="navbar-toggler border-0 ml-1" type="button">
+                <span class="fas fa-bars text-light" id="mobile_sidebar_right-button">
+                <b class="sr-only"><?php esc_html_e( '右侧边栏按钮:', 'GoSheng-framework' ) ?></b>
             </span>
-            </button>
+                </button><?php
+			} ?>
         </div>
-        <!-- Your site title as branding in the menu -->
 		<?php if ( ! has_custom_logo() ) { ?>
 	<?php if ( is_front_page() && is_home() ) : ?>
         <h1 class="navbar-brand mb-0">
