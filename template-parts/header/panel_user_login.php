@@ -25,7 +25,7 @@ global $GoSheng;
         <div class="col-sm-2"><p class="sr-only">记住登录状态</p></div>
         <div class="col-sm-6">
             <div class="form-check">
-                <label class="form-check-label font-6 font-lg-8" for="modal_login_rememberme">
+                <label class="form-check-label" for="modal_login_rememberme">
                     <input type="checkbox" class="form-check-input text-dark" name="rememberme"
                            id="modal_login_rememberme" checked="checked">记住登录状态</label>
             </div>
