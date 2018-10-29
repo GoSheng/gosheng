@@ -319,6 +319,38 @@ Redux::setSection( $opt_name, array(
 			'placeholder' => __( '', 'GoSheng-framework' ),
 			'default'     => '',
 		),
+		array(
+			'id'       => 'oauth_github',
+			'type'     => 'switch',
+			'title'    => __( 'GitHub登录', 'GoSheng-framework' ),
+			'subtitle' => __( '使用GitHub登录站点', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'          => 'oauth_github_client_id',
+			'type'        => 'text',
+			'required'    => array( 'oauth_github', '=', '1' ),
+//			'validate'    => '',
+			'title'       => __( 'GitHub登录站点Client ID', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+		array(
+			'id'          => 'oauth_github_client_secret',
+			'type'        => 'text',
+			'required'    => array( 'oauth_github', '=', '1' ),
+//			'validate'    => '',
+			'title'       => __( 'GitHub登录站点Client Secret', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
 	)
 ) );
 
