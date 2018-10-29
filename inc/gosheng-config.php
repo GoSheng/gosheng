@@ -287,40 +287,19 @@ Redux::setSection( $opt_name, array(
 
 Redux::setSection( $opt_name, array(
 	'id'    => 'oauth',
-	'title' => __( '第三方登录（开发中）', 'GoSheng-framework' ),
+	'title' => __( '社会化登录', 'GoSheng-framework' ),
 	'desc'  => __( '', 'GoSheng-framework' ),
 	'icon'  => 'el el-cog'
 ) );
 Redux::setSection( $opt_name, array(
-	'id'         => 'oauth_',
-	'title'      => __( '第三方登录', 'GoSheng-framework' ),
+	'id'         => 'oauth_github',
+	'title'      => __( 'GitHub登录', 'GoSheng-framework' ),
 	'desc'       => __( '', 'GoSheng-framework' ),
 	'subsection' => true,
 	'icon'       => 'el el-cogs',
 	'fields'     => array(
 		array(
-			'id'       => 'oauth_qq',
-			'type'     => 'switch',
-			'title'    => __( 'QQ登录', 'GoSheng-framework' ),
-			'subtitle' => __( '使用QQ登录站点', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
-			'on'       => __( '开启', 'GoSheng-framework' ),
-			'off'      => __( '关闭', 'GoSheng-framework' ),
-			'default'  => false,
-		),
-		array(
-			'id'          => 'oauth_qq_key',
-			'type'        => 'text',
-			'required'    => array( 'oauth_qq', '=', '1' ),
-//			'validate'    => '',
-			'title'       => __( 'QQ登录站点Key', 'GoSheng-framework' ),
-			'subtitle'    => __( '', 'GoSheng-framework' ),
-			'desc'        => __( '', 'GoSheng-framework' ),
-			'placeholder' => __( '', 'GoSheng-framework' ),
-			'default'     => '',
-		),
-		array(
-			'id'       => 'oauth_github',
+			'id'       => 'oauth_github_switch',
 			'type'     => 'switch',
 			'title'    => __( 'GitHub登录', 'GoSheng-framework' ),
 			'subtitle' => __( '使用GitHub登录站点', 'GoSheng-framework' ),
@@ -332,7 +311,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'          => 'oauth_github_client_id',
 			'type'        => 'text',
-			'required'    => array( 'oauth_github', '=', '1' ),
+			'required'    => array( 'oauth_github_switch', '=', '1' ),
 //			'validate'    => '',
 			'title'       => __( 'GitHub登录站点Client ID', 'GoSheng-framework' ),
 			'subtitle'    => __( '', 'GoSheng-framework' ),
@@ -343,9 +322,48 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'          => 'oauth_github_client_secret',
 			'type'        => 'text',
-			'required'    => array( 'oauth_github', '=', '1' ),
+			'required'    => array( 'oauth_github_switch', '=', '1' ),
 //			'validate'    => '',
 			'title'       => __( 'GitHub登录站点Client Secret', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+	)
+) );
+Redux::setSection( $opt_name, array(
+	'id'         => 'oauth_qq',
+	'title'      => __( 'QQ登录', 'GoSheng-framework' ),
+	'desc'       => __( '', 'GoSheng-framework' ),
+	'subsection' => true,
+	'icon'       => 'el el-cogs',
+	'fields'     => array(
+		array(
+			'id'       => 'oauth_qq_switch',
+			'type'     => 'switch',
+			'title'    => __( 'QQ登录', 'GoSheng-framework' ),
+			'subtitle' => __( '使用QQ登录站点', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'          => 'oauth_qq_client_id',
+			'type'        => 'text',
+			'required'    => array( 'oauth_qq_switch', '=', '1' ),
+			'title'       => __( 'QQ登录站点Client ID', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+		array(
+			'id'          => 'oauth_qq_client_secret',
+			'type'        => 'text',
+			'required'    => array( 'oauth_qq_switch', '=', '1' ),
+			'title'       => __( 'QQ登录站点Client Secret', 'GoSheng-framework' ),
 			'subtitle'    => __( '', 'GoSheng-framework' ),
 			'desc'        => __( '', 'GoSheng-framework' ),
 			'placeholder' => __( '', 'GoSheng-framework' ),
