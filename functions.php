@@ -22,6 +22,7 @@ get_template_part( 'inc/base/functions', 'comments_list' );
 get_template_part( 'inc/base/functions', 'link_submit' );
 get_template_part( 'inc/redux' );
 
+get_template_part( 'inc/class/class', 'gosheng_user_oauth' );
 get_template_part( 'inc/class/class', 'gosheng_owl_carousel' );
 get_template_part( 'inc/class/class', 'gosheng_array_depth' );
 get_template_part( 'inc/class/class', 'wp-bootstrap-navwalker' );
