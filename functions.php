@@ -11,7 +11,6 @@ add_action( 'after_setup_theme', 'GoSheng_register_nav_menus' );
 get_template_part( 'inc/base/functions', 'option' );
 get_template_part( 'inc/base/functions', 'base' );
 get_template_part( 'inc/base/functions', 'user_meta' );
-get_template_part( 'inc/base/functions', 'user_oauth' );
 get_template_part( 'inc/base/functions', 'content' );
 get_template_part( 'inc/base/functions', 'breadcrumb' );
 get_template_part( 'inc/base/functions', 'email' );
@@ -20,6 +19,7 @@ get_template_part( 'inc/base/functions', 'comment_form' );
 get_template_part( 'inc/base/functions', 'comment_navigation' );
 get_template_part( 'inc/base/functions', 'comments_list' );
 get_template_part( 'inc/base/functions', 'link_submit' );
+get_template_part( 'inc/oauth/oauth' );
 get_template_part( 'inc/redux' );
 
 get_template_part( 'inc/class/class', 'gosheng_user_oauth' );
