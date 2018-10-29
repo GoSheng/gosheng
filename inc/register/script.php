@@ -30,6 +30,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_theia_sticky_sidebar' );
 
 add_action( 'wp_enqueue_scripts', 'enqueue_cookie' );
 add_action( 'wp_enqueue_scripts', 'enqueue_local' );
+add_action( 'wp_enqueue_scripts', 'enqueue_oauth' );
 add_action( 'wp_enqueue_scripts', 'enqueue_sidebar' );
 
 if ( $GoSheng['notification'] ) {

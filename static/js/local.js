@@ -375,11 +375,12 @@ function topControl(e) {
 }
 
 //tooltip提示
-$(document).ready(function () {
+(function () {
     $("input[id^='modal_']").tooltip();
+    $("a[id^='oauth_']").tooltip();
     $("main a").tooltip();
     $("#footTools>a").tooltip();
-});
+})();
 //tab切换
 // $(document).ready(function () {
 //     $('#v-pills-tab a').on('click', function (e) {

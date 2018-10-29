@@ -92,6 +92,11 @@ function enqueue_local() {
 	wp_enqueue_script( 'local' );
 }
 
+function enqueue_oauth() {
+	wp_register_script( 'oauth', themeStaticFile_URI . 'js/gosheng_oauth.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_enqueue_script( 'oauth' );
+}
+
 function enqueue_cookie() {
 	wp_register_script( 'cookie', themeStaticFile_URI . 'js/cookie.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'cookie' );
@@ -101,12 +106,17 @@ function enqueue_qrcode() {
 	wp_register_script( 'qrcode', themeStaticFile_URI . 'js/qrcode.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'qrcode' );
 }
+
 function enqueue_resizesensor() {
-	wp_register_script( 'resizesensor', themeStaticFile_URI . 'js/resizesensor.min.js', array('jquery'), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'resizesensor', themeStaticFile_URI . 'js/resizesensor.min.js', array( 'jquery' ), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'resizesensor' );
 }
+
 function enqueue_theia_sticky_sidebar() {
-	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array('resizesensor','jquery'), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array(
+		'resizesensor',
+		'jquery'
+	), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'theia_sticky_sidebar' );
 }
 
