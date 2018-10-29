@@ -10,6 +10,8 @@ add_action( 'after_setup_theme', 'GoSheng_register_nav_menus' );
 
 get_template_part( 'inc/base/functions', 'option' );
 get_template_part( 'inc/base/functions', 'base' );
+get_template_part( 'inc/base/functions', 'user_meta' );
+get_template_part( 'inc/base/functions', 'user_oauth' );
 get_template_part( 'inc/base/functions', 'content' );
 get_template_part( 'inc/base/functions', 'breadcrumb' );
 get_template_part( 'inc/base/functions', 'email' );
