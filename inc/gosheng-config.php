@@ -972,7 +972,7 @@ Redux::setSection( $opt_name, array(
 			'required' => array( 'owl_carousel_top', '=', '1' ),
 			'title'    => __( '顶部全宽轮播图', 'GoSheng-framework' ),
 			'subtitle' => __( '2张以上', 'GoSheng-framework' ),
-			'desc'     => __( '宽度1920px，高度自定义，太高影响页面效果，建议350px以内。', 'GoSheng-framework' ),
+			'desc'     => __( '宽度1920px，高度自定义，太高影响页面效果，建议450px—650px', 'GoSheng-framework' ),
 		),
 	),
 ) );
