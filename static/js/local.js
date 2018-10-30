@@ -16,7 +16,7 @@ const GoSheng_Window_Screen_availWidth = window.screen.availWidth;//屏幕可用
 const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可用工作区宽度
 
 //登录模态框动画
-$(document).ready(function () {
+(function () {
     let modalLogin = document.querySelector("#modalLogin");
     let reward_modal = document.querySelector("#reward_modal");
 
@@ -55,10 +55,10 @@ $(document).ready(function () {
         });
     }
 
-});
+})();
 
 //搜索框
-$(document).ready(function () {
+(function () {
     if (document.body.querySelector("#Gosheng_searchForm")) {
         let Gosheng_search = document.body.querySelector("#Gosheng_searchForm");
         let search = Gosheng_search.querySelector("#s");
@@ -197,10 +197,10 @@ $(document).ready(function () {
         }
 
     }
-});
+})();
 
 //滚动监听
-$(document).ready(function () {
+(function () {
     let headerNav = document.querySelector("#headerNav");
     let footTools = document.querySelector("#footTools");
 
@@ -236,17 +236,17 @@ $(document).ready(function () {
             new_scroll_position = last_scroll_position;
         }
     }
-});
+})();
 
 //返回顶部
-$(document).ready(function () {
+(function () {
     let footToolBackTop = document.querySelector("#footToolBackTop");
     if (footToolBackTop) {
         footToolBackTop.addEventListener('click', topControl);
     }
-});
+})();
 //分享功能
-$(document).ready(function () {
+(function () {
     let gosheng_share = document.querySelector("#gosheng_share");
     if (gosheng_share) {
         let gosheng_share_btn = document.querySelectorAll("a[id^=gosheng_share_]");
@@ -322,9 +322,9 @@ $(document).ready(function () {
             });
         }
     }
-});
+})();
 //侧边栏切换按钮
-$(document).ready(function () {
+(function () {
     let footToolSidebar = document.body.querySelector("#footToolSidebar");
     let sidebar = document.body.querySelector("#sidebar");
     let content = document.body.querySelector("#content");
@@ -360,14 +360,14 @@ $(document).ready(function () {
             }, 400);
         }
     }
-});
+})();
 //LOGO点击
-$(document).ready(function () {
+(function () {
     let logo = document.body.querySelector('#logo');
     if (logo) {
         logo.addEventListener('click', topControl);
     }
-});
+})();
 
 function topControl(e) {
     e.preventDefault();
@@ -389,17 +389,17 @@ function topControl(e) {
 //     })
 // });
 //登录和注册
-$(document).ready(function () {
+(function () {
     let redirect_to = document.querySelectorAll("input[name=redirect_to]");
     if (redirect_to) {
         for (let redirect_to_length = redirect_to.length, i = 0; i < redirect_to_length; i++) {
             redirect_to[i].value = GoSheng_href;
         }
     }
-});
+})();
 
 //移动端导航栏按钮
-$(document).ready(function () {
+(function () {
     const mainBody = document.querySelector('main');
     const navbarCollapse = document.querySelectorAll('.navbar-collapse');
     mainBody.addEventListener('click', navbarCollapseHide);
@@ -409,19 +409,19 @@ $(document).ready(function () {
             navbarCollapse[i].classList.remove('show');
         }
     }
-});
+})();
 
 //顶部日期时间
-$(document).ready(function () {
+(function () {
     let timeElement = document.querySelector('#gosheng_time');
     if (timeElement) {
         timeElement.innerHTML = new Date().toLocaleString() + ' 星期' + '日一二三四五六'.charAt(new Date().getDay());
         setInterval("document.querySelector('#gosheng_time').innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
     }
-});
+})();
 
 //判断用户是否同意使用cookie
-$(document).ready(function () {
+(function () {
     let gosheng_cookie = document.querySelector("#gosheng_cookie");
     let gosheng_cookie_agree = document.querySelector("#gosheng_cookie_agree");
     let gosheng_cookie_disagree = document.querySelector("#gosheng_cookie_disagree");
@@ -469,9 +469,9 @@ $(document).ready(function () {
             content: '您已经拒绝本站使用Cookie技术获取浏览信息，请关闭本站即可。',
         });
     }
-});
+})();
 // 文章点赞功能
-$(document).ready(function () {
+(function () {
     $.fn.postLike = function () {
         if ($(this).hasClass('done')) {
             layer.open({
@@ -506,16 +506,16 @@ $(document).ready(function () {
     $(document).on("click", "#gosehng_thumbs_up a", function () {
         $(this).postLike();
     });
-});
+})();
 // 侧边栏跟随栏
-$(document).ready(function () {
+(function () {
     $("#gosheng_follow_bar").theiaStickySidebar({
         // Settings
         additionalMarginTop: 60
     });
-});
+})();
 //通知公告
-$(document).ready(function () {
+(function () {
     let gosheng_notice = document.querySelector("#gosheng_notice");
     if (gosheng_notice) {
         let close = gosheng_notice.querySelector(".close");
@@ -535,9 +535,9 @@ $(document).ready(function () {
             GoSheng_SetCookie('gosheng_notice_closed', 'yes', 0.5);
         }
     }
-});
+})();
 //评论，QQ填写后自动写昵称和邮箱
-$(document).ready(function () {
+(function () {
     let respond = document.querySelector("#respond");
     if (respond) {
         let comment_author = respond.querySelector("#comment_author");
@@ -575,7 +575,12 @@ $(document).ready(function () {
                 dataType: "jsonp",
                 jsonpCallback: "portraitCallBack",
                 success: function (data) {
-                    comment_author.value = data[qq_number][6];
+                    if (data[qq_number]) {
+                        comment_author.value = data[qq_number][6];
+                    } else {
+                        comment_author_qq.value = "";
+                        comment_author_qq.placeholder = "请输入正确的QQ号码";
+                    }
                 },
                 error: function () {
                     comment_author.value = "昵称获取失败";
@@ -605,56 +610,25 @@ $(document).ready(function () {
             });
         }
     }
-});
+})();
 //评论内容需要验证
-$(document).ready(function () {
+(function () {
     let commentform = document.querySelector("#commentform");
     if (commentform) {
         commentform.removeAttribute("novalidate");
     }
-});
+})();
 //评论css修正
-$(document).ready(function () {
+(function () {
     let respond = document.querySelector("#respond");
     if (respond) {
         respond.classList.add("pb-2", "mb-1");
     }
-});
+})();
 //获取用户UA
-$(document).ready(function () {
+(function () {
     let gosheng_user_agent = document.querySelector("#gosheng_user_agent");
     if (gosheng_user_agent) {
         gosheng_user_agent.value = navigator.userAgent;
-    }
-});
-//
-(function () {
-    if (gosheng_google_reCaptcha_site_key) {
-        grecaptcha.ready(function () {
-            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: 'action_name'})
-                .then(function (token) {
-                    // Verify the token on the server.
-                    console.log(token);
-                    let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-                    let data = {
-                        action: "GoSheng_recaptcha",
-                        token: token,
-                    };
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        data: data,
-                        dataType: "text",
-                        success: function (data) {
-                            console.log("成功");
-                            console.log(data);
-                        },
-                        error: function (data) {
-                            console.log("失败");
-                            console.log(data);
-                        }
-                    })
-                });
-        });
     }
 })();

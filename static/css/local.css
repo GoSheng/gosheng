@@ -9,6 +9,7 @@ body::-webkit-scrollbar { display:none; }
 /* 选取状态 */
 ::selection { background-color:#343A40; color:#F8F9FA; }
 /* 选取状态 */
+.grecaptcha-badge {display:none;}
 /* 自定义简写 */
 @media (min-width:576px) {
 }

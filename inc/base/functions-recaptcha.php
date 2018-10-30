@@ -2,16 +2,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-//global $GoSheng;
-//$GoSheng['google_reCaptcha_Site_key'];
-//$GoSheng['google_reCaptcha_Secret_key'];
 
 add_action( 'wp_enqueue_scripts', 'enqueue_reCaptcha' );
 function enqueue_reCaptcha() {
 	global $GoSheng;
 	if ( $GoSheng['google_reCaptcha_switch'] ) {
-		wp_register_script( 'reCaptcha', 'https://www.recaptcha.net/recaptcha/api.js?render=' . $GoSheng['google_reCaptcha_Site_key'], array(), 'v3', false );
+		wp_register_script( 'reCaptcha', 'https://www.recaptcha.net/recaptcha/api.js?render=' . $GoSheng['google_reCaptcha_Site_key'], array(), 'v3', true );
 		wp_enqueue_script( 'reCaptcha' );
+		wp_register_script( 'google_reCaptcha', themeStaticFile_URI . 'js/google_reCaptcha.js', array(), THEME_STATIC_FILE_VERSION, true );
+		wp_enqueue_script( 'google_reCaptcha' );
 	}
 }
 
@@ -21,6 +20,8 @@ if ( ! function_exists( 'GoSheng_recaptcha' ) ) {
 	function GoSheng_recaptcha() {
 		if ( $_POST ) {
 			if ( $_POST['token'] ) {
+				$token = $_POST['token'];
+				GoSheng_reCaptcha_site_verify( $token );
 			}
 		}
 		wp_die();
@@ -36,5 +37,18 @@ if ( ! function_exists( 'GoSheng_reCaptcha_script_code' ) ) {
 			$script_after  = "</script>\r\n";
 			echo $script_before . $script_code . $script_after;
 		}
+	}
+}
+if ( ! function_exists( 'GoSheng_reCaptcha_site_verify' ) ) {
+	function GoSheng_reCaptcha_site_verify( $token = '' ) {
+		global $GoSheng;
+		$site_verify_url = 'https://www.recaptcha.net/recaptcha/api/siteverify';
+		$secret_key      = $GoSheng['google_reCaptcha_Secret_key'];
+		$response        = $token;
+		$remoteip        = '';
+		$url             = $site_verify_url . '?secret=' . $secret_key . '&response=' . $response . '&remoteip=' . $remoteip;
+		$get_site_verify = wp_remote_post( $url );
+		$result          = json_decode( $get_site_verify['body'] );
+		echo json_encode( $result );
 	}
 }
