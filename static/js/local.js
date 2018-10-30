@@ -627,3 +627,34 @@ $(document).ready(function () {
         gosheng_user_agent.value = navigator.userAgent;
     }
 });
+//
+(function () {
+    if (gosheng_google_reCaptcha_site_key) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: 'action_name'})
+                .then(function (token) {
+                    // Verify the token on the server.
+                    console.log(token);
+                    let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+                    let data = {
+                        action: "GoSheng_recaptcha",
+                        token: token,
+                    };
+                    $.ajax({
+                        type: "post",
+                        url: url,
+                        data: data,
+                        dataType: "text",
+                        success: function (data) {
+                            console.log("成功");
+                            console.log(data);
+                        },
+                        error: function (data) {
+                            console.log("失败");
+                            console.log(data);
+                        }
+                    })
+                });
+        });
+    }
+})();

@@ -16,7 +16,6 @@ function oauth_github() {
 function social_oauth_github() {
 	if ( isset( $_GET['code'] ) && isset( $_GET['type'] ) && $_GET['type'] == 'github' ) {
 		github_oauth();
-		echo 'github';
 	}
 }
 

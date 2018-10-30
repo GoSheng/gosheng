@@ -488,6 +488,52 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
+	'id'    => 'captcha',
+	'title' => __( '验证', 'GoSheng-framework' ),
+	'desc'  => __( '介绍', 'GoSheng-framework' ),
+	'icon'  => 'el el-cog'
+) );
+Redux::setSection( $opt_name, array(
+	'id'         => 'google_reCaptcha',
+	'title'      => __( 'Google reCAPTCHA', 'GoSheng-framework' ),
+	'desc'       => __( '谷歌 reCAPTCHA', 'GoSheng-framework' ),
+	'subsection' => true,
+	'icon'       => 'el el-cogs',
+	'fields'     => array(
+		array(
+			'id'       => 'google_reCaptcha_switch',
+			'type'     => 'switch',
+			'title'    => __( '谷歌reCaptcha', 'GoSheng-framework' ),
+			'subtitle' => __( 'V3版本', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'          => 'google_reCaptcha_Site_key',
+			'type'        => 'text',
+			'required'    => array( 'google_reCaptcha_switch', '=', '1' ),
+			'title'       => __( 'Site key', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+		array(
+			'id'          => 'google_reCaptcha_Secret_key',
+			'type'        => 'text',
+			'required'    => array( 'google_reCaptcha_switch', '=', '1' ),
+			'title'       => __( 'Secret key', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+	)
+) );
+
+Redux::setSection( $opt_name, array(
 	'id'    => 'function',
 	'title' => __( '功能开关', 'GoSheng-framework' ),
 	'desc'  => __( '介绍', 'GoSheng-framework' ),

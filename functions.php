@@ -19,6 +19,7 @@ get_template_part( 'inc/base/functions', 'comment_form' );
 get_template_part( 'inc/base/functions', 'comment_navigation' );
 get_template_part( 'inc/base/functions', 'comments_list' );
 get_template_part( 'inc/base/functions', 'link_submit' );
+get_template_part( 'inc/base/functions', 'recaptcha' );
 get_template_part( 'inc/oauth/oauth' );
 get_template_part( 'inc/redux' );
 

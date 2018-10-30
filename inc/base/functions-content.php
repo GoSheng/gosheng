@@ -356,7 +356,7 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 			'weibo'         => __( '微博', 'GoSheng-framework' ),
 			'weixin'        => __( '微信', 'GoSheng-framework' ),
 			'qq'            => __( 'QQ好友', 'GoSheng-framework' ),
-			'alipay'            => __( '支付宝', 'GoSheng-framework' ),
+			'alipay'        => __( '支付宝', 'GoSheng-framework' ),
 			'tencent-weibo' => __( '腾讯微博', 'GoSheng-framework' ),
 			'facebook'      => __( 'Facebook', 'GoSheng-framework' ),
 			'twitter'       => __( '推特', 'GoSheng-framework' ),
@@ -532,9 +532,8 @@ add_action( 'wp_ajax_avatar_form_qq_info', 'GoSheng_avatar_form_qq_info' );
 if ( ! function_exists( 'GoSheng_avatar_form_qq_info' ) ) {
 	function GoSheng_avatar_form_qq_info() {
 		if ( $_POST ) {
-			$info = $_POST;
-			if ( $info['qq_number'] ) {
-				$qq_number = trim( $info['qq_number'] );
+			if ( $_POST['qq_number'] ) {
+				$qq_number = trim( $_POST['qq_number'] );
 			}
 			if ( $qq_number && is_numeric( $qq_number ) && strlen( $qq_number ) > 4 && strlen( $qq_number ) < 12 ) {
 				$qq_avatar = wp_remote_get( 'http://ptlogin2.qq.com/getface?appid=1006102&imgtype=3&uin=' . $qq_number );
