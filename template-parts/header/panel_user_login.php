@@ -17,8 +17,11 @@ global $GoSheng;
         <label for="modal_login_password" class="col-sm-2 text-dark">密码</label>
         <div class="col-sm-6">
             <input type="password" name="pwd" id="modal_login_password"
-                   class="form-control form-control-sm border border-secondary text-info" minlength="7" maxlength="16"
-                   required="required" autocomplete="off" placeholder="请输入密码" title="请输入密码">
+                   class="form-control form-control-sm border border-secondary text-info letter-spacing-2" minlength="7"
+                   maxlength="16" required="required" autocomplete="off" placeholder="请输入密码" title="请输入密码">
+            <span class="p-absolute t-0 r-0">
+                <i id="GoSheng_toggle_password" class="p-2 fas fa-lg fa-eye" title="显示密码"></i>
+            </span>
         </div>
     </div>
     <div class="form-group form-row justify-content-center">

@@ -19,6 +19,10 @@ body::-webkit-scrollbar { display:none; }
 }
 @media (min-width:1200px) {
 }
+.letter-spacing-1 {letter-spacing:.25rem;}
+.letter-spacing-2 {letter-spacing:.5rem;}
+.letter-spacing-3 {letter-spacing:.75rem;}
+.letter-spacing-4 {letter-spacing:1rem;}
 .fa-qq {color:#0098e6;}
 .fa-weibo {color:#ec0117;}
 .fa-weixin {color:#33c433;}

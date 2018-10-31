@@ -380,6 +380,7 @@ function topControl(e) {
     $("a[id^='oauth_']").tooltip();
     $("main a").tooltip();
     $("#footTools>a").tooltip();
+    $("#GoSheng_toggle_password").tooltip();
 })();
 //tab切换
 // $(document).ready(function () {
@@ -629,5 +630,37 @@ function topControl(e) {
     let gosheng_user_agent = document.querySelector("#gosheng_user_agent");
     if (gosheng_user_agent) {
         gosheng_user_agent.value = navigator.userAgent;
+    }
+})();
+//切换密码显示方式
+(function () {
+    let toggle_password = document.querySelector("#GoSheng_toggle_password");
+    if (toggle_password) {
+        toggle_password.addEventListener("click", function () {
+            switch (this.classList.contains("fa-eye")) {
+                case true:
+                    GoSheng_show_password();
+                    break;
+                default:
+                    GoSheng_hidden_password();
+                    break;
+            }
+        });
+
+        function GoSheng_show_password() {
+            let modal_login_password = document.querySelector("#modal_login_password");
+            modal_login_password.setAttribute("type", "text");
+            toggle_password.setAttribute("data-original-title", "隐藏密码");
+            toggle_password.classList.remove("fa-eye");
+            toggle_password.classList.add("fa-eye-slash");
+        }
+
+        function GoSheng_hidden_password() {
+            let modal_login_password = document.querySelector("#modal_login_password");
+            modal_login_password.setAttribute("type", "password");
+            toggle_password.setAttribute("data-original-title", "显示密码");
+            toggle_password.classList.remove("fa-eye-slash");
+            toggle_password.classList.add("fa-eye");
+        }
     }
 })();
