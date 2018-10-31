@@ -45,8 +45,8 @@ if ( ! function_exists( 'GoSheng_reCaptcha_site_verify' ) ) {
 		$site_verify_url = 'https://www.recaptcha.net/recaptcha/api/siteverify';
 		$secret_key      = $GoSheng['google_reCaptcha_Secret_key'];
 		$response        = $token;
-		$remoteip        = '';
-		$url             = $site_verify_url . '?secret=' . $secret_key . '&response=' . $response . '&remoteip=' . $remoteip;
+		$remote_ip        = $_SERVER['REMOTE_ADDR'] ? $_SERVER['REMOTE_ADDR'] : '';
+		$url             = $site_verify_url . '?secret=' . $secret_key . '&response=' . $response . '&remoteip=' . $remote_ip;
 		$get_site_verify = wp_remote_post( $url );
 		$result          = json_decode( $get_site_verify['body'] );
 		echo json_encode( $result );
