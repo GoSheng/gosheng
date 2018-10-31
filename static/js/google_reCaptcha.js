@@ -47,7 +47,7 @@
                             skin: "msg",
                             time: 5,
                         });
-                        console.log("reCAPTCHA提醒：异常访问");
+                        fundebug.notify("reCAPTCHA提醒：异常访问");
                         break;
                     case 0.6:
                     case 0.7:

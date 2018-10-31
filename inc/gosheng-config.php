@@ -505,7 +505,7 @@ Redux::setSection( $opt_name, array(
 			'type'     => 'switch',
 			'title'    => __( '谷歌reCaptcha', 'GoSheng-framework' ),
 			'subtitle' => __( 'V3版本', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'     => __( '异常信息记录需开启funDebug功能。', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
 			'off'      => __( '关闭', 'GoSheng-framework' ),
 			'default'  => false,
@@ -1455,7 +1455,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( 'funDebug的ApiKey', 'GoSheng-framework' ),
 			'desc'        => __( '查看FunDebug的apikey：', 'GoSheng-framework' ) . '<a href="https://fundebug.com/project/integrate?form=GoShengTheme" target="_blank">点这里</a>',
 			'placeholder' => __( '此项为必填项。', 'GoSheng-framework' ),
-			'default'     => '8883fa46c59b2de24f4b014c92e1b829f36a2b6eb244f56a1a4ab36726f70603',
+			'default'     => 'c3fc86af5c65c2dd31d842ba75456bc610e0802700f2627e9ae12cd3533952d4',
 		),
 	),
 ) );
