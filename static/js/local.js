@@ -510,7 +510,6 @@ function topControl(e) {
 // 侧边栏跟随栏
 (function () {
     $("#gosheng_follow_bar").theiaStickySidebar({
-        // Settings
         additionalMarginTop: 60
     });
 })();
@@ -525,14 +524,14 @@ function topControl(e) {
         function gosheng_hidden_notice() {
             $("#gosheng_notice").alert("close");
             layer.open({
-                content: '您已关闭公告信息，12小时内不会再出现。',
-                skin: 'msg',
+                content: "您已关闭公告信息，12小时内不会再出现。",
+                skin: "msg",
                 time: 5,
             });
         }
 
         function gosheng_notice_cookie() {
-            GoSheng_SetCookie('gosheng_notice_closed', 'yes', 0.5);
+            GoSheng_SetCookie("gosheng_notice_closed", "yes", 0.5);
         }
     }
 })();

@@ -35,30 +35,24 @@
         function GoSheng_reCaptcha_score(data) {
             let results = JSON.parse(data);
             if (results.success === true) {
-                let num_pow = Math.pow(10, 17);
-                // console.log(1 - results.score);
-                // console.log((1 - results.score) * num_pow);
-                let num = (1 - results.score) * num_pow;
-                let num_1 = 1 * num_pow;
-                let num_2 = 2 * num_pow;
-                let num_3 = 3 * num_pow;
-                let num_4 = 4 * num_pow;
-                let num_5 = 5 * num_pow;
-                let num_6 = 6 * num_pow;
-                let num_7 = 7 * num_pow;
-                let num_8 = 8 * num_pow;
-                let num_9 = 9 * num_pow;
-                let number_value = num > num_1 ? (num > num_2 ? (num > num_3 ? (num > num_4 ? (num > num_5 ? (num > num_6 ? (num > num_7 ? (num > num_8 ? (num > num_9 ? 9 : 9) : 8) : 7) : 6) : 5) : 4) : 3) : 2) : 1;
-                switch (number_value) {
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                    case 7:
-                    case 8:
-                    case 9:
+                let num = results.score;
+                switch (num) {
+                    case 0.1:
+                    case 0.2:
+                    case 0.3:
+                    case 0.4:
+                    case 0.5:
+                        layer.open({
+                            content: "reCAPTCHA提醒：您的访问异常，系统已经记录您的信息。",
+                            skin: "msg",
+                            time: 5,
+                        });
+                        console.log("reCAPTCHA提醒：异常访问");
+                        break;
+                    case 0.6:
+                    case 0.7:
+                    case 0.8:
+                    case 0.9:
                         break;
                     default:
                         layer.open({
