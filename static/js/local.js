@@ -303,16 +303,21 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
         let gosheng_share_weixin = document.querySelector("#gosheng_share_weixin");
         let share_weixin = document.querySelector("#share_weixin");
         if (gosheng_share_weixin) {
-            weixin_qrcode();
             gosheng_share_weixin.addEventListener('click', display_weixin_qrcode);
         }
 
         function display_weixin_qrcode() {
             share_weixin.classList.toggle("d-none");
+            layer.open({
+                className: "share_weixin_img",
+                content: "",
+                skin: "msg",
+            });
+            weixin_qrcode();
         }
 
         function weixin_qrcode() {
-            let qrcode = new QRCode(document.querySelector('#share_weixin_img'), {
+            let qrcode = new QRCode(document.getElementsByClassName('share_weixin_img')[0], {
                 text: GoSheng_href,
                 width: 200,
                 height: 200,
