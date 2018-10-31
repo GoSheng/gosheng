@@ -9,7 +9,7 @@ global $GoSheng;
         <label for="modal_register_user_login" class="col-sm-2 text-dark">用户名</label>
         <div class="col-sm-6">
             <input type="text" name="user_login" id="modal_register_user_login"
-                   class="form-control form-control-sm border border-dark" minlength="5" maxlength="20"
+                   class="form-control form-control-sm border border-secondary text-success" minlength="5" maxlength="20"
                    required="required" autocomplete="off" placeholder="用户名" title="请输入要注册的用户名">
         </div>
     </div>
@@ -17,7 +17,7 @@ global $GoSheng;
         <label for="modal_register_user_email" class="col-sm-2 text-dark">Email</label>
         <div class="col-sm-6">
             <input type="email" name="user_email" id="modal_register_user_email"
-                   class="form-control form-control-sm border border-dark" minlength="5" maxlength="20"
+                   class="form-control form-control-sm border border-secondary text-success" minlength="5" maxlength="20"
                    required="required" autocomplete="off" placeholder="邮箱" title="请输入您的邮箱">
         </div>
     </div>

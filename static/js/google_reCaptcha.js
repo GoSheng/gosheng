@@ -42,6 +42,7 @@
                     case 0.3:
                     case 0.4:
                     case 0.5:
+                        GoSheng_reCaptcha_disabled();
                         layer.open({
                             content: "reCAPTCHA提醒：您的访问异常，系统已经记录您的信息。",
                             skin: "msg",
@@ -53,6 +54,7 @@
                     case 0.7:
                     case 0.8:
                     case 0.9:
+                        GoSheng_reCaptcha_pass();
                         break;
                     default:
                         layer.open({
@@ -65,6 +67,30 @@
                     content: "页面加载出错，请刷新本页面。",
                     time: 8,
                 });
+            }
+        }
+
+        function GoSheng_reCaptcha_pass() {
+            let reCaptcha_check = document.querySelector("#reCaptcha_check");
+            if (reCaptcha_check) {
+                let reCaptcha_pass = document.querySelector("#reCaptcha_pass");
+                let captcha_text = document.querySelector("#captcha_text");
+                let captcha_checkbox = document.querySelector("#captcha_checkbox");
+                reCaptcha_check.classList.add("d-none");
+                reCaptcha_pass.classList.remove("d-none");
+                captcha_text.parentNode.removeChild(captcha_text);
+                captcha_checkbox.parentNode.removeChild(captcha_checkbox);
+            }
+        }
+
+        function GoSheng_reCaptcha_disabled() {
+            let reCaptcha_check = document.querySelector("#reCaptcha_check");
+            if (reCaptcha_check) {
+                let captcha_text = document.querySelector("#captcha_text");
+                let captcha_checkbox = document.querySelector("#captcha_checkbox");
+                reCaptcha_check.classList.add("d-none");
+                captcha_text.classList.remove("d-none");
+                captcha_checkbox.classList.remove("d-none");
             }
         }
     }
