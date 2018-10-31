@@ -73,10 +73,12 @@
         function GoSheng_reCaptcha_pass() {
             let reCaptcha_check = document.querySelector("#reCaptcha_check");
             if (reCaptcha_check) {
+                let reCaptcha_check_hidden = reCaptcha_check.querySelector("#reCaptcha_check_hidden");
                 let reCaptcha_pass = document.querySelector("#reCaptcha_pass");
                 let captcha_text = document.querySelector("#captcha_text");
                 let captcha_checkbox = document.querySelector("#captcha_checkbox");
                 reCaptcha_check.classList.add("d-none");
+                reCaptcha_check.removeChild(reCaptcha_check_hidden);
                 reCaptcha_pass.classList.remove("d-none");
                 captcha_text.parentNode.removeChild(captcha_text);
                 captcha_checkbox.parentNode.removeChild(captcha_checkbox);
@@ -86,9 +88,11 @@
         function GoSheng_reCaptcha_disabled() {
             let reCaptcha_check = document.querySelector("#reCaptcha_check");
             if (reCaptcha_check) {
+                let reCaptcha_check_hidden = reCaptcha_check.querySelector("#reCaptcha_check_hidden");
                 let captcha_text = document.querySelector("#captcha_text");
                 let captcha_checkbox = document.querySelector("#captcha_checkbox");
                 reCaptcha_check.classList.add("d-none");
+                reCaptcha_check.removeChild(reCaptcha_check_hidden);
                 captcha_text.classList.remove("d-none");
                 captcha_checkbox.classList.remove("d-none");
             }

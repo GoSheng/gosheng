@@ -23,7 +23,10 @@ global $GoSheng;
     </div>
     <div class="form-group form-row justify-content-center">
         <div for="modal_login_captcha" class="col-sm-2 text-dark">验证码</div>
-        <div class="col-sm-6 text-success" id="reCaptcha_check"><span>正在检测您的运行环境</span></div>
+        <div class="col-sm-6 text-success" id="reCaptcha_check">
+            <span>正在检测您的运行环境</span>
+            <input type="hidden" name="reCaptcha_check_hidden" id="reCaptcha_check_hidden" required="required">
+        </div>
         <div class="col-sm-6 d-none text-success" id="reCaptcha_pass"><span>您已经通过了reCAPTCHA验证</span></div>
         <div class="col-sm-3 d-none" id="captcha_text">
             <input type="text" name="login_captcha" id="modal_login_captcha"
