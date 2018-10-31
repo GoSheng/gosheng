@@ -26,7 +26,7 @@
                             GoSheng_reCaptcha_score(data);
                         },
                         error: function (data) {
-                            console.log(data);
+                            fundebug.notify("reCAPTCHA提醒：失败。");
                         }
                     })
                 });
