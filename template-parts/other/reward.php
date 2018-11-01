@@ -112,9 +112,8 @@ if ( $GoSheng['reward_all'] ) {
 						<?php } ?>
 						<?php if ( $GoSheng['reward_paypal'] ) { ?>
                             <div role="tabpanel" class="tab-pane fade zoomIn animated" id="reward_paypal">
-                                <!--                                <img class="img-fluid d-block mx-auto" src="-->
-								<?php //echo $GoSheng['reward_paypal_image']['url']; ?><!--" alt="" title="">-->
-                                <a class="d-block text-center" href="https://paypal.me/<?php echo $GoSheng['reward_paypal_url']; ?>"
+                                <a class="d-block text-center"
+                                   href="https://paypal.me/<?php echo $GoSheng['reward_paypal_url']; ?>"
                                    title="<?php esc_attr_e( 'PayPal.Me链接地址', 'GoSheng-framework' ) ?>"
                                    target="_blank"><?php esc_html_e( '给我PayPal转账', 'GoSheng-framework' ) ?></a>
                                 <span class="d-block text-center"><?php echo $GoSheng['reward_paypal_text']; ?></span>
