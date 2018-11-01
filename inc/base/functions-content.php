@@ -599,9 +599,9 @@ if ( ! function_exists( 'GoSheng_hitokoto' ) ) {
 	function GoSheng_hitokoto() {
 		global $GoSheng;
 		if ( $GoSheng['hitokoto_switch'] ) {
-			$hitokoto_before = '<div id="GoSheng_hitokoto" class="my-2 p-1 rounded text-center bg-info"><span id="GoSheng_hitokoto_text" class="text-light font-6 font-lg-8">';
+			$hitokoto_before = '<div id="GoSheng_hitokoto" class="my-3 p-1 rounded shadow-sm border text-center"><span id="GoSheng_hitokoto_text" class="text-secondary font-6 font-lg-8">';
 			$hitokoto_text   = __( '狗剩主题', 'GoSheng-framework' );
-			$hitokoto_after  = '</span><i class="mx-2 p-1 shadow-sm btn btn-sm btn-outline-light fas fa-redo" id="get_new_hitokoto" title="%1$s"></i></div>';
+			$hitokoto_after  = '</span><i class="mx-2 p-1 shadow-sm btn btn-sm btn-outline-secondary fas fa-redo" id="get_new_hitokoto" title="%1$s"></i></div>';
 			$hitokoto_after  = sprintf( $hitokoto_after, __( '换一个', 'GoSheng-framework' ) );
 			echo $hitokoto_before;
 			echo $hitokoto_text;

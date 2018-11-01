@@ -393,7 +393,6 @@ function topControl(e) {
     $("a[id^='oauth_']").tooltip();
     $("main a").tooltip();
     $("#footTools>a").tooltip();
-    $("#GoSheng_toggle_password").tooltip();
 })();
 //tab切换
 // $(document).ready(function () {
@@ -668,6 +667,7 @@ function topControl(e) {
 (function () {
     let toggle_password = document.querySelector("#GoSheng_toggle_password");
     if (toggle_password) {
+        $("#GoSheng_toggle_password").tooltip();
         toggle_password.addEventListener("click", function () {
             switch (this.classList.contains("fa-eye")) {
                 case true:
@@ -706,6 +706,7 @@ function topControl(e) {
             get_new_hitokoto.addEventListener("click", GoSheng_get_hitokkoto_url);
         }
         GoSheng_get_hitokkoto_url();
+        $("#get_new_hitokoto").tooltip();
 
         function GoSheng_get_hitokkoto_url() {
             let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
