@@ -434,7 +434,7 @@ function topControl(e) {
 })();
 
 //判断用户是否同意使用cookie
-(function () {
+$(document).ready(function () {
     let gosheng_cookie = document.querySelector("#gosheng_cookie");
     let gosheng_cookie_agree = document.querySelector("#gosheng_cookie_agree");
     let gosheng_cookie_disagree = document.querySelector("#gosheng_cookie_disagree");
@@ -482,7 +482,7 @@ function topControl(e) {
             content: '您已经拒绝本站使用Cookie技术获取浏览信息，请关闭本站即可。',
         });
     }
-})();
+});
 // 文章点赞功能
 (function () {
     $.fn.postLike = function () {
