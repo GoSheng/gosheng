@@ -307,7 +307,6 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 
         function display_weixin_qrcode() {
             layer.open({
-                className: "share_weixin_img",
                 style: 'border:none; background-color:#dc3545; color:#fff;',
                 title: "分享页面二维码",
                 content: "扫一扫二维码，打开本页面。",
@@ -332,7 +331,7 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
         function qrcode_img_center() {
             let qrcode_img = document.querySelector(".layui-m-layercont img");
             if (qrcode_img) {
-                qrcode_img.classList.add("mx-auto","img-thumbnail");
+                qrcode_img.classList.add("mx-auto", "img-thumbnail");
             }
         }
     }
@@ -644,6 +643,25 @@ function topControl(e) {
     let gosheng_user_agent = document.querySelector("#gosheng_user_agent");
     if (gosheng_user_agent) {
         gosheng_user_agent.value = navigator.userAgent;
+    }
+})();
+//密码样式
+(function () {
+    let modal_login_password = document.querySelector("#modal_login_password");
+    if (modal_login_password) {
+        modal_login_password.addEventListener("change", password_letter_spacing);
+        modal_login_password.addEventListener("input", password_letter_spacing);
+
+        function password_letter_spacing() {
+            switch (modal_login_password.value.length > 0) {
+                case true:
+                    modal_login_password.classList.add("letter-spacing-2");
+                    break;
+                default:
+                    modal_login_password.classList.remove("letter-spacing-2");
+                    break;
+            }
+        }
     }
 })();
 //切换密码显示方式

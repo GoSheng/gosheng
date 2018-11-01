@@ -17,8 +17,8 @@ global $GoSheng;
         <label for="modal_login_password" class="col-sm-2 text-dark">密码</label>
         <div class="col-sm-6">
             <input type="password" name="pwd" id="modal_login_password"
-                   class="form-control form-control-sm border border-secondary text-info letter-spacing-2" minlength="7"
-                   maxlength="16" required="required" autocomplete="off" placeholder="请输入密码" title="请输入密码">
+                   class="form-control form-control-sm border border-secondary text-info" minlength="7" maxlength="16"
+                   required="required" autocomplete="off" placeholder="请输入密码" title="请输入密码">
             <span class="p-absolute t-0 r-0">
                 <i id="GoSheng_toggle_password" class="p-2 fas fa-lg fa-eye" title="显示密码"></i>
             </span>
@@ -27,7 +27,10 @@ global $GoSheng;
     <div class="form-group form-row justify-content-center">
         <div for="modal_login_captcha" class="col-sm-2 text-dark">验证码</div>
         <div class="col-sm-6 text-success" id="reCaptcha_check">
-            <span>正在检测您的运行环境</span>
+            <span>
+                <i>正在检测您的运行环境</i>
+                <a href="javascript:;" id="reCaptcha_recheck" class="text-muted" title="重新检测">重试</a>
+            </span>
             <input type="hidden" name="reCaptcha_check_hidden" id="reCaptcha_check_hidden" required="required">
         </div>
         <div class="col-sm-6 d-none text-success" id="reCaptcha_pass"><span>您已经通过了reCAPTCHA验证</span></div>

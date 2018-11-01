@@ -1,36 +1,43 @@
 (function () {
     if (gosheng_google_reCaptcha_site_key) {
-        let body = document.querySelector("body");
         grecaptcha.ready(function () {
+            Gosheng_reCaptcha_ajax();
+        });
+        let reCaptcha_recheck = document.querySelector("#reCaptcha_recheck");
+        if (reCaptcha_recheck) {
+            reCaptcha_recheck.addEventListener("click", Gosheng_reCaptcha_ajax);
+        }
+
+        function Gosheng_reCaptcha_ajax() {
+            let body = document.querySelector("body");
             switch (body.classList.contains("home")) {
                 case true:
-                    var action_type = "homepage";
+                    var reCaptcha_action_type = "homepage";
                     break;
                 default:
-                    var action_type = "other";
+                    var reCaptcha_action_type = "other";
                     break;
             }
-            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: action_type})
-                .then(function (token) {
-                    let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-                    let data = {
-                        action: "GoSheng_recaptcha",
-                        token: token,
-                    };
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        data: data,
-                        dataType: "text",
-                        success: function (data) {
-                            GoSheng_reCaptcha_score(data);
-                        },
-                        error: function (data) {
-                            fundebug.notify("reCAPTCHA提醒：失败。");
-                        }
-                    })
-                });
-        });
+            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: reCaptcha_action_type}).then(function (token) {
+                let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+                let data = {
+                    action: "GoSheng_recaptcha",
+                    token: token,
+                };
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: data,
+                    dataType: "text",
+                    success: function (data) {
+                        GoSheng_reCaptcha_score(data);
+                    },
+                    error: function (data) {
+                        fundebug.notify("reCAPTCHA提醒：失败。");
+                    }
+                })
+            });
+        }
 
         function GoSheng_reCaptcha_score(data) {
             let results = JSON.parse(data);
