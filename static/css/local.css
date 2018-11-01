@@ -577,3 +577,5 @@ body::-webkit-scrollbar { display:none; }
 #search_history .history_list .history_data .history_text {text-align:left;}
 #search_history .history_list .history_data .btn_delete {float:right;padding-right:3px;color:#a4a118;}
 #search_history .history_list .history_data .history_tips {display:none;}
+/* 一言 */
+#get_new_hitokoto {cursor:pointer;}
