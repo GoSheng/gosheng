@@ -580,7 +580,7 @@ if ( ! function_exists( 'GoSheng_hitokoto_url' ) ) {
 			if ( $_POST['type'] == 'url' ) {
 				global $GoSheng;
 				if ( $GoSheng['hitokoto_switch'] ) {
-					$hitokoto_url = 'https://v1.hitokoto.cn';
+					$hitokoto_url = $GoSheng['hitokoto_api_url'];
 					$charset      = 'utf-8';
 					$encode       = 'text';
 					$c            = $GoSheng['hitokoto_cat'];

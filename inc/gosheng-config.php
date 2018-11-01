@@ -1484,13 +1484,26 @@ Redux::setSection( $opt_name, array(
 			'default'  => true,
 		),
 		array(
+			'id'       => 'hitokoto_api_url',
+			'type'     => 'select',
+			'required' => array( 'hitokoto_switch', '=', '1' ),
+			'title'    => __( '一言API地址', 'GoSheng-framework' ),
+			'subtitle' => __( '使用的一言API地址', 'GoSheng-framework' ),
+			'desc'     => __( '.', 'GoSheng-framework' ),
+			'options'  => array(
+				'https://v1.hitokoto.cn' => __( '官方v1 API', 'GoSheng-framework' ),
+			),
+			'default'  => 'https://v1.hitokoto.cn',
+		),
+		array(
 			'id'       => 'hitokoto_cat',
 			'type'     => 'select',
-			'required'    => array( 'hitokoto_switch', '=', '1' ),
+			'required' => array( 'hitokoto_switch', '=', '1' ),
 			'title'    => __( '语句类型', 'GoSheng-framework' ),
 			'subtitle' => __( '一言语句类型', 'GoSheng-framework' ),
 			'desc'     => __( '.', 'GoSheng-framework' ),
 			'options'  => array(
+				''  => __( '随机', 'GoSheng-framework' ),
 				'a' => __( '动画', 'GoSheng-framework' ),
 				'b' => __( '漫画', 'GoSheng-framework' ),
 				'c' => __( '游戏', 'GoSheng-framework' ),
@@ -1499,7 +1512,7 @@ Redux::setSection( $opt_name, array(
 				'f' => __( '网络', 'GoSheng-framework' ),
 				'g' => __( '其他', 'GoSheng-framework' ),
 			),
-			'default'  => 'e',
+			'default'  => 'f',
 		),
 	)
 ) );
