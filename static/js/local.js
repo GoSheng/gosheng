@@ -696,3 +696,48 @@ function topControl(e) {
         }
     }
 })();
+//一言
+(function () {
+    let GoSheng_hitokoto = document.querySelector("#GoSheng_hitokoto");
+    if (GoSheng_hitokoto) {
+        let GoSheng_hitokoto_text = document.querySelector("#GoSheng_hitokoto_text");
+        let get_new_hitokoto = document.querySelector("#get_new_hitokoto");
+        let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+        let data = {
+            action: "GoSheng_hitokoto_url",
+            type: "url"
+        };
+        $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            dataType: "text",
+            success: function (url) {
+                GoSheng_get_hitokoto(url);
+                if (get_new_hitokoto) {
+                    get_new_hitokoto.addEventListener("click", GoSheng_get_hitokoto(url));
+                }
+            },
+            error: function (data) {
+                console.log(data);
+
+            }
+        });
+
+
+        function GoSheng_get_hitokoto(url) {
+            let hitokoto_url = url;
+            console.log(hitokoto_url);
+            $.ajax({
+                type: "get",
+                url: hitokoto_url,
+                success: function (data) {
+                    GoSheng_hitokoto_text.innerHTML = data;
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        }
+    }
+})();

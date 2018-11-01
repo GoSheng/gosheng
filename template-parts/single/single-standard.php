@@ -32,5 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div><!-- .entry-content -->
     <footer class="entry-footer">
 		<?php GoSheng_edit_post_link(); ?>
+		<?php GoSheng_hitokoto(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-## -->

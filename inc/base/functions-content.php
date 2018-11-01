@@ -521,7 +521,6 @@ if ( ! function_exists( 'GoSheng_nickname_form_qq_info' ) ) {
 		wp_die();
 	}
 }
-
 add_action( 'wp_ajax_nopriv_avatar_form_qq_info', 'GoSheng_avatar_form_qq_info' );
 add_action( 'wp_ajax_avatar_form_qq_info', 'GoSheng_avatar_form_qq_info' );
 if ( ! function_exists( 'GoSheng_avatar_form_qq_info' ) ) {
@@ -539,33 +538,65 @@ if ( ! function_exists( 'GoSheng_avatar_form_qq_info' ) ) {
 		wp_die();
 	}
 }
-
-add_action( 'wp_insert_comment', 'wp_insert_tel', 10, 2 );
-function wp_insert_tel( $comment_ID, $commmentdata ) {
-	$qq                 = isset( $_POST['qq'] ) ? $_POST['qq'] : false;
-	$gosheng_user_agent = isset( $_POST['gosheng_user_agent'] ) ? $_POST['gosheng_user_agent'] : false;
-	update_comment_meta( $comment_ID, 'gosheng_user_agent', $gosheng_user_agent );
-	update_comment_meta( $comment_ID, 'qq', $qq );
+add_action( 'wp_insert_comment', 'wp_insert_info', 10, 2 );
+if ( ! function_exists( 'wp_insert_info' ) ) {
+	function wp_insert_info( $comment_ID, $commmentdata ) {
+		$qq                 = isset( $_POST['qq'] ) ? $_POST['qq'] : false;
+		$gosheng_user_agent = isset( $_POST['gosheng_user_agent'] ) ? $_POST['gosheng_user_agent'] : false;
+		update_comment_meta( $comment_ID, 'gosheng_user_agent', $gosheng_user_agent );
+		update_comment_meta( $comment_ID, 'qq', $qq );
+	}
 }
-
 add_filter( 'manage_edit-comments_columns', 'my_comments_columns' );
-function my_comments_columns( $columns ) {
-	$columns['qq']                 = __( 'QQ号', 'GoSheng-framework' );
-	$columns['gosheng_user_agent'] = __( '用户UA', 'GoSheng-framework' );
+if ( ! function_exists( 'my_comments_columns' ) ) {
+	function my_comments_columns( $columns ) {
+		$columns['qq']                 = __( 'QQ号', 'GoSheng-framework' );
+		$columns['gosheng_user_agent'] = __( '用户UA', 'GoSheng-framework' );
 
-	return $columns;
+		return $columns;
+	}
+}
+add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
+if ( ! function_exists( 'output_my_comments_columns' ) ) {
+	function output_my_comments_columns( $column_name, $comment_id ) {
+		switch ( $column_name ) {
+			case "gosheng_user_agent" :
+				echo get_comment_meta( $comment_id, 'gosheng_user_agent', true );
+				break;
+			case "qq" :
+				echo get_comment_meta( $comment_id, 'qq', true );
+				break;
+			default:
+				break;
+		}
+	}
 }
 
-add_action( 'manage_comments_custom_column', 'output_my_comments_columns', 10, 2 );
-function output_my_comments_columns( $column_name, $comment_id ) {
-	switch ( $column_name ) {
-		case "gosheng_user_agent" :
-			echo get_comment_meta( $comment_id, 'gosheng_user_agent', true );
-			break;
-		case "qq" :
-			echo get_comment_meta( $comment_id, 'qq', true );
-			break;
-		default:
-			break;
+add_action( 'wp_ajax_nopriv_GoSheng_hitokoto_url', 'GoSheng_hitokoto_url' );
+add_action( 'wp_ajax_GoSheng_hitokoto_url', 'GoSheng_hitokoto_url' );
+if ( ! function_exists( 'GoSheng_hitokoto_url' ) ) {
+	function GoSheng_hitokoto_url() {
+		if ( $_POST ) {
+			if ( $_POST['type'] == 'url' ) {
+				$hitokoto_url = 'https://v1.hitokoto.cn';
+				$charset      = 'utf-8';
+				$encode       = 'text';
+				$c            = '';
+				$callback     = '';
+				$url          = $hitokoto_url . '?charset=' . $charset . '&encode=' . $encode . '&c=' . $c . '&callback' . $callback;
+				echo $url;
+			}
+		}
+		wp_die();
+	}
+}
+if ( ! function_exists( 'GoSheng_hitokoto' ) ) {
+	function GoSheng_hitokoto() {
+		$hitokoto_before  = '<div id="GoSheng_hitokoto" class="p-1 rounded text-center bg-info"><span id="GoSheng_hitokoto_text" class="text-light">';
+		$hitokoto_text    = '狗剩主题';
+		$hitokoto_after   = '</span><i class="fas fa-redo" id="get_new_hitokoto"></i></div>';
+		echo $hitokoto_before;
+		echo $hitokoto_text;
+		echo $hitokoto_after;
 	}
 }
