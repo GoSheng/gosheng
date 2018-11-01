@@ -301,30 +301,39 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
         }
 
         let gosheng_share_weixin = document.querySelector("#gosheng_share_weixin");
-        let share_weixin = document.querySelector("#share_weixin");
         if (gosheng_share_weixin) {
             gosheng_share_weixin.addEventListener('click', display_weixin_qrcode);
         }
 
         function display_weixin_qrcode() {
-            share_weixin.classList.toggle("d-none");
             layer.open({
                 className: "share_weixin_img",
-                content: "",
-                skin: "msg",
+                style: 'border:none; background-color:#dc3545; color:#fff;',
+                title: "分享页面二维码",
+                content: "扫一扫二维码，打开本页面。",
+                success: function () {
+                    weixin_qrcode();
+                    qrcode_img_center();
+                },
             });
-            weixin_qrcode();
         }
 
         function weixin_qrcode() {
-            let qrcode = new QRCode(document.getElementsByClassName('share_weixin_img')[0], {
+            let qrcode = new QRCode(document.getElementsByClassName('layui-m-layercont')[0], {
                 text: GoSheng_href,
-                width: 200,
-                height: 200,
+                width: 300,
+                height: 300,
                 colorDark: '#000000',
                 colorLight: '#ffffff',
                 correctLevel: QRCode.CorrectLevel.H
             });
+        }
+
+        function qrcode_img_center() {
+            let qrcode_img = document.querySelector(".layui-m-layercont img");
+            if (qrcode_img) {
+                qrcode_img.classList.add("mx-auto","img-thumbnail");
+            }
         }
     }
 })();
