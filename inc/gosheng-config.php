@@ -1461,6 +1461,50 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
+	'id'    => 'hitokoto',
+	'title' => __( '一言', 'GoSheng-framework' ),
+	'desc'  => __( '', 'GoSheng-framework' ),
+	'icon'  => 'el el-cog'
+) );
+Redux::setSection( $opt_name, array(
+	'id'         => 'hitokoto_',
+	'title'      => __( '一言设置', 'GoSheng-framework' ),
+	'desc'       => __( '', 'GoSheng-framework' ),
+	'subsection' => true,
+	'icon'       => 'el el-cog',
+	'fields'     => array(
+		array(
+			'id'       => 'hitokoto_switch',
+			'type'     => 'switch',
+			'title'    => __( '一言开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
+		),
+		array(
+			'id'       => 'hitokoto_cat',
+			'type'     => 'select',
+			'required'    => array( 'hitokoto_switch', '=', '1' ),
+			'title'    => __( '语句类型', 'GoSheng-framework' ),
+			'subtitle' => __( '一言语句类型', 'GoSheng-framework' ),
+			'desc'     => __( '.', 'GoSheng-framework' ),
+			'options'  => array(
+				'a' => __( '动画', 'GoSheng-framework' ),
+				'b' => __( '漫画', 'GoSheng-framework' ),
+				'c' => __( '游戏', 'GoSheng-framework' ),
+				'd' => __( '小说', 'GoSheng-framework' ),
+				'e' => __( '原创', 'GoSheng-framework' ),
+				'f' => __( '网络', 'GoSheng-framework' ),
+				'g' => __( '其他', 'GoSheng-framework' ),
+			),
+			'default'  => 'e',
+		),
+	)
+) );
+
+Redux::setSection( $opt_name, array(
 	'id'    => 'music',
 	'title' => __( '音乐', 'GoSheng-framework' ),
 	'desc'  => __( '介绍', 'GoSheng-framework' ),
