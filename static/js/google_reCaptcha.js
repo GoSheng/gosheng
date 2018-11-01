@@ -7,12 +7,15 @@
         });
         let reCaptcha_recheck = document.querySelector("#reCaptcha_recheck");
         if (reCaptcha_recheck) {
-            reCaptcha_recheck.addEventListener("click", Gosheng_reCaptcha_ajax("recheck"));
+            reCaptcha_recheck.addEventListener("click", function () {
+                Gosheng_reCaptcha_ajax("recheck");
+            });
         }
 
         function Gosheng_reCaptcha_ajax(action_type) {
             if (action_type.length > 0) {
                 var reCaptcha_action_type = action_type;
+                console.log(action_type);
             } else {
                 let body = document.querySelector("body");
                 switch (body.classList.contains("home")) {
@@ -24,28 +27,29 @@
                         break;
                 }
             }
-            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {
-                action: reCaptcha_action_type
-            })
-                .then(function (token) {
-                    let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-                    let data = {
-                        action: "GoSheng_recaptcha",
-                        token: token,
-                    };
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        data: data,
-                        dataType: "text",
-                        success: function (data) {
-                            GoSheng_reCaptcha_score(data);
-                        },
-                        error: function (data) {
-                            fundebug.notify("reCAPTCHA提醒：失败。");
-                        }
-                    })
-                });
+            grecaptcha.ready(function () {
+                grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: reCaptcha_action_type})
+                    .then(function (token) {
+                        let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+                        let data = {
+                            action: "GoSheng_recaptcha",
+                            token: token,
+                        };
+                        $.ajax({
+                            type: "post",
+                            url: url,
+                            data: data,
+                            dataType: "text",
+                            success: function (data) {
+                                GoSheng_reCaptcha_score(data);
+                            },
+                            error: function (data) {
+                                fundebug.notify("reCAPTCHA提醒：失败。");
+                            }
+                        })
+                    });
+            });
+
         }
 
         function GoSheng_reCaptcha_score(data) {
@@ -94,7 +98,7 @@
                 let captcha_text = document.querySelector("#captcha_text");
                 let captcha_checkbox = document.querySelector("#captcha_checkbox");
                 reCaptcha_check.classList.add("d-none");
-                reCaptcha_check.removeChild(reCaptcha_check_hidden);
+                reCaptcha_check_hidden ? reCaptcha_check.removeChild(reCaptcha_check_hidden) : "";
                 reCaptcha_pass.classList.remove("d-none");
                 captcha_text.parentNode.removeChild(captcha_text);
                 captcha_checkbox.parentNode.removeChild(captcha_checkbox);
@@ -108,7 +112,7 @@
                 let captcha_text = document.querySelector("#captcha_text");
                 let captcha_checkbox = document.querySelector("#captcha_checkbox");
                 reCaptcha_check.classList.add("d-none");
-                reCaptcha_check.removeChild(reCaptcha_check_hidden);
+                reCaptcha_check_hidden ? reCaptcha_check.removeChild(reCaptcha_check_hidden) : "";
                 captcha_text.classList.remove("d-none");
                 captcha_checkbox.classList.remove("d-none");
             }
