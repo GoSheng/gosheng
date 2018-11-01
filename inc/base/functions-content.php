@@ -351,7 +351,6 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 		$share_after       = '</div>';
 		$share_link_before = '<a href="javascript:;" id="gosheng_share_%1$s" rel="nofollow" title="分享到%2$s" class="btn btn-outline-info rounded py-lg-3 border fab fa-lg fa-%3$s">';
 		$share_link_after  = '</a>';
-		$share_weixin_img  = '<span id="share_weixin" class="p-relative d-none"><span id="share_weixin_img" class="z10000 p-absolute border rounded p-3 bg-light"></span></span>';
 		$share_type        = array(
 			'weibo'         => __( '微博', 'GoSheng-framework' ),
 			'weixin'        => __( '微信', 'GoSheng-framework' ),
@@ -364,11 +363,7 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 		);
 		echo $share_before;
 		foreach ( $share_type as $item => $value ) {
-			if ( $item == 'weixin' ) {
-				echo sprintf( $share_link_before, $item, $value, $item ) . $share_weixin_img . $share_link_after;
-			} else {
-				echo sprintf( $share_link_before, $item, $value, $item ) . $share_link_after;
-			}
+			echo sprintf( $share_link_before, $item, $value, $item ) . $share_link_after;
 		}
 		echo $share_after;
 	}
