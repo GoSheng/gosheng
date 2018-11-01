@@ -1,6 +1,6 @@
 (function () {
     if (gosheng_google_reCaptcha_site_key) {
-        $('#modalLogin').on('show.bs.modal', function (e) {
+        $('#modalLogin').on('show.bs.modal', function () {
             grecaptcha.ready(function () {
                 Gosheng_reCaptcha_ajax("login");
             });
