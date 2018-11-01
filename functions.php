@@ -8,6 +8,13 @@ get_template_part( 'inc/update' );
 add_action( 'after_setup_theme', 'GoSheng_setup' );
 add_action( 'after_setup_theme', 'GoSheng_register_nav_menus' );
 
+get_template_part( 'inc/register/script_file' );
+get_template_part( 'inc/register/style_file' );
+get_template_part( 'inc/register/script' );
+get_template_part( 'inc/register/style' );
+get_template_part( 'inc/register/sidebar' );
+get_template_part( 'inc/register/widgets' );
+
 get_template_part( 'inc/base/functions', 'option' );
 get_template_part( 'inc/base/functions', 'base' );
 get_template_part( 'inc/base/functions', 'user_meta' );
@@ -30,13 +37,3 @@ get_template_part( 'inc/class/class', 'wp-bootstrap-navwalker' );
 
 get_template_part( 'inc/class/class-admin_bar_menu' );
 get_template_part( 'inc/register/register-widgets' );
-
-
-get_template_part( 'inc/register/script_file' );
-get_template_part( 'inc/register/style_file' );
-get_template_part( 'inc/register/script' );
-get_template_part( 'inc/register/style' );
-get_template_part( 'inc/register/sidebar' );
-get_template_part( 'inc/register/widgets' );
-
-

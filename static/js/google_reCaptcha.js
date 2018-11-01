@@ -1,42 +1,51 @@
 (function () {
     if (gosheng_google_reCaptcha_site_key) {
-        grecaptcha.ready(function () {
-            Gosheng_reCaptcha_ajax();
+        $('#modalLogin').on('show.bs.modal', function (e) {
+            grecaptcha.ready(function () {
+                Gosheng_reCaptcha_ajax("login");
+            });
         });
         let reCaptcha_recheck = document.querySelector("#reCaptcha_recheck");
         if (reCaptcha_recheck) {
-            reCaptcha_recheck.addEventListener("click", Gosheng_reCaptcha_ajax);
+            reCaptcha_recheck.addEventListener("click", Gosheng_reCaptcha_ajax("recheck"));
         }
 
-        function Gosheng_reCaptcha_ajax() {
-            let body = document.querySelector("body");
-            switch (body.classList.contains("home")) {
-                case true:
-                    var reCaptcha_action_type = "homepage";
-                    break;
-                default:
-                    var reCaptcha_action_type = "other";
-                    break;
+        function Gosheng_reCaptcha_ajax(action_type) {
+            if (action_type.length > 0) {
+                var reCaptcha_action_type = action_type;
+            } else {
+                let body = document.querySelector("body");
+                switch (body.classList.contains("home")) {
+                    case true:
+                        var reCaptcha_action_type = "homepage";
+                        break;
+                    default:
+                        var reCaptcha_action_type = "other";
+                        break;
+                }
             }
-            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {action: reCaptcha_action_type}).then(function (token) {
-                let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-                let data = {
-                    action: "GoSheng_recaptcha",
-                    token: token,
-                };
-                $.ajax({
-                    type: "post",
-                    url: url,
-                    data: data,
-                    dataType: "text",
-                    success: function (data) {
-                        GoSheng_reCaptcha_score(data);
-                    },
-                    error: function (data) {
-                        fundebug.notify("reCAPTCHA提醒：失败。");
-                    }
-                })
-            });
+            grecaptcha.execute(gosheng_google_reCaptcha_site_key, {
+                action: reCaptcha_action_type
+            })
+                .then(function (token) {
+                    let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
+                    let data = {
+                        action: "GoSheng_recaptcha",
+                        token: token,
+                    };
+                    $.ajax({
+                        type: "post",
+                        url: url,
+                        data: data,
+                        dataType: "text",
+                        success: function (data) {
+                            GoSheng_reCaptcha_score(data);
+                        },
+                        error: function (data) {
+                            fundebug.notify("reCAPTCHA提醒：失败。");
+                        }
+                    })
+                });
         }
 
         function GoSheng_reCaptcha_score(data) {
