@@ -177,8 +177,8 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 }
 
 // Add content after the form.
-$args['footer_text']   = __( '<p>感谢使用狗剩主题</p>', 'GoSheng-framework' );
-$args['footer_credit'] = '<b>' . sprintf( __( '狗剩官方网站', 'GoSheng-framework' ) . '</b>' . '<a href="https://gosheng.net" target="_blank" style="color:#aa0000">' . __( 'GoSheng.net', 'GoSheng-framework' ) . '</a>' );
+$args['footer_text'] = '<b>' . sprintf( __( '狗剩官方网站', 'GoSheng-framework' ) . '</b>' . '<a href="https://gosheng.net" target="_blank" style="color:#488bff">' . __( 'GoSheng.net', 'GoSheng-framework' ) . '</a>' );
+$args['footer_credit']   = __( '<p>感谢使用狗剩主题</p>', 'GoSheng-framework' );
 
 Redux::setArgs( $opt_name, $args );
 
