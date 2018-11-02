@@ -1558,6 +1558,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'hitokoto_cat',
 			'type'     => 'select',
+//			'multi'    => true,
 			'required' => array( 'hitokoto_switch', '=', '1' ),
 			'title'    => __( '语句类型', 'GoSheng-framework' ),
 			'subtitle' => __( '一言语句类型', 'GoSheng-framework' ),
@@ -1572,7 +1573,8 @@ Redux::setSection( $opt_name, array(
 				'f' => __( '网络', 'GoSheng-framework' ),
 				'g' => __( '其他', 'GoSheng-framework' ),
 			),
-			'default'  => 'f',
+//			'default'  => array( 'a', 'b', 'c', 'd', 'e', 'f', 'g' ),
+			'default'  => 'a',
 		),
 	)
 ) );
