@@ -6,10 +6,32 @@ global $GoSheng;
 ?>
 </div><!--col div-->
 
-<?php if ( $GoSheng['sidebar_switch'] ) { ?>
+<?php
+function GoSheng_get_sidebar() {
+	?>
     <div class="col-12 col-lg-3 animated" id="sidebar">
 		<?php get_sidebar(); ?>
     </div><!--col-12 div-->
+	<?php
+}
+
+?>
+<?php if ( $GoSheng['sidebar_switch'] ) { ?>
+	<?php
+	if ( is_home() ) {
+		GoSheng_get_sidebar();
+	} elseif ( is_single() && $GoSheng['sidebar_single'] ) {
+		GoSheng_get_sidebar();
+	} elseif ( is_page() && $GoSheng['sidebar_page'] ) {
+		GoSheng_get_sidebar();
+	} elseif ( is_search() && $GoSheng['sidebar_search'] ) {
+		GoSheng_get_sidebar();
+	} elseif ( is_category() && $GoSheng['sidebar_category'] ) {
+		GoSheng_get_sidebar();
+	} elseif ( is_404() && $GoSheng['sidebar_404'] ) {
+		GoSheng_get_sidebar();
+	}
+	?>
 <?php } ?>
 
 

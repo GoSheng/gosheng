@@ -177,8 +177,8 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 }
 
 // Add content after the form.
-$args['footer_text'] = '<b>' . sprintf( __( '狗剩官方网站', 'GoSheng-framework' ) . '</b>' . '<a href="https://gosheng.net" target="_blank" style="color:#488bff">' . __( 'GoSheng.net', 'GoSheng-framework' ) . '</a>' );
-$args['footer_credit']   = __( '<p>感谢使用狗剩主题</p>', 'GoSheng-framework' );
+$args['footer_text']   = '<b>' . sprintf( __( '狗剩官方网站', 'GoSheng-framework' ) . '</b>' . '<a href="https://gosheng.net" target="_blank" style="color:#488bff">' . __( 'GoSheng.net', 'GoSheng-framework' ) . '</a>' );
+$args['footer_credit'] = __( '<p>感谢使用狗剩主题</p>', 'GoSheng-framework' );
 
 Redux::setArgs( $opt_name, $args );
 
@@ -281,6 +281,56 @@ Redux::setSection( $opt_name, array(
 				'2' => __( '单独侧边栏（待开发,支持子主题开启）', 'GoSheng-framework' ),
 			),
 			'default'  => '1',
+		),
+		array(
+			'id'       => 'sidebar_single',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '文章页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
+		),
+		array(
+			'id'       => 'sidebar_page',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '页面页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'       => 'sidebar_search',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '搜索页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'       => 'sidebar_category',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '分类页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
+		),
+		array(
+			'id'       => 'sidebar_404',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '404页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
 		),
 	)
 ) );
