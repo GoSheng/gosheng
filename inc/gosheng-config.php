@@ -171,7 +171,7 @@ if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false )
 	} else {
 		$v = str_replace( '-', '_', $args['opt_name'] );
 	}
-	$args['intro_text'] = sprintf( __( '要从代码中访问任何已保存的选项，您可以使用全局变量： <strong>$%1$s</strong>', 'GoSheng-framework' ), $v );
+	$args['intro_text'] = sprintf( __( '主题功能扩展，务必通过子主题方式，避免主题更新时覆盖您的修改，要从代码中访问任何已保存的选项，您可以使用全局变量： <strong>$%1$s</strong>', 'GoSheng-framework' ), $v );
 } else {
 	$args['intro_text'] = __( '您还没有设置全局变量。', 'GoSheng-framework' );
 }
