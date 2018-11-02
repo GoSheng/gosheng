@@ -18,7 +18,7 @@ function GoSheng_get_sidebar() {
 ?>
 <?php if ( $GoSheng['sidebar_switch'] ) { ?>
 	<?php
-	if ( is_home() ) {
+	if ( is_home() && $GoSheng['sidebar_home'] ) {
 		GoSheng_get_sidebar();
 	} elseif ( is_single() && $GoSheng['sidebar_single'] ) {
 		GoSheng_get_sidebar();

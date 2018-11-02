@@ -283,6 +283,16 @@ Redux::setSection( $opt_name, array(
 			'default'  => '1',
 		),
 		array(
+			'id'       => 'sidebar_home',
+			'type'     => 'switch',
+			'required' => array( 'sidebar_switch', '=', '1' ),
+			'title'    => __( '首页侧边栏开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => true,
+		),
+		array(
 			'id'       => 'sidebar_single',
 			'type'     => 'switch',
 			'required' => array( 'sidebar_switch', '=', '1' ),
