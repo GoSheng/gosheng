@@ -259,7 +259,7 @@ if ( ! function_exists( 'GoSheng_posted_permalink' ) ) {
 if ( ! function_exists( 'GoSheng_posted_title' ) ) {
 	function GoSheng_posted_title( $num_words = '' ) {
 		if ( empty( $num_words ) ) {
-			$num_words = 25;
+			$num_words = 35;
 		}
 		echo wp_trim_words( get_the_title(), $num_words, '......' );
 	}

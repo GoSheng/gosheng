@@ -21,16 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
             <span><?php GoSheng_posted_excerpt(85); ?></span>
         </div>
         <div class="p-absolute t-0 t-lg-4 d-flex justify-content-start align-items-center">
-            <span class="mr-3 mr-lg-4">
-                <i class="mr-1 text-dark text-muted font-8 font-lg-9 fas fa-clock"></i>
+            <span class="mr-1 mr-lg-2">
+                <i class="text-dark text-muted font-8 font-lg-9 fas fa-clock"></i>
                 <span class="font-8 font-lg-9"><?php GoSheng_posted_time( 1 ); ?></span>
             </span>
-            <span class="mr-3 mr-lg-4">
-                <i class="mr-1 text-dark text-muted font-8 font-lg-9 fas fa-eye"></i>
+            <span class="mr-1 mr-lg-2">
+                <i class="text-dark text-muted font-8 font-lg-9 fas fa-eye"></i>
                 <span class="font-8 font-lg-9"><?php GoSheng_posted_views( 1 ); ?></span>
             </span>
-            <span class="mr-3 mr-lg-4">
-                <i class="mr-1 text-dark text-muted font-8 font-lg-9 fas fa-comment-dots"></i>
+            <span class="mr-1 mr-lg-2">
+                <i class="text-dark text-muted font-8 font-lg-9 fas fa-comment-dots"></i>
                 <span class="font-8 font-lg-9"><?php GoSheng_posted_comment_number( 1 ); ?></span>
             </span>
         </div>
