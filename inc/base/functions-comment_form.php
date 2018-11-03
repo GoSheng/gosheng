@@ -13,7 +13,7 @@ if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
 function GoSheng_simle() {
 	$simle_before = '<div>';
 	$simle_after  = '</div>';
-	$simle        = '<span><i class="fab fa-fw fa-lg fa-alipay"></i></span>';
+	$simle        = '<span>表情功能开发中</span>';
 
 	return $simle_before . $simle . $simle_after;
 }
