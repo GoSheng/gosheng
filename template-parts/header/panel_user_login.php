@@ -24,26 +24,32 @@ global $GoSheng;
             </span>
         </div>
     </div>
-    <div class="form-group form-row justify-content-center">
-        <div for="modal_login_captcha" class="col-sm-2 text-dark">验证码</div>
-        <div class="col-sm-6 text-success" id="reCaptcha_check">
+	<?php
+	if ( $GoSheng['google_reCaptcha_switch'] ) {
+		?>
+        <div class="form-group form-row justify-content-center">
+            <div for="modal_login_captcha" class="col-sm-2 text-dark">验证码</div>
+            <div class="col-sm-6 text-success" id="reCaptcha_check">
             <span>
                 <i>正在检测您的运行环境</i>
                 <a href="javascript:;" id="reCaptcha_recheck" class="text-muted" title="重新检测">重试</a>
             </span>
-            <input type="hidden" name="reCaptcha_check_hidden" id="reCaptcha_check_hidden" required="required">
+                <input type="hidden" name="reCaptcha_check_hidden" id="reCaptcha_check_hidden" required="required">
+            </div>
+            <div class="col-sm-6 d-none text-success" id="reCaptcha_pass"><span>您已经通过了reCAPTCHA验证</span></div>
+            <div class="col-sm-3 d-none" id="captcha_text">
+                <input type="text" name="login_captcha" id="modal_login_captcha"
+                       class="form-control form-control-sm border border-secondary text-info" minlength="4"
+                       maxlength="6" required="required" autocomplete="off" placeholder="请输入验证码">
+            </div>
+            <div class="col-sm-3 d-none" id="captcha_checkbox">
+                <input type="checkbox" name="captcha_checkbox" id="reCaptcha_checkbox" required="required">
+                <label for="reCaptcha_checkbox" class="form-check-label">验证勾选</label>
+            </div>
         </div>
-        <div class="col-sm-6 d-none text-success" id="reCaptcha_pass"><span>您已经通过了reCAPTCHA验证</span></div>
-        <div class="col-sm-3 d-none" id="captcha_text">
-            <input type="text" name="login_captcha" id="modal_login_captcha"
-                   class="form-control form-control-sm border border-secondary text-info" minlength="4" maxlength="6"
-                   required="required" autocomplete="off" placeholder="请输入验证码">
-        </div>
-        <div class="col-sm-3 d-none" id="captcha_checkbox">
-            <input type="checkbox" name="captcha_checkbox" id="reCaptcha_checkbox" required="required">
-            <label for="reCaptcha_checkbox" class="form-check-label">验证勾选</label>
-        </div>
-    </div>
+		<?php
+	}
+	?>
     <div class="form-group form-row justify-content-center">
         <div class="col-sm-2"><p class="sr-only">记住登录状态</p></div>
         <div class="col-sm-6">

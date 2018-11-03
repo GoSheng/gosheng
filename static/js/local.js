@@ -594,7 +594,8 @@ $(document).ready(function () {
                         comment_author_qq.placeholder = "请输入正确的QQ号码";
                     }
                 },
-                error: function () {
+                error: function (data) {
+                    console.log(data);
                     comment_author.value = "昵称获取失败";
                 }
             });
