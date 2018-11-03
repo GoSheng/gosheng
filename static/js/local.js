@@ -202,9 +202,12 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 //滚动监听
 (function () {
     let headerNav = document.querySelector("#headerNav");
-    let footTools = document.querySelector("#footTools");
-
+    $("#floatTools>a").tooltip();
     if (headerNav) {
+        let floatTools = document.querySelector("#floatTools");
+        let floatToolSidebar = document.querySelector("#floatToolSidebar");
+        let floatToolQQ = document.querySelector("#floatToolQQ");
+        let floatToolBackTop = document.querySelector("#floatToolBackTop");
         let new_scroll_position = 0;
         let last_scroll_position;
         setTimeout(scrollListener, 500);
@@ -219,15 +222,15 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
                 headerNav.classList.remove("slideDown");
                 headerNav.classList.add("slideUp", "fixed-top");
                 if (new_scroll_position < last_scroll_position && last_scroll_position > 400) {
-                    footTools.children['1'].classList.remove("invisible");
-                    footTools.children['2'].classList.remove("invisible");
+                    floatToolQQ ? floatToolQQ.classList.remove("invisible") : "";
+                    floatToolBackTop ? floatToolBackTop.classList.remove("invisible") : "";
                 }
             } else if (new_scroll_position > last_scroll_position) {
                 headerNav.classList.remove("slideUp");
                 headerNav.classList.add("slideDown", "fixed-top");
                 if (last_scroll_position < 400) {
-                    footTools.children['1'].classList.add("invisible");
-                    footTools.children['2'].classList.add("invisible");
+                    floatToolQQ ? floatToolQQ.classList.add("invisible") : "";
+                    floatToolBackTop ? floatToolBackTop.classList.add("invisible") : "";
                     if (last_scroll_position < 49) {
                         headerNav.classList.remove('slideDown', "fixed-top");
                     }
@@ -235,14 +238,6 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
             }
             new_scroll_position = last_scroll_position;
         }
-    }
-})();
-
-//返回顶部
-(function () {
-    let footToolBackTop = document.querySelector("#footToolBackTop");
-    if (footToolBackTop) {
-        footToolBackTop.addEventListener('click', topControl);
     }
 })();
 //分享功能
@@ -338,12 +333,12 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 })();
 //侧边栏切换按钮
 (function () {
-    let footToolSidebar = document.body.querySelector("#footToolSidebar");
+    let floatToolSidebar = document.body.querySelector("#floatToolSidebar");
     let sidebar = document.body.querySelector("#sidebar");
     let content = document.body.querySelector("#content");
     if (sidebar) {
-        footToolSidebar.classList.remove('invisible');
-        footToolSidebar.addEventListener('click', sidebarToggle);
+        floatToolSidebar.classList.remove('invisible');
+        floatToolSidebar.addEventListener('click', sidebarToggle);
     } else {
 
     }
@@ -377,9 +372,12 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 //LOGO点击
 (function () {
     let logo = document.body.querySelector('#logo');
-    if (logo) {
-        logo.addEventListener('click', topControl);
-    }
+    logo ? logo.addEventListener('click', topControl) : "";
+})();
+//返回顶部
+(function () {
+    let floatToolBackTop = document.querySelector("#floatToolBackTop");
+    floatToolBackTop ? floatToolBackTop.addEventListener('click', topControl) : "";
 })();
 
 function topControl(e) {
@@ -392,7 +390,6 @@ function topControl(e) {
     $("input[id^='modal_']").tooltip();
     $("a[id^='oauth_']").tooltip();
     $("main a").tooltip();
-    $("#footTools>a").tooltip();
 })();
 //tab切换
 // $(document).ready(function () {

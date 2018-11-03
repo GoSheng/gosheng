@@ -12,7 +12,7 @@ remove_action( 'wp_head', 'feed_links', 2 ); //移除feed
 remove_action( 'wp_head', 'feed_links_extra', 3 ); //移除分类feed
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
 remove_action( 'template_redirect', 'wp_shortlink_header', 11 );//动态链接地址shortlink2
-remove_action( 'wp_head', 'rel_canonical' );//中文地址
+//remove_action( 'wp_head', 'rel_canonical' );//中文地址
 remove_action( 'wp_head', 'wp_resource_hints', 2 );
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );//移除emoji脚本
 remove_action( 'wp_print_styles', 'print_emoji_styles' );//移除emoji样式表
