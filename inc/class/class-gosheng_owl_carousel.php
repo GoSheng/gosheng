@@ -28,7 +28,7 @@ if ( ! class_exists( 'GoSheng_owl_carousel' ) ) {
 					case 10:
 						echo '<div id="' . $id . '" class="owl-carousel owl-theme mb-1 mb-lg-2">';
 						for ( $i = 0; $i <= count( $slides ) - 1; $i ++ ) {
-							$html = '<div class="item">';
+							$html = '<div class="item text-center">';
 							$html .= '<a href="' . $slides[ $i ]['url'] . '" title="' . $slides[ $i ]['title'] . '" target="_blank">';
 							$html .= '<img class="img-fluid" src="' . $slides[ $i ]['image'] . '" alt="' . $slides[ $i ]['title'] . '">';
 							$html .= '</a>';

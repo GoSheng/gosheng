@@ -575,7 +575,7 @@ Redux::setSection( $opt_name, array(
 			'type'        => 'text',
 			'required'    => array( 'google_reCaptcha_switch', '=', '1' ),
 			'title'       => __( 'Site key', 'GoSheng-framework' ),
-			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'subtitle'    => '<a href="https://www.google.com/recaptcha">' . __( '谷歌reCAPTCHA申请地址', 'GoSheng-framework' ) . '</a>',
 			'desc'        => __( '', 'GoSheng-framework' ),
 			'placeholder' => __( '', 'GoSheng-framework' ),
 			'default'     => '',
@@ -634,7 +634,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'gosheng_user_register',
 			'type'     => 'switch',
-			'title'    => __( '用户注册功能', 'GoSheng-framework' ),
+			'title'    => __( '用户注册功能（待完善）', 'GoSheng-framework' ),
 			'subtitle' => __( '是否开启前台用户注册功能。', 'GoSheng-framework' ),
 			'desc'     => __( '', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
@@ -644,7 +644,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'gosheng_user_lostPassword',
 			'type'     => 'switch',
-			'title'    => __( '用户找回密码功能', 'GoSheng-framework' ),
+			'title'    => __( '用户找回密码功能（待完善）', 'GoSheng-framework' ),
 			'subtitle' => __( '是否开启前台用户找回密码功能。', 'GoSheng-framework' ),
 			'desc'     => __( '', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
@@ -684,7 +684,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'notification',
 			'type'     => 'switch',
-			'title'    => __( '消息通知功能', 'GoSheng-framework' ),
+			'title'    => __( '消息通知功能（待完善）', 'GoSheng-framework' ),
 			'subtitle' => __( '是否开启消息通知功能。', 'GoSheng-framework' ),
 			'desc'     => __( '', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
@@ -694,7 +694,7 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'geolocation',
 			'type'     => 'switch',
-			'title'    => __( '地理位置功能', 'GoSheng-framework' ),
+			'title'    => __( '地理位置功能（待完善）', 'GoSheng-framework' ),
 			'subtitle' => __( '是否开启获取用户地理位置功能。', 'GoSheng-framework' ),
 			'desc'     => __( '', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
@@ -759,7 +759,7 @@ Redux::setSection( $opt_name, array(
 ) );
 Redux::setSection( $opt_name, array(
 	'id'         => 'head_switch',
-	'title'      => __( 'head标签（本功能暂停使用，设置直接生效。）', 'GoSheng-framework' ),
+	'title'      => __( 'head标签（本功能暂停使用，设置已经直接生效。）', 'GoSheng-framework' ),
 	'desc'       => __( '&lt;head&gt;标签内容控制', 'GoSheng-framework' ),
 	'subsection' => true,
 	'icon'       => 'el el-cogs',
@@ -1243,7 +1243,7 @@ Redux::setSection( $opt_name, array(
 			'required' => array( 'owl_carousel_top', '=', '1' ),
 			'title'    => __( '顶部全宽轮播图', 'GoSheng-framework' ),
 			'subtitle' => __( '2张以上', 'GoSheng-framework' ),
-			'desc'     => __( '宽度1920px，高度自定义，太高影响页面效果，建议450px—650px', 'GoSheng-framework' ),
+			'desc'     => __( '宽度1920px，高度自定义，最好效果是统一的高度，太高影响页面效果，建议450px—650px', 'GoSheng-framework' ),
 		),
 	),
 ) );
@@ -1434,7 +1434,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( '工信部的备案号', 'GoSheng-framework' ),
 			'desc'        => __( '例如：闽ICP备15012807号-1', 'GoSheng-framework' ),
 			'placeholder' => __( '请输入ICP备案号。', 'GoSheng-framework' ),
-			'default'     => '京ICP证030173号',
+			'default'     => '示例：京ICP证030173号',
 		),
 		array(
 			'id'       => 'recordcode',
@@ -1454,7 +1454,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( '公安部的备案号', 'GoSheng-framework' ),
 			'desc'        => __( '例如：11000002000001', 'GoSheng-framework' ),
 			'placeholder' => __( '请输入您的公安备案号', 'GoSheng-framework' ),
-			'default'     => '11000002000001',
+			'default'     => '示例：11000002000001',
 		),
 		array(
 			'id'          => 'recordcode_text',
@@ -1464,7 +1464,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( '公安部的备案文字信息', 'GoSheng-framework' ),
 			'desc'        => __( '例如：京公网安备11000002000001号', 'GoSheng-framework' ),
 			'placeholder' => __( '请输入您的公安备案文字信息', 'GoSheng-framework' ),
-			'default'     => '京公网安备11000002000001号',
+			'default'     => '示例：京公网安备11000002000001号',
 		),
 		array(
 			'id'       => 'website_statistics',
