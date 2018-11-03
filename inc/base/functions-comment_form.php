@@ -10,12 +10,14 @@ if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
 		return $result;
 	}
 }
-function GoSheng_simle() {
-	$simle_before = '<div>';
-	$simle_after  = '</div>';
-	$simle        = '<span>表情功能开发中</span>';
+if ( ! function_exists( 'GoSheng_simle' ) ) {
+	function GoSheng_simle() {
+		$simle_before = '<div>';
+		$simle_after  = '</div>';
+		$simle        = '<span>表情功能开发中，支持扩展。</span>';
 
-	return $simle_before . $simle . $simle_after;
+		return $simle_before . $simle . $simle_after;
+	}
 }
 
 if ( ! function_exists( 'GoSheng_comment_form' ) ) {
