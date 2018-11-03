@@ -2,7 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 function enqueue_notification() {
 	wp_register_script( 'notification', themeStaticFile_URI . 'js/notification.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'notification' );
