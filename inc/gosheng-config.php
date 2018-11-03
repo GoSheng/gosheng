@@ -683,16 +683,6 @@ Redux::setSection( $opt_name, array(
 			'default'  => true,
 		),
 		array(
-			'id'       => 'notification',
-			'type'     => 'switch',
-			'title'    => __( '消息通知功能（待完善）', 'GoSheng-framework' ),
-			'subtitle' => __( '是否开启消息通知功能。', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
-			'on'       => __( '开启', 'GoSheng-framework' ),
-			'off'      => __( '关闭', 'GoSheng-framework' ),
-			'default'  => false,
-		),
-		array(
 			'id'       => 'geolocation',
 			'type'     => 'switch',
 			'title'    => __( '地理位置功能（待完善）', 'GoSheng-framework' ),
@@ -723,6 +713,62 @@ Redux::setSection( $opt_name, array(
 			'default'  => __( '本站采用cookie技术获取您的部分浏览信息，点击同意将表示您同意我们这么做，如果您不同意本站使用cookie技术获取您的浏览信息，请关闭浏览器窗口。', 'GoSheng-framework' ),
 		),
 	),
+) );
+
+Redux::setSection( $opt_name, array(
+	'id'     => 'notification',
+	'title'  => __( '消息通知（待完善）', 'GoSheng-framework' ),
+	'desc'   => __( '', 'GoSheng-framework' ),
+	'icon'   => 'el el-cog',
+	'fields' => array(
+		array(
+			'id'       => 'notification_switch',
+			'type'     => 'switch',
+			'title'    => __( '消息通知功能（待完善）', 'GoSheng-framework' ),
+			'subtitle' => __( '是否开启消息通知功能。', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
+			'id'          => 'notification_text',
+			'type'        => 'text',
+			'required'    => array( 'notification_switch', '=', '1' ),
+			'title'       => __( '通知内容', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+		array(
+			'id'          => 'notification_url',
+			'type'        => 'text',
+			'required'    => array( 'notification_switch', '=', '1' ),
+			'title'       => __( '通知链接', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'default'     => '',
+		),
+		array(
+			'id'          => 'notification_image',
+			'type'        => 'media',
+			'required'    => array( 'notification_switch', '=', '1' ),
+			'title'       => __( '消息图片。', 'GoSheng-framework' ),
+			'subtitle'    => __( '', 'GoSheng-framework' ),
+			'desc'        => __( '图片尺寸', 'GoSheng-framework' ),
+			'placeholder' => __( '', 'GoSheng-framework' ),
+			'url'         => true,
+			'readonly'    => false,
+			'preview'     => true,
+			'width'       => '',
+			'height'      => '',
+			'default'     => array(
+				'url' => '',
+			),
+		),
+	)
 ) );
 
 Redux::setSection( $opt_name, array(

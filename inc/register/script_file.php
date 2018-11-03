@@ -125,11 +125,6 @@ function enqueue_sidebar() {
 	wp_enqueue_script( 'sidebar' );
 }
 
-function enqueue_notification() {
-	wp_register_script( 'notification', themeStaticFile_URI . 'js/notification.js', array(), THEME_STATIC_FILE_VERSION, true );
-	wp_enqueue_script( 'notification' );
-}
-
 function enqueue_geolocation() {
 	wp_register_script( 'geolocation', themeStaticFile_URI . 'js/geolocation.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'geolocation' );

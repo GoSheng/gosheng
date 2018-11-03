@@ -33,9 +33,6 @@ add_action( 'wp_enqueue_scripts', 'enqueue_local' );
 add_action( 'wp_enqueue_scripts', 'enqueue_oauth' );
 add_action( 'wp_enqueue_scripts', 'enqueue_sidebar' );
 
-if ( $GoSheng['notification'] ) {
-	add_action( 'wp_enqueue_scripts', 'enqueue_notification' );
-}
 if ( $GoSheng['geolocation'] ) {
 	add_action( 'wp_enqueue_scripts', 'enqueue_geolocation' );
 }

@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 
     function notification1() {
-        var n = new Notification('感谢', {
+        let n = new Notification('感谢', {
             body: '感谢您允许本站使用通知功能，后续如有重要信息，将会以此通知形式发送给您。',
             tag: '1',
             icon: 'https://img6.bdstatic.com/img/image/smallpic/fengjingxiaotu.jpg',
