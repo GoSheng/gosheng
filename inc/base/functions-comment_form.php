@@ -27,7 +27,7 @@ if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 		$must_log_in          = '<p class="must-log-in"><a class="btn btn-outline-dark btn-sm font-8 font-lg-9" href="#" data-toggle="modal" data-target="#modalLogin" data-modaltab="login"><i class="fas fa-sign-in-alt mr-1 mr-lg-2" aria-hidden="true"></i>' . __( '点击这里登录后发布评论', 'GoSheng-framework' ) . '</a></p>';
 		$comment_field        = '<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control bg-input text-info" id="comment_textarea" placeholder="%1$s" name="comment" rows="6" aria-required="true" minlength="10" maxlength="65525" required="required"></textarea></div>%2$s</div>';
 		$comment_field_btn    = '<div class="mt-2 form-group"><span id="gosheng_comment_smile" class="btn btn-sm btn-outline-secondary"><i class="far fa-smile"></i>%1$s</span>%2$s</div>';
-		$comment_field_smile  = '<div id="gosheng_smile" class="p-relative z1 d-none"><div class="p-absolute container py-2 rounded border border-secondary bg-input" style="min-height:12rem;">%1$s</div></div>';
+		$comment_field_smile  = '<div id="gosheng_smile" class="p-relative z1 d-none"><div class="p-absolute container py-2 rounded border border-secondary bg-input" style="min-height:12rem;max-height:12rem;overflow:overlay;">%1$s</div></div>';
 		$comment_field_smile  = sprintf( $comment_field_smile, GoSheng_simle() );
 		$comment_field_btn    = sprintf( $comment_field_btn, __( '表情', 'GoSheng-framework' ), $comment_field_smile );
 		$comment_field        = sprintf( $comment_field, __( '请输入您对本文的评论内容', 'GoSheng-framework' ), $comment_field_btn );

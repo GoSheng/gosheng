@@ -616,6 +616,7 @@ $(document).ready(function () {
                     comment_author_qq_avatar.src = data[qq_number];
                 },
                 error: function (data) {
+                    console.log("头像获取失败");
                     console.log(data);
                 }
             });
@@ -722,6 +723,7 @@ $(document).ready(function () {
                     GoSheng_get_hitokoto(url);
                 },
                 error: function (data) {
+                    console.log("一言地址获取失败");
                     console.log(data);
 
                 }
@@ -735,9 +737,10 @@ $(document).ready(function () {
                 type: "get",
                 url: hitokoto_url,
                 success: function (data) {
-                    GoSheng_hitokoto_text.innerHTML = data;
+                    GoSheng_hitokoto_text.innerText = data;
                 },
                 error: function (data) {
+                    console.log("一言语句获取失败");
                     console.log(data);
                 }
             })
@@ -774,6 +777,18 @@ $(document).ready(function () {
                 gosheng_simles[i].classList.toggle("active");
             }
         }
+    }
+    let simle_yan = gosheng_smile.querySelector("#simle_yan");
+    if (simle_yan) {
+        let comment_textarea = document.getElementById("comment_textarea");
+        simle_yan.addEventListener("click", function (e) {
+            e.preventDefault();
+            let simle = e.target;
+            let simle_title = simle.dataset["originalTitle"];
+            let input_simle = simle_title + simle.innerText;
+            let input_old = comment_textarea.value;
+            comment_textarea.value = " " + input_old + input_simle + " ";
+        })
     }
 })();
 
