@@ -703,10 +703,16 @@ $(document).ready(function () {
         let GoSheng_hitokoto_text = document.querySelector("#GoSheng_hitokoto_text");
         let get_new_hitokoto = document.querySelector("#get_new_hitokoto");
         if (get_new_hitokoto) {
+            get_new_hitokoto.addEventListener("mouseenter", icon_spin);
+            get_new_hitokoto.addEventListener("mouseleave", icon_spin);
             get_new_hitokoto.addEventListener("click", GoSheng_get_hitokkoto_url);
         }
         GoSheng_get_hitokkoto_url();
         $("#get_new_hitokoto").tooltip();
+
+        function icon_spin() {
+            this.classList.toggle("fa-spin");
+        }
 
         function GoSheng_get_hitokkoto_url() {
             let url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";

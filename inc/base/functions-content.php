@@ -349,7 +349,7 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 	function GoSheng_posted_share() {
 		$share_before      = '<div id="gosheng_share" class="mb-2 mb-lg-3 d-flex justify-content-start flex-wrap">';
 		$share_after       = '</div>';
-		$share_link_before = '<a href="javascript:;" id="gosheng_share_%1$s" rel="nofollow" title="分享到%2$s" class="btn btn-outline-info rounded py-lg-3 border fab fa-lg fa-%3$s">';
+		$share_link_before = '<a href="javascript:;" id="gosheng_share_%1$s" rel="nofollow" title="分享到%2$s" class="btn rounded py-lg-3 border fab fa-lg fa-%3$s hvr-fade hvr-bob">';
 		$share_link_after  = '</a>';
 		$share_type        = array(
 			'weibo'         => __( '微博', 'GoSheng-framework' ),
@@ -372,8 +372,8 @@ if ( ! function_exists( 'GoSheng_posted_reward' ) ) {
 	function GoSheng_posted_reward() {
 		$reward_before = '<div id="gosheng_reward" class="mb-2 mb-lg-3 text-center">';
 		$reward_after  = '</div>';
-		$reward_link   = '<a href="#" class="btn btn-sm btn-outline-danger border font-11 font-lg-12 text-dark" data-toggle="modal" data-target="#reward_modal" data-modaltab="alipay" title="%1$s"><i class="fas fa-yen-sign"></i>%2$s</a>';
-		$reward        = $reward_before . sprintf( $reward_link, __( '文章不错，奖励一下作者', 'GoSheng-framework' ), __( '打赏', 'GoSheng-framework' ) ) . $reward_after;
+		$reward_link   = '<a href="#" class="btn btn-sm btn-outline-danger border font-11 font-lg-12 text-dark hvr-icon-pulse-grow" data-toggle="modal" data-target="#reward_modal" data-modaltab="alipay" title="%1$s"><i class="fas fa-yen-sign hvr-icon"></i>%2$s</a>';
+		$reward        = $reward_before . sprintf( $reward_link, __( '文章不错，奖励一下作者', 'GoSheng-framework' ), __( '', 'GoSheng-framework' ) ) . $reward_after;
 		echo $reward;
 	}
 }
@@ -447,8 +447,8 @@ if ( ! function_exists( 'GoSheng_posted_thumbs_up' ) ) {
 		$thumbs_up_after  = '</div>';
 		$done             = isset( $_COOKIE[ 'thumbs_up_' . $post->ID ] ) ? ' done' : '';
 		$count            = get_post_meta( $post->ID, 'thumbs_up', true ) ? get_post_meta( $post->ID, 'thumbs_up', true ) : '';
-		$thumbs_up_link   = '<a class="btn btn-sm btn-outline-danger border font-11 font-lg-12 text-dark thumbs_up%4$s" data-action="thumbs_up" data-id="%3$s" href="javascript:;" title="%1$s"><i class="far fa-thumbs-up"></i>%2$s<span class="count">%5$s</span></a>';
-		$thumbs_up        = $thumbs_up_before . sprintf( $thumbs_up_link, __( '文章不错，点个赞吧。', 'GoSheng-framework' ), __( '点赞', 'GoSheng-framework' ), get_the_ID(), $done, $count ) . $thumbs_up_after;
+		$thumbs_up_link   = '<a class="btn btn-sm btn-outline-danger border font-11 font-lg-12 text-dark thumbs_up hvr-icon-bounce%4$s" data-action="thumbs_up" data-id="%3$s" href="javascript:;" title="%1$s"><i class="far fa-thumbs-up hvr-icon"></i>%2$s<span class="count">%5$s</span></a>';
+		$thumbs_up        = $thumbs_up_before . sprintf( $thumbs_up_link, __( '文章不错，点个赞吧。', 'GoSheng-framework' ), __( ' ', 'GoSheng-framework' ), get_the_ID(), $done, $count ) . $thumbs_up_after;
 		echo $thumbs_up;
 	}
 }
@@ -602,7 +602,7 @@ if ( ! function_exists( 'GoSheng_hitokoto' ) ) {
 		if ( $GoSheng['hitokoto_switch'] ) {
 			$hitokoto_before = '<div id="GoSheng_hitokoto" class="my-3 p-1 rounded shadow-sm border text-center"><span id="GoSheng_hitokoto_text" class="text-secondary font-6 font-lg-8">';
 			$hitokoto_text   = __( '狗剩主题', 'GoSheng-framework' );
-			$hitokoto_after  = '</span><i class="mx-2 p-1 shadow-sm btn btn-sm btn-outline-secondary fas fa-redo" id="get_new_hitokoto" title="%1$s"></i></div>';
+			$hitokoto_after  = '</span><i class="mx-2 p-1 btn btn-sm fas fa-sync-alt" id="get_new_hitokoto" title="%1$s"></i></div>';
 			$hitokoto_after  = sprintf( $hitokoto_after, __( '换一个', 'GoSheng-framework' ) );
 			echo $hitokoto_before;
 			echo $hitokoto_text;
