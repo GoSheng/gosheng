@@ -743,7 +743,7 @@ $(document).ready(function () {
         }
     }
 })();
-//
+//评论表情
 (function () {
     let gosheng_comment_smile = document.querySelector("#gosheng_comment_smile");
     if (gosheng_comment_smile) {
@@ -752,4 +752,27 @@ $(document).ready(function () {
             gosheng_smile.classList.toggle("d-none");
         })
     }
+    let gosheng_smile = document.querySelector("#gosheng_smile");
+    if (gosheng_smile) {
+        let gosheng_simle_yan = document.querySelector("#gosheng_simle_yan");
+        let gosheng_simle_emoji = document.querySelector("#gosheng_simle_emoji");
+        if (gosheng_simle_yan) {
+            gosheng_simle_yan.addEventListener("click", function (e) {
+                gosheng_simles(e);
+            });
+        }
+        if (gosheng_simle_emoji) {
+            gosheng_simle_emoji.addEventListener("click", function (e) {
+                gosheng_simles(e);
+            });
+        }
+
+        function gosheng_simles(e) {
+            let gosheng_simles = e.target.parentNode.childNodes;
+            for (let i = 0; i < gosheng_simles.length; i++) {
+                gosheng_simles[i].classList.toggle("active");
+            }
+        }
+    }
 })();
+

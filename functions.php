@@ -22,6 +22,7 @@ get_template_part( 'inc/base/functions', 'content' );
 get_template_part( 'inc/base/functions', 'breadcrumb' );
 get_template_part( 'inc/base/functions', 'email' );
 get_template_part( 'inc/base/functions', 'shortcode' );
+get_template_part( 'inc/base/functions', 'comment_simle' );
 get_template_part( 'inc/base/functions', 'comment_form' );
 get_template_part( 'inc/base/functions', 'comment_navigation' );
 get_template_part( 'inc/base/functions', 'comments_list' );

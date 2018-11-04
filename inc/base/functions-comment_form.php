@@ -2,22 +2,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
 if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
 	add_action( 'comment_id_fields', 'gosheng_comment_id_fields' );
 	function gosheng_comment_id_fields( $result ) {
 		$result .= '<input type="hidden" name="gosheng_user_agent" id="gosheng_user_agent">';
 
 		return $result;
-	}
-}
-if ( ! function_exists( 'GoSheng_simle' ) ) {
-	function GoSheng_simle() {
-		$simle_before = '<div>';
-		$simle_after  = '</div>';
-		$simle_cat    = '<div><span class="btn btn-sm btn-outline-secondary">颜文字</span><span class="btn btn-sm btn-outline-secondary">emoji表情</span></div>';
-		$simle        = '<span>表情功能开发中，支持扩展。</span>';
-
-		return $simle_before . $simle_cat . $simle . $simle_after;
 	}
 }
 
