@@ -28,7 +28,7 @@ function enqueue_popper_bootcdn() {
 }
 
 function enqueue_bootstrap() {
-	wp_register_script( 'bootstrap', themeStaticFile_URI . 'js/bootstrap.js', array( 'jquery' ), '4.1.3', true );
+	wp_register_script( 'bootstrap', themeStaticFile_URI . 'js/bootstrap.min.js', array( 'jquery' ), '4.1.3', true );
 	wp_enqueue_script( 'bootstrap' );
 }
 

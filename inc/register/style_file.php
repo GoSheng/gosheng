@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 注册样式表
  */
 function enqueue_style_bootstrap() {
-	wp_register_style( 'bootstrap', themeStaticFile_URI . 'css/bootstrap.css', array(), '4.1.3', 'all' );
+	wp_register_style( 'bootstrap', themeStaticFile_URI . 'css/bootstrap.min.css', array(), '4.1.3', 'all' );
 	wp_enqueue_style( 'bootstrap' );
 }
 

@@ -749,6 +749,8 @@ $(document).ready(function () {
 })();
 //评论表情
 (function () {
+    $("#simle_yan span").tooltip();
+    $("#simle_emoji span").tooltip();
     let gosheng_comment_smile = document.querySelector("#gosheng_comment_smile");
     if (gosheng_comment_smile) {
         let gosheng_smile = document.querySelector("#gosheng_smile");
@@ -778,7 +780,7 @@ $(document).ready(function () {
             }
         }
     }
-    let simle_yan = gosheng_smile.querySelector("#simle_yan");
+    let simle_yan = document.querySelector("#simle_yan");
     if (simle_yan) {
         let comment_textarea = document.getElementById("comment_textarea");
         simle_yan.addEventListener("click", input_simle);
@@ -792,16 +794,14 @@ $(document).ready(function () {
             comment_textarea.value = input_old + " " + input_simle + " ";
         }
     }
-    let gosheng_comment_clear = gosheng_smile.querySelector("#gosheng_comment_clear");
+    let gosheng_comment_clear = document.querySelector("#gosheng_comment_clear");
     if (gosheng_comment_clear) {
         gosheng_comment_clear.addEventListener("click", comment_clear);
 
         function comment_clear() {
             let comment_textarea = document.getElementById("comment_textarea");
             comment_textarea.value = "";
-
         }
     }
-
 })();
 

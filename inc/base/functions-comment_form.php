@@ -24,22 +24,23 @@ if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 			$cookies           = '<div class="form-group"><div class="form-check"><input class="form-check-input" type="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent"><label class="form-check-label font-6 font-lg-8" for="wp-comment-cookies-consent">%1$s</label></div></div>';
 			$fields['cookies'] = sprintf( $cookies, __( '记住我的信息，下次直接发布评论。', 'GoSheng-framework' ) );
 		}
-		$must_log_in          = '<p class="must-log-in"><a class="btn btn-outline-dark btn-sm font-8 font-lg-9" href="#" data-toggle="modal" data-target="#modalLogin" data-modaltab="login"><i class="fas fa-sign-in-alt mr-1 mr-lg-2" aria-hidden="true"></i>' . __( '点击这里登录后发布评论', 'GoSheng-framework' ) . '</a></p>';
-		$comment_field        = '<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control bg-input text-info" id="comment_textarea" placeholder="%1$s" name="comment" rows="6" aria-required="true" minlength="10" maxlength="65525" required="required"></textarea></div>%2$s</div>';
-		$comment_field_btn    = '<div class="mt-2 form-group"><span id="gosheng_comment_smile" class="mr-2 btn btn-sm btn-outline-secondary"><i class="far fa-smile"></i>%1$s</span><span id="gosheng_comment_clear" class="mr-2 btn btn-sm btn-outline-secondary"><i class="far fa-smile"></i>%2$s</span>%3$s</div>';
-		$comment_field_smile  = '<div id="gosheng_smile" class="p-relative z1 t-1 d-none"><div class="p-absolute container py-2 rounded border border-secondary bg-input" style="min-height:12rem;max-height:12rem;overflow:overlay;">%1$s</div></div>';
-		$comment_field_smile  = sprintf( $comment_field_smile, GoSheng_simle() );
-		$comment_field_btn    = sprintf( $comment_field_btn, __( '表情', 'GoSheng-framework' ), __( '清空内容', 'GoSheng-framework' ), $comment_field_smile );
-		$comment_field        = sprintf( $comment_field, __( '请输入您对本文的评论内容', 'GoSheng-framework' ), $comment_field_btn );
-		$user                 = wp_get_current_user();
-		$user_identity        = $user->exists() ? $user->display_name : '';
-		$logged_in_as         = '<p class="logged-in-as"><span>当前用户：%1$s</span><a class="float-right" href="%2$s">%3$s</a></p>';
-		$logged_in_as         = sprintf( $logged_in_as, $user_identity, wp_logout_url(), __( '退出', 'GoSheng-framework' ) );
-		$comment_notes_before = '<span class="font-8">%1$s</span>';
-		$comment_notes_before = sprintf( $comment_notes_before, __( '您的邮箱和QQ不会被公开显示。', 'GoSheng-framework' ) );
-		$comment_notes_after  = '<span class="font-8">%1$s</span>';
-		$comment_notes_after  = sprintf( $comment_notes_after, __( '最后一步，马上评论。', 'GoSheng-framework' ) );
-		$args                 = array(
+		$must_log_in            = '<p class="must-log-in"><a class="btn btn-outline-dark btn-sm font-8 font-lg-9" href="#" data-toggle="modal" data-target="#modalLogin" data-modaltab="login"><i class="fas fa-sign-in-alt mr-1 mr-lg-2" aria-hidden="true"></i>' . __( '点击这里登录后发布评论', 'GoSheng-framework' ) . '</a></p>';
+		$comment_field          = '<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control bg-input text-info" id="comment_textarea" placeholder="%1$s" name="comment" rows="6" aria-required="true" minlength="10" maxlength="65525" required="required"></textarea></div>%2$s</div>';
+		$comment_field_btn      = '<div class="mt-2 form-group">%1$s%2$s</div>';
+		$comment_field_btn_span = GoSheng_comment_field_btn();
+		$comment_field_smile    = '<div id="gosheng_smile" class="p-relative z1 t-1 d-none"><div class="p-absolute container py-2 rounded border border-secondary bg-input" style="min-height:12rem;max-height:12rem;overflow:overlay;">%1$s</div></div>';
+		$comment_field_smile    = sprintf( $comment_field_smile, GoSheng_simle() );
+		$comment_field_all      = sprintf( $comment_field_btn, $comment_field_btn_span, $comment_field_smile );
+		$comment_field          = sprintf( $comment_field, __( '请输入您对本文的评论内容', 'GoSheng-framework' ), $comment_field_all );
+		$user                   = wp_get_current_user();
+		$user_identity          = $user->exists() ? $user->display_name : '';
+		$logged_in_as           = '<p class="logged-in-as"><span>当前用户：%1$s</span><a class="float-right" href="%2$s">%3$s</a></p>';
+		$logged_in_as           = sprintf( $logged_in_as, $user_identity, wp_logout_url(), __( '退出', 'GoSheng-framework' ) );
+		$comment_notes_before   = '<span class="font-8">%1$s</span>';
+		$comment_notes_before   = sprintf( $comment_notes_before, __( '您的邮箱和QQ不会被公开显示。', 'GoSheng-framework' ) );
+		$comment_notes_after    = '<span class="font-8">%1$s</span>';
+		$comment_notes_after    = sprintf( $comment_notes_after, __( '最后一步，马上评论。', 'GoSheng-framework' ) );
+		$args                   = array(
 			'title_reply_before'   => '<span id="reply-title" class="comment-reply-title font-8 font-lg-10"><i class="fas fa-comments"></i>',
 			'title_reply_after'    => '</span>',
 			'cancel_reply_before'  => ' <span class="d-block">',
