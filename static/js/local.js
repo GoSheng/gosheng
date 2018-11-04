@@ -781,14 +781,16 @@ $(document).ready(function () {
     let simle_yan = gosheng_smile.querySelector("#simle_yan");
     if (simle_yan) {
         let comment_textarea = document.getElementById("comment_textarea");
-        simle_yan.addEventListener("click", function (e) {
+        simle_yan.addEventListener("click", input_simle);
+
+        function input_simle(e) {
             e.preventDefault();
             let simle = e.target;
             let simle_title = simle.dataset["originalTitle"];
             let input_simle = simle_title + simle.innerText;
             let input_old = comment_textarea.value;
-            comment_textarea.value = " " + input_old + input_simle + " ";
-        })
+            comment_textarea.value = input_old + " " + input_simle + " ";
+        }
     }
 })();
 
