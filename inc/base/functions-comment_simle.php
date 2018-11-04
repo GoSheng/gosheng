@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'GoSheng_comment_field_btn' ) ) {
 	function GoSheng_comment_field_btn() {
 		$comment_field_btn_span = '<span id="gosheng_comment_smile" class="mr-2 btn btn-sm btn-outline-secondary"><i class="far fa-smile"></i>' . __( '表情', 'GoSheng-framework' ) . '</span>';
-		$comment_field_btn_span .= '<span id="gosheng_comment_clear" class="mr-2 btn btn-sm btn-outline-secondary"><i class="far fa-smile"></i>' . __( '清空内容', 'GoSheng-framework' ) . '</span>';
+		$comment_field_btn_span .= '<span id="gosheng_comment_clear" class="mr-2 btn btn-sm btn-outline-secondary"><i class="fas fa-broom"></i>' . __( '清空内容', 'GoSheng-framework' ) . '</span>';
 
 		return $comment_field_btn_span;
 	}

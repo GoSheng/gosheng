@@ -788,10 +788,12 @@ $(document).ready(function () {
         function input_simle(e) {
             e.preventDefault();
             let simle = e.target;
-            let simle_title = simle.dataset["originalTitle"];
-            let input_simle = simle_title + simle.innerText;
-            let input_old = comment_textarea.value;
-            comment_textarea.value = input_old + " " + input_simle + " ";
+            if (simle.localName === "span" || simle.nodeName === "SPAN" || simle.tagName === "SPAN") {
+                let simle_title = simle.dataset["originalTitle"];
+                let input_simle = simle_title + simle.innerHTML;
+                let input_old = comment_textarea.value;
+                comment_textarea.value = input_old + " " + input_simle + " ";
+            }
         }
     }
     let gosheng_comment_clear = document.querySelector("#gosheng_comment_clear");
