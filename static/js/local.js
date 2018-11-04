@@ -792,5 +792,16 @@ $(document).ready(function () {
             comment_textarea.value = input_old + " " + input_simle + " ";
         }
     }
+    let gosheng_comment_clear = gosheng_smile.querySelector("#gosheng_comment_clear");
+    if (gosheng_comment_clear) {
+        gosheng_comment_clear.addEventListener("click", comment_clear);
+
+        function comment_clear() {
+            let comment_textarea = document.getElementById("comment_textarea");
+            comment_textarea.value = "";
+
+        }
+    }
+
 })();
 

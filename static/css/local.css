@@ -1,10 +1,12 @@
 @charset "UTF-8";
 /* webkit内核滚动条 */
 body::-webkit-scrollbar { display:none; }
+#gosheng_smile>div::-webkit-scrollbar { display:none; }
 /*body::-webkit-scrollbar { width:10px;height:10px; }*/
 /*body::-webkit-scrollbar-thumb { background:#bbbbbb;border-radius:5px; }*/
 /*body::-webkit-scrollbar-track { background:#EDEDED;border-radius:5px; }*/
 /*body::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:focus {background:#999999; }*/
+
 /* webkit内核滚动条 */
 /* 选取状态 */
 ::selection { background-color:#343A40; color:#F8F9FA; }
