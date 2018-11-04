@@ -2,17 +2,16 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 if ( ! function_exists( 'simle_yan' ) ) {
 	function simle_yan() {
-		$simle = '颜文字11表情';
+		$simle = '颜文字表情';
 
 		return $simle;
 	}
 }
 if ( ! function_exists( 'simle_emoji' ) ) {
 	function simle_emoji() {
-		$simle = 'emoji11表情';
+		$simle = 'emoji表情';
 
 		return $simle;
 	}

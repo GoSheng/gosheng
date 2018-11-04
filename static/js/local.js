@@ -443,6 +443,7 @@ $(document).ready(function () {
                 break;
             case "no":
                 display_gosheng_cookie();
+                custom_content();
                 break;
             default:
                 display_gosheng_cookie();

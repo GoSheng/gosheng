@@ -2,7 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
 	add_action( 'comment_id_fields', 'gosheng_comment_id_fields' );
 	function gosheng_comment_id_fields( $result ) {
@@ -11,7 +10,6 @@ if ( ! function_exists( 'gosheng_comment_id_fields' ) ) {
 		return $result;
 	}
 }
-
 if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 	function GoSheng_comment_form() {
 		$commenter = wp_get_current_commenter();
