@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 		}
 		?>
 		<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-            <div>测试</div>
+            <div class="text-center"><?php esc_html_e( '评论已经关闭', 'GoSheng-framework' ); ?></div>
 		<?php endif; ?>
     </div>
 <?php GoSheng_comment_form();
