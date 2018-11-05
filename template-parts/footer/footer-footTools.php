@@ -22,6 +22,11 @@ global $GoSheng;
 		<?php
 	}
 	?>
+    <a href="#" id="floatToolComment" class="invisible mb-1 btn btn-outline-dark" title="显示评论">
+        <i class="fas fa-comments text-success" aria-hidden="true">
+            <span class="sr-only">显示评论</span>
+        </i>
+    </a>
     <a href="#" id="floatToolBackTop" class="invisible mb-1 btn btn-outline-dark" title="返回顶部">
         <i class="fas fa-arrow-up text-success" aria-hidden="true">
             <span class="sr-only">返回顶部</span>

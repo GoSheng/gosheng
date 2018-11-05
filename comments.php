@@ -6,6 +6,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+<div id="GoSheng_comment" class="collapse">
     <div id="comments" class="comments-area">
 		<?php
 		if ( have_comments() ) {
@@ -17,4 +18,6 @@ if ( post_password_required() ) {
             <div class="text-center"><?php esc_html_e( '评论已经关闭', 'GoSheng-framework' ); ?></div>
 		<?php endif; ?>
     </div>
-<?php GoSheng_comment_form();
+	<?php GoSheng_comment_form(); ?>
+</div>
+<?php
