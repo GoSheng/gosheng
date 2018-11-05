@@ -408,19 +408,16 @@ function topControl(e) {
 
 //tooltip提示
 (function () {
-    $("input[id^='modal_']").tooltip();
-    $("a[id^='oauth_']").tooltip();
+    $("input[id^='modal_']").tooltip({
+        placement: "bottom",
+    });
+    $("a[id^='oauth_']").tooltip({
+        placement: "bottom",
+    });
     $("#content a").tooltip({
         placement: "bottom",
     });
 })();
-//tab切换
-// $(document).ready(function () {
-//     $('#v-pills-tab a').on('click', function (e) {
-//         e.preventDefault();
-//         $(this).tab('show');
-//     })
-// });
 //登录和注册
 (function () {
     let redirect_to = document.querySelectorAll("input[name=redirect_to]");

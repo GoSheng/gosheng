@@ -15,7 +15,6 @@
         function Gosheng_reCaptcha_ajax(action_type) {
             if (action_type.length > 0) {
                 var reCaptcha_action_type = action_type;
-                console.log(action_type);
             } else {
                 let body = document.querySelector("body");
                 switch (body.classList.contains("home")) {

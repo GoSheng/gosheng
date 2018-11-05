@@ -70,9 +70,9 @@ global $GoSheng;
         </div>
     </div>
 </form>
-<div class="text-center">
-    <span class="my-2 text-muted font-6 font-lg-8">更多登录方式</span>
-    <div class="my-2">
+<div id="GoSheng_oauth_login" class="text-center">
+    <span class="my-2 btn text-muted font-6 font-lg-8" data-toggle="collapse" data-target="#oauth_login_list">更多登录方式</span>
+    <div class="my-2 collapse" id="oauth_login_list">
         <a href="javascript:;" class="mr-1" title="<?php esc_html_e( 'QQ登录', 'GoSheng-framework' ); ?>" id="oauth_qq"><i
                     class="font-10 font-lg-12 fab fa-fw fa-qq"></i></a>
         <a href="javascript:;" class="mr-1" title="<?php esc_html_e( '微博登录', 'GoSheng-framework' ); ?>"
