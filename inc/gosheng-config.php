@@ -186,12 +186,16 @@ Redux::setArgs( $opt_name, $args );
  * ---> END ARGUMENTS
  */
 
-$theme_desc = '%1$s<a href="https://wpa.qq.com/msgrd?v=3&uin=469946668&site=qq&menu=yes" target="_blank">469946668</a><br>' . '<a href="%2$s" title="%3$s" target="_blank">%3$s</a>';
+$theme_desc = '%1$s<a href="https://wpa.qq.com/msgrd?v=3&uin=469946668&site=qq&menu=yes" target="_blank">469946668</a>' . '<br><a href="%2$s" title="%3$s" target="_blank">%3$s</a>' . '<br>%4$s' . '<br>%5$s' . '<br>%6$s' . '<br>%7$s';
 $theme_desc = sprintf(
 	$theme_desc,
-	__( '感谢您使用狗剩主题，主题后台使用 ReduxFramework 框架，前台使用 Bootstrap 4.1.3 框架。支持子主题扩展,支持后台一键升级版本。如需技术支持，请联系QQ', 'GoSheng-framework' ),
+	__( '感谢您使用狗剩主题，主题后台使用 ReduxFramework 框架，前台使用Bootstrap框架。支持子主题扩展,支持后台一键升级版本。如需技术支持，请联系QQ', 'GoSheng-framework' ),
 	admin_url( '/tools.php?page=redux-status' ),
-	__( '主机信息', 'GoSheng-framework' )
+	__( '主机信息', 'GoSheng-framework' ),
+	sprintf( __( 'Redux Framework版本v%1$s', 'GoSheng-framework' ), esc_html( ReduxFramework::$_version ) ),
+	sprintf( __( '谷歌 reCAPTCHA版本%1$s', 'GoSheng-framework' ), 'v3' ),
+	sprintf( __( 'Bootstrap版本%1$s', 'GoSheng-framework' ), 'v4.1.3' ),
+	sprintf( __( 'Font Awesome版本%1$s', 'GoSheng-framework' ), 'v5.5.0' )
 );
 
 // -> START Switch & Button Set
