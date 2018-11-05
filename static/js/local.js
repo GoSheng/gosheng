@@ -411,7 +411,7 @@ function topControl(e) {
     $("input[id^='modal_']").tooltip({
         placement: "bottom",
     });
-    $("a[id^='oauth_']").tooltip({
+    $("span[id^='oauth_']").tooltip({
         placement: "bottom",
     });
     $("#content a").tooltip({

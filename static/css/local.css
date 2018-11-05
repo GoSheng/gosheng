@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* webkit内核滚动条 */
 body::-webkit-scrollbar { display:none; }
-#gosheng_smile>div::-webkit-scrollbar { display:none; }
+#gosheng_smile > div::-webkit-scrollbar { display:none; }
 /*body::-webkit-scrollbar { width:10px;height:10px; }*/
 /*body::-webkit-scrollbar-thumb { background:#bbbbbb;border-radius:5px; }*/
 /*body::-webkit-scrollbar-track { background:#EDEDED;border-radius:5px; }*/
@@ -12,6 +12,7 @@ body::-webkit-scrollbar { display:none; }
 ::selection { background-color:#343A40; color:#F8F9FA; }
 /* 选取状态 */
 .grecaptcha-badge {display:none;}
+#oauth_login_list > span {cursor:pointer;}
 .bg-input {background-color:#eeeeff;}
 /* 自定义简写 */
 @media (min-width:576px) {
