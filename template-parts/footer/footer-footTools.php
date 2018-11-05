@@ -22,9 +22,9 @@ global $GoSheng;
 		<?php
 	}
 	?>
-    <a href="#" id="floatToolComment" class="invisible mb-1 btn btn-outline-dark" title="显示评论">
+    <a href="#" id="floatToolComment" class="invisible mb-1 btn btn-outline-dark" title="隐藏评论区">
         <i class="fas fa-comments text-success" aria-hidden="true">
-            <span class="sr-only">显示评论</span>
+            <span class="sr-only">隐藏评论区</span>
         </i>
     </a>
     <a href="#" id="floatToolBackTop" class="invisible mb-1 btn btn-outline-dark" title="返回顶部">

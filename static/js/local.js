@@ -384,22 +384,38 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
     let floatToolBackTop = document.querySelector("#floatToolBackTop");
     floatToolBackTop ? floatToolBackTop.addEventListener('click', topControl) : "";
 })();
-//
+//评论区显示方式
 (function () {
     let floatToolComment = document.querySelector("#floatToolComment");
     floatToolComment ? floatToolComment.addEventListener("click", floatToolComment_toggle) : "";
+
+    function floatToolComment_toggle(e) {
+        e.preventDefault();
+        $("#GoSheng_comment").collapse("toggle");
+        let toolCommentMsg = this.getAttribute("data-original-title");
+        if (toolCommentMsg === "隐藏评论区") {
+            this.setAttribute("data-original-title", "显示评论区");
+            GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
+        } else {
+            this.setAttribute("data-original-title", "隐藏评论区");
+            GoSheng_SetCookie("GoSheng_comment_area", "show", 7);
+        }
+    }
+
+    function GoSheng_comment_area() {
+        let comment_area_status = GoSheng_GetCookie("GoSheng_comment_area");
+        let GoSheng_comment=document.querySelector()
+        switch (comment_area_status) {
+            case "show":
+                break;
+            case "hidden":
+                break;
+            default:
+                break;
+        }
+    }
 })();
 
-function floatToolComment_toggle(e) {
-    e.preventDefault();
-    $("#GoSheng_comment").collapse("toggle");
-    let toolCommentMsg = this.getAttribute("data-original-title");
-    if (toolCommentMsg === "显示评论") {
-        this.setAttribute("data-original-title", "隐藏评论");
-    } else {
-        this.setAttribute("data-original-title", "显示评论");
-    }
-}
 
 function topControl(e) {
     e.preventDefault();

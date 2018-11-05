@@ -6,7 +6,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="GoSheng_comment" class="collapse">
+<div id="GoSheng_comment" class="collapse show">
     <div id="comments" class="comments-area">
 		<?php
 		if ( have_comments() ) {
