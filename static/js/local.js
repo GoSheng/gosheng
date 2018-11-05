@@ -407,8 +407,10 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
         let GoSheng_comment = document.querySelector("#GoSheng_comment");
         switch (comment_area_status) {
             case "show":
+                GoSheng_comment.classList.add("show");
                 break;
             case "hidden":
+                GoSheng_comment.classList.remove("show");
                 break;
             default:
                 break;
