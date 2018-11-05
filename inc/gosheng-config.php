@@ -134,7 +134,7 @@ $args = array(
 		),
 	)
 );
-Redux::setExtensions( $opt_name, dirname( __FILE__ ) . '/redux/extension/redux-vendor-support/' );
+Redux::setExtensions( $opt_name, dirname( __FILE__ ) . '/redux_extension/redux-vendor-support/' );
 
 /*
  * ---> START HELP TABS
@@ -357,7 +357,7 @@ Redux::setSection( $opt_name, array(
 	'title'      => __( 'GitHub登录', 'GoSheng-framework' ),
 	'desc'       => __( '', 'GoSheng-framework' ),
 	'subsection' => true,
-	'icon'       => 'el el-cogs',
+	'icon'       => 'el el-github',
 	'fields'     => array(
 		array(
 			'id'       => 'oauth_github_switch',
