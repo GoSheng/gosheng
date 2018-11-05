@@ -403,19 +403,22 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
     }
 
     function GoSheng_comment_area() {
-        let comment_area_status = GoSheng_GetCookie("GoSheng_comment_area");
         let GoSheng_comment = document.querySelector("#GoSheng_comment");
-        switch (comment_area_status) {
-            case "show":
-                GoSheng_comment.classList.add("show");
-                break;
-            case "hidden":
-                GoSheng_comment.classList.remove("show");
-                break;
-            default:
-                break;
+        if (GoSheng_comment) {
+            let comment_area_status = GoSheng_GetCookie("GoSheng_comment_area");
+            switch (comment_area_status) {
+                case "show":
+                    GoSheng_comment.classList.add("show");
+                    break;
+                case "hidden":
+                    GoSheng_comment.classList.remove("show");
+                    break;
+                default:
+                    break;
+            }
         }
     }
+    GoSheng_comment_area();
 })();
 
 
