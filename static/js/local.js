@@ -392,33 +392,7 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
     function floatToolComment_toggle(e) {
         e.preventDefault();
         $("#GoSheng_comment").collapse("toggle");
-        let toolCommentMsg = this.getAttribute("data-original-title");
-        if (toolCommentMsg === "隐藏评论区") {
-            this.setAttribute("data-original-title", "显示评论区");
-            GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
-        } else {
-            this.setAttribute("data-original-title", "隐藏评论区");
-            GoSheng_SetCookie("GoSheng_comment_area", "show", 7);
-        }
     }
-
-    function GoSheng_comment_area() {
-        let GoSheng_comment = document.querySelector("#GoSheng_comment");
-        if (GoSheng_comment) {
-            let comment_area_status = GoSheng_GetCookie("GoSheng_comment_area");
-            switch (comment_area_status) {
-                case "show":
-                    GoSheng_comment.classList.add("show");
-                    break;
-                case "hidden":
-                    GoSheng_comment.classList.remove("show");
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-    GoSheng_comment_area();
 })();
 
 
