@@ -115,6 +115,11 @@ function enqueue_style_layer() {
 	wp_enqueue_style( 'layer' );
 }
 
+function enqueue_style_notyf() {
+	wp_register_style( 'notyf', themeStaticFile_URI . 'css/notyf.min.css', array(), THEME_STATIC_FILE_VERSION, 'all' );
+	wp_enqueue_style( 'notyf' );
+}
+
 function enqueue_style_local() {
 	wp_register_style( 'local', themeStaticFile_URI . 'css/local.css', array(), THEME_STATIC_FILE_VERSION, 'all' );
 	wp_enqueue_style( 'local' );

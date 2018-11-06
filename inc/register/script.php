@@ -25,6 +25,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_OwlCarousel2_local' );
 add_action( 'wp_enqueue_scripts', 'enqueue_lozad' );
 add_action( 'wp_enqueue_scripts', 'enqueue_qrcode' );
 add_action( 'wp_enqueue_scripts', 'enqueue_layer' );
+add_action( 'wp_enqueue_scripts', 'enqueue_notyf' );
 add_action( 'wp_enqueue_scripts', 'enqueue_resizesensor' );
 add_action( 'wp_enqueue_scripts', 'enqueue_theia_sticky_sidebar' );
 

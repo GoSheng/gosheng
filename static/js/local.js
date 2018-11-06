@@ -14,7 +14,11 @@ const GoSheng_Window_Screen_Width = window.screen.width;//屏幕分辨率的宽
 const GoSheng_Window_Screen_Heigth = window.screen.height;//屏幕分辨率的高
 const GoSheng_Window_Screen_availWidth = window.screen.availWidth;//屏幕可用工作区高度
 const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可用工作区宽度
-
+let notyf = new Notyf({
+    delay: 5000,
+    alertIcon: 'fas fa-exclamation-circle',
+    confirmIcon: 'fas fa-check-circle'
+});
 //登录模态框动画
 (function () {
     let modalLogin = document.querySelector("#modalLogin");
@@ -542,18 +546,10 @@ $(document).ready(function () {
 (function () {
     $.fn.postLike = function () {
         if ($(this).hasClass('done')) {
-            layer.open({
-                content: '一小时只能赞一次哦',
-                skin: 'msg',
-                time: 3,
-            });
+            notyf.alert("一小时只能赞一次哦");
             return false;
         } else {
-            layer.open({
-                content: '感谢您的赞！',
-                skin: 'msg',
-                time: 3,
-            });
+            notyf.confirm("感谢您的赞");
             $(this).addClass('done');
             let id = $(this).data("id"),
                 action = $(this).data('action'),

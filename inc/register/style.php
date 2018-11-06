@@ -27,6 +27,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_style_hover' );
 //add_action('wp_enqueue_scripts', 'enqueue_style_hover_bootcdn');
 
 add_action( 'wp_enqueue_scripts', 'enqueue_style_layer' );
+add_action( 'wp_enqueue_scripts', 'enqueue_style_notyf' );
 
 add_action( 'wp_enqueue_scripts', 'enqueue_style_local' );
 add_action( 'wp_enqueue_scripts', 'enqueue_style_sidebar' );

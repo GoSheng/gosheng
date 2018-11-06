@@ -86,6 +86,10 @@ function enqueue_layer() {
 	wp_register_script( 'layer', themeStaticFile_URI . 'js/layer.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'layer' );
 }
+function enqueue_notyf() {
+	wp_register_script( 'notyf', themeStaticFile_URI . 'js/notyf.min.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_enqueue_script( 'notyf' );
+}
 
 function enqueue_local() {
 	wp_register_script( 'local', themeStaticFile_URI . 'js/local.js', array(), THEME_STATIC_FILE_VERSION, true );
