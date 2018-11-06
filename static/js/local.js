@@ -387,9 +387,10 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 //评论区显示方式
 (function () {
     let floatToolComment = document.querySelector("#floatToolComment");
+    let GoSheng_comment = document.querySelector("#GoSheng_comment");
     floatToolComment ? floatToolComment.addEventListener("click", floatToolComment_toggle) : "";
     floatToolComment ? floatToolComment.addEventListener("click", floatToolComment_title) : "";
-    floatToolComment ? GoSheng_comment_area_cookie() : "";
+    GoSheng_comment ? GoSheng_comment_area_cookie() : "";
 
     function floatToolComment_toggle(e) {
         e.preventDefault();
@@ -418,7 +419,6 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 
     function GoSheng_comment_area_cookie() {
         let x = GoSheng_GetCookie("GoSheng_comment_area");
-        let GoSheng_comment = document.querySelector("#GoSheng_comment");
         switch (x) {
             case "":
             case "show":
