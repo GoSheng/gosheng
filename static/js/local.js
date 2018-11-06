@@ -311,7 +311,7 @@ let notyf = new Notyf({
 
         function display_weixin_qrcode() {
             layer.open({
-                style: 'border:none; background-color:#dc3545; color:#fff;',
+                style: 'border:none; background-color:#cccccc7d; color:#fff;',
                 title: "分享页面二维码",
                 content: "扫一扫二维码，打开本页面。",
                 success: function () {
@@ -409,14 +409,17 @@ let notyf = new Notyf({
             case "隐藏评论区":
                 floatToolComment.setAttribute("data-original-title", "显示评论区");
                 GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
+                notyf.confirm("评论区已经设置为隐藏");
                 break;
             case "显示评论区":
                 floatToolComment.setAttribute("data-original-title", "隐藏评论区");
                 GoSheng_SetCookie("GoSheng_comment_area", "show", 7);
+                notyf.confirm("评论区已经设置为可见");
                 break;
             default:
                 floatToolComment.setAttribute("data-original-title", "显示评论区");
                 GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
+                notyf.confirm("评论区已经设置为隐藏");
                 break;
         }
     }
@@ -504,7 +507,7 @@ $(document).ready(function () {
                 break;
             case "no":
                 display_gosheng_cookie();
-                custom_content();
+                disagree_content();
                 break;
             default:
                 display_gosheng_cookie();
@@ -513,11 +516,12 @@ $(document).ready(function () {
     if (gosheng_cookie_agree) {
         gosheng_cookie_agree.addEventListener('click', hidden_gosheng_cookie);
         gosheng_cookie_agree.addEventListener('click', set_cookie_agree);
+        gosheng_cookie_agree.addEventListener('click', agree_content);
     }
     if (gosheng_cookie_disagree) {
         gosheng_cookie_disagree.addEventListener('click', display_gosheng_cookie);
-        gosheng_cookie_disagree.addEventListener('click', set_cookie_disagreer);
-        gosheng_cookie_disagree.addEventListener('click', custom_content);
+        gosheng_cookie_disagree.addEventListener('click', set_cookie_disagree);
+        gosheng_cookie_disagree.addEventListener('click', disagree_content);
     }
 
     function hidden_gosheng_cookie() {
@@ -532,14 +536,16 @@ $(document).ready(function () {
         GoSheng_SetCookie("gosheng_cookie_agree", "yes", 30);
     }
 
-    function set_cookie_disagreer() {
+    function set_cookie_disagree() {
         GoSheng_SetCookie("gosheng_cookie_agree", "no", 30);
     }
 
-    function custom_content() {
-        layer.open({
-            content: '您已经拒绝本站使用Cookie技术获取浏览信息，请关闭本站即可。',
-        });
+    function agree_content() {
+        notyf.confirm("感谢您同意本站使用Cookie技术获取浏览信息，我们将会为您提供更优质的浏览体验。");
+    }
+
+    function disagree_content() {
+        notyf.alert("您已经拒绝本站使用Cookie技术获取浏览信息，请关闭本站即可。");
     }
 });
 // 文章点赞功能
@@ -587,11 +593,7 @@ $(document).ready(function () {
 
         function gosheng_hidden_notice() {
             $("#gosheng_notice").alert("close");
-            layer.open({
-                content: "您已关闭公告信息，12小时内不会再出现。",
-                skin: "msg",
-                time: 5,
-            });
+            notyf.confirm("您已关闭公告信息，12小时内不会再出现。");
         }
 
         function gosheng_notice_cookie() {

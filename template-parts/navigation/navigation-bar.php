@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-success border-top-0 border-left-0 border-right-0 z100000"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark z100000"
      id="headerNav">
     <div class="container">
         <div>
