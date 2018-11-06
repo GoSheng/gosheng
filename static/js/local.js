@@ -388,17 +388,59 @@ const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可�
 (function () {
     let floatToolComment = document.querySelector("#floatToolComment");
     floatToolComment ? floatToolComment.addEventListener("click", floatToolComment_toggle) : "";
+    floatToolComment ? floatToolComment.addEventListener("click", floatToolComment_title) : "";
+    floatToolComment ? GoSheng_comment_area_cookie() : "";
 
     function floatToolComment_toggle(e) {
         e.preventDefault();
         $("#GoSheng_comment").collapse("toggle");
+    }
+
+    function floatToolComment_title(e) {
+        e.preventDefault();
+        let x = floatToolComment.getAttribute("data-original-title");
+        switch (x) {
+            case "":
+            case "隐藏评论区":
+                floatToolComment.setAttribute("data-original-title", "显示评论区");
+                GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
+                break;
+            case "显示评论区":
+                floatToolComment.setAttribute("data-original-title", "隐藏评论区");
+                GoSheng_SetCookie("GoSheng_comment_area", "show", 7);
+                break;
+            default:
+                floatToolComment.setAttribute("data-original-title", "显示评论区");
+                GoSheng_SetCookie("GoSheng_comment_area", "hidden", 7);
+                break;
+        }
+    }
+
+    function GoSheng_comment_area_cookie() {
+        let x = GoSheng_GetCookie("GoSheng_comment_area");
+        let GoSheng_comment = document.querySelector("#GoSheng_comment");
+        switch (x) {
+            case "":
+            case "show":
+                floatToolComment.setAttribute("data-original-title", "隐藏评论区");
+                GoSheng_comment.classList.add("show");
+                break;
+            case "hidden":
+                floatToolComment.setAttribute("data-original-title", "显示评论区");
+                GoSheng_comment.classList.remove("show");
+                break;
+            default:
+                floatToolComment.setAttribute("data-original-title", "隐藏评论区");
+                GoSheng_comment.classList.add("show");
+                break;
+        }
     }
 })();
 
 
 function topControl(e) {
     e.preventDefault();
-    $('html,body').animate({scrollTop: '0px'}, 800);
+    $("html,body").animate({scrollTop: "0px"}, 800);
 }
 
 //tooltip提示
