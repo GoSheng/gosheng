@@ -28,7 +28,7 @@ if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 		$comment_field          = '<div class="comment form-group has-feedback"><div class="input-group"><textarea class="form-control bg-input text-info" id="comment_textarea" placeholder="%1$s" name="comment" rows="6" aria-required="true" minlength="10" maxlength="65525" required="required"></textarea></div>%2$s</div>';
 		$comment_field_btn      = '<div class="mt-2 form-group">%1$s%2$s</div>';
 		$comment_field_btn_span = GoSheng_comment_field_btn();
-		$comment_field_smile    = '<div id="gosheng_smile" class="p-relative z1 t-1 d-none"><div class="p-absolute container py-2 rounded border border-secondary bg-input" style="min-height:12rem;max-height:12rem;overflow:overlay;">%1$s</div></div>';
+		$comment_field_smile    = '<div id="gosheng_smile" class="p-relative z1 t-1 collapse"><div class="container py-2 rounded border border-secondary bg-input" style="min-height:12rem;max-height:12rem;overflow:auto;">%1$s</div></div>';
 		$comment_field_smile    = sprintf( $comment_field_smile, GoSheng_simle() );
 		$comment_field_all      = sprintf( $comment_field_btn, $comment_field_btn_span, $comment_field_smile );
 		$comment_field          = sprintf( $comment_field, __( '请输入您对本文的评论内容', 'GoSheng-framework' ), $comment_field_all );

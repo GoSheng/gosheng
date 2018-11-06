@@ -816,7 +816,7 @@ $(document).ready(function () {
     if (gosheng_comment_smile) {
         let gosheng_smile = document.querySelector("#gosheng_smile");
         gosheng_comment_smile.addEventListener("click", function () {
-            gosheng_smile.classList.toggle("d-none");
+            $("#gosheng_smile").collapse("toggle");
         })
     }
     let gosheng_smile = document.querySelector("#gosheng_smile");
