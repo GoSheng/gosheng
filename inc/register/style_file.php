@@ -26,7 +26,7 @@ function enqueue_style_bootstrap_75cdn() {
 }
 
 function enqueue_style_font_awesome5() {
-	wp_register_style( 'font_awesome5', themeStaticFile_URI . 'fonts/font_awesome5/css/fontawesome.min.css', array(), '5.3.1', 'all' );
+	wp_register_style( 'font_awesome5', themeStaticFile_URI . 'fonts/font_awesome5/css/fontawesome.min.css', array(), '5.5.0', 'all' );
 	wp_enqueue_style( 'font_awesome5' );
 }
 

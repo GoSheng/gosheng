@@ -134,7 +134,6 @@ $args = array(
 		),
 	)
 );
-Redux::setExtensions( $opt_name, dirname( __FILE__ ) . '/redux_extension/redux-vendor-support/' );
 
 /*
  * ---> START HELP TABS
@@ -1710,6 +1709,8 @@ class reduxDashboardWidget {
 //class reduxNewsflash {
 //}
 
+Redux::setExtensions( $opt_name, dirname( __FILE__ ) . '/redux_extension/redux-vendor-support/' );
+add_action( 'redux/page/GoSheng/enqueue', 'enqueue_style_font_awesome5' );
 /*
  * 隐藏Redux Framework 欢迎页面
  * 隐藏Redux Framework 导出个人数据页面（Export Personal Data）
