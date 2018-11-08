@@ -92,7 +92,7 @@ function enqueue_notyf() {
 }
 
 function enqueue_local() {
-	wp_register_script( 'local', themeStaticFile_URI . 'js/local.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'local', themeStaticFile_URI . 'js/local.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'local' );
 }
 

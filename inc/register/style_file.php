@@ -121,7 +121,7 @@ function enqueue_style_notyf() {
 }
 
 function enqueue_style_local() {
-	wp_register_style( 'local', themeStaticFile_URI . 'css/local.css', array(), THEME_STATIC_FILE_VERSION, 'all' );
+	wp_register_style( 'local', themeStaticFile_URI . 'css/local.min.css', array(), THEME_STATIC_FILE_VERSION, 'all' );
 	wp_enqueue_style( 'local' );
 }
 
