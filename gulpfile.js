@@ -43,16 +43,16 @@ gulp.task('style_notyf', function () {
 });
 
 gulp.task('default', ['clean'], function () {
-    gulp.start('script_local', 'style_local')
-    gulp.watch('static/css/local.css', ['style_local'])
-    gulp.watch('static/css/notyf.css', ['style_notyf'])
-    gulp.watch('static/js/local.js', ['script_local'])
+    gulp.start('script_local', 'style_local');
+    gulp.watch('static/css/local.css', ['style_local']);
+    gulp.watch('static/css/notyf.css', ['style_notyf']);
+    gulp.watch('static/js/local.js', ['script_local']);
     gulp.watch('static/js/notyf.js', ['script_notyf'])
 });
 
 gulp.task('watch', function () {
-    gulp.watch('static/css/local.css', ['style_local'])
-    gulp.watch('static/css/notyf.css', ['style_notyf'])
-    gulp.watch('static/js/local.js', ['script_local'])
+    gulp.watch('static/css/local.css', ['style_local']);
+    gulp.watch('static/css/notyf.css', ['style_notyf']);
+    gulp.watch('static/js/local.js', ['script_local']);
     gulp.watch('static/js/notyf.js', ['script_notyf'])
 });
