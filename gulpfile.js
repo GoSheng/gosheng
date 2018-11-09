@@ -28,6 +28,36 @@ gulp.task('script_notyf', function () {
         .pipe(gulp.dest('./static/js/'))
 });
 
+gulp.task('script_cookie', function () {
+    gulp.src('./static/js/cookie.js')
+        .pipe(uglify())
+        .on('error', function (err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename('cookie.min.js'))
+        .pipe(gulp.dest('./static/js/'))
+});
+
+gulp.task('script_google_reCaptcha', function () {
+    gulp.src('./static/js/google_reCaptcha.js')
+        .pipe(uglify())
+        .on('error', function (err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename('google_reCaptcha.min.js'))
+        .pipe(gulp.dest('./static/js/'))
+});
+
+gulp.task('script_gosheng_oauth', function () {
+    gulp.src('./static/js/gosheng_oauth.js')
+        .pipe(uglify())
+        .on('error', function (err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename('gosheng_oauth.min.js'))
+        .pipe(gulp.dest('./static/js/'))
+});
+
 gulp.task('style_local', function () {
     gulp.src(['./static/css/local.css'])
         .pipe(cssnano())

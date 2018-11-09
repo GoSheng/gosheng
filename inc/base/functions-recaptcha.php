@@ -9,7 +9,7 @@ function enqueue_reCaptcha() {
 	if ( $GoSheng['google_reCaptcha_switch'] ) {
 		wp_register_script( 'reCaptcha', 'https://www.recaptcha.net/recaptcha/api.js?render=' . $GoSheng['google_reCaptcha_Site_key'], array(), 'v3', true );
 		wp_enqueue_script( 'reCaptcha' );
-		wp_register_script( 'google_reCaptcha', themeStaticFile_URI . 'js/google_reCaptcha.js', array(), THEME_STATIC_FILE_VERSION, true );
+		wp_register_script( 'google_reCaptcha', themeStaticFile_URI . 'js/google_reCaptcha.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 		wp_enqueue_script( 'google_reCaptcha' );
 	}
 }
@@ -45,7 +45,7 @@ if ( ! function_exists( 'GoSheng_reCaptcha_site_verify' ) ) {
 		$site_verify_url = 'https://www.recaptcha.net/recaptcha/api/siteverify';
 		$secret_key      = $GoSheng['google_reCaptcha_Secret_key'];
 		$response        = $token;
-		$remote_ip        = $_SERVER['REMOTE_ADDR'] ? $_SERVER['REMOTE_ADDR'] : '';
+		$remote_ip       = $_SERVER['REMOTE_ADDR'] ? $_SERVER['REMOTE_ADDR'] : '';
 		$url             = $site_verify_url . '?secret=' . $secret_key . '&response=' . $response . '&remoteip=' . $remote_ip;
 		$get_site_verify = wp_remote_post( $url );
 		$result          = json_decode( $get_site_verify['body'] );
