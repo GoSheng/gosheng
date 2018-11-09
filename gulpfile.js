@@ -35,7 +35,7 @@ gulp.task('style_local', function () {
         .pipe(gulp.dest('./static/css/'))
 });
 
-gulp.task('style_notyf', function () {
+gulp.task('style_notyf', function () {//修改过样式，注意保存
     gulp.src(['./static/css/notyf.css'])
         .pipe(cssnano())
         .pipe(rename('notyf.min.css'))
