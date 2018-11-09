@@ -18,12 +18,12 @@ function enqueue_jquery_bootcdn() {
 }
 
 function enqueue_popper() {
-	wp_register_script( 'popper', themeStaticFile_URI . 'js/popper.min.js', array( 'jquery' ), '1.14.4', true );
+	wp_register_script( 'popper', themeStaticFile_URI . 'js/popper.min.js', array( 'jquery' ), '1.14.5', true );
 	wp_enqueue_script( 'popper' );
 }
 
 function enqueue_popper_bootcdn() {
-	wp_register_script( 'popper', 'https://cdn.bootcss.com/popper.js/1.14.4/umd/popper.min.js', array( 'jquery' ), 'BootCDN', true );
+	wp_register_script( 'popper', 'https://cdn.bootcss.com/popper.js/1.14.5/umd/popper.min.js', array( 'jquery' ), 'BootCDN', true );
 	wp_enqueue_script( 'popper' );
 }
 
