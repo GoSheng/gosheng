@@ -77,12 +77,18 @@ gulp.task('default', ['clean'], function () {
     gulp.watch('static/css/local.css', ['style_local']);
     gulp.watch('static/css/notyf.css', ['style_notyf']);
     gulp.watch('static/js/local.js', ['script_local']);
-    gulp.watch('static/js/notyf.js', ['script_notyf'])
+    gulp.watch('static/js/notyf.js', ['script_notyf']);
+    gulp.watch('static/js/cookie.js', ['script_cookie']);
+    gulp.watch('static/js/google_reCaptcha.js', ['script_google_reCaptcha']);
+    gulp.watch('static/js/gosheng_oauth.js', ['script_gosheng_oauth']);
 });
 
 gulp.task('watch', function () {
     gulp.watch('static/css/local.css', ['style_local']);
     gulp.watch('static/css/notyf.css', ['style_notyf']);
     gulp.watch('static/js/local.js', ['script_local']);
-    gulp.watch('static/js/notyf.js', ['script_notyf'])
+    gulp.watch('static/js/notyf.js', ['script_notyf']);
+    gulp.watch('static/js/cookie.js', ['script_cookie']);
+    gulp.watch('static/js/google_reCaptcha.js', ['script_google_reCaptcha']);
+    gulp.watch('static/js/gosheng_oauth.js', ['script_gosheng_oauth']);
 });

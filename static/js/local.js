@@ -15,7 +15,7 @@ const GoSheng_Window_Screen_Heigth = window.screen.height;//屏幕分辨率的�
 const GoSheng_Window_Screen_availWidth = window.screen.availWidth;//屏幕可用工作区高度
 const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可用工作区宽度
 let notyf = new Notyf({
-    delay: 5000,
+    delay: 7000,
     alertIcon: 'fas fa-exclamation-circle',
     confirmIcon: 'fas fa-check-circle'
 });
