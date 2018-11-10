@@ -1659,12 +1659,23 @@ Redux::setSection( $opt_name, array(
 	'icon'  => 'el el-music'
 ) );
 Redux::setSection( $opt_name, array(
-	'id'         => 'music_',
-	'title'      => __( '背景音乐', 'GoSheng-framework' ),
+	'id'         => 'music',
+	'title'      => __( '音乐', 'GoSheng-framework' ),
 	'desc'       => __( '', 'GoSheng-framework' ),
 	'subsection' => true,
 	'icon'       => 'el el-music',
-	'fields'     => array()
+	'fields'     => array(
+		array(
+			'id'       => 'aplayer',
+			'type'     => 'switch',
+			'title'    => __( '播放器开关', 'GoSheng-framework' ),
+			'subtitle' => __( '', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+	)
 ) );
 
 Redux::setSection( $opt_name, array(

@@ -30,6 +30,7 @@ get_template_part( 'inc/base/functions', 'link_submit' );
 get_template_part( 'inc/base/functions', 'recaptcha' );
 get_template_part( 'inc/base/functions', 'notification' );
 get_template_part( 'inc/oauth/oauth' );
+get_template_part( 'inc/aplayer/aplayer' );
 get_template_part( 'inc/redux' );
 
 get_template_part( 'inc/class/class', 'gosheng_user_oauth' );
