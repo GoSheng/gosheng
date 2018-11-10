@@ -4,6 +4,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 global $GoSheng;
 ?>
+<?php
+if ( $GoSheng['aplayer_switch'] ) {
+	?>
+    <div id="gosheng_aplayer" class="p-relative container">
+        <div id="aplayer" class="p-absolute"></div>
+    </div>
+	<?php
+}
+?>
 <footer class="container-fluid py-1 py-lg-2 bg-footer text-muted border border-success border-bottom-0 border-left-0 border-right-0"
         id="footer">
     <div class="container">

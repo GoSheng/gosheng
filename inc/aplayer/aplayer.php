@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'wp_enqueue_scripts', 'enqueue_aplayer' );
 function enqueue_aplayer() {
 	global $GoSheng;
-	if ( $GoSheng['aplayer'] ) {
+	if ( $GoSheng['aplayer_switch'] ) {
 		wp_register_script( 'aplayer', themeStaticFile_URI . 'js/aplayer.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 		wp_enqueue_script( 'aplayer' );
 		wp_register_style( 'aplayer', themeStaticFile_URI . 'css/aplayer.min.css', array(), THEME_STATIC_FILE_VERSION, 'all' );
