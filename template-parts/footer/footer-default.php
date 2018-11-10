@@ -7,8 +7,8 @@ global $GoSheng;
 <?php
 if ( $GoSheng['aplayer_switch'] ) {
 	?>
-    <div id="gosheng_aplayer" class="p-relative container">
-        <div id="aplayer" class="p-absolute"></div>
+    <div id="gosheng_aplayer" class="p-relative container-fluid">
+        <div id="aplayer" class="p-absolute b-0 l-0"></div>
     </div>
 	<?php
 }
