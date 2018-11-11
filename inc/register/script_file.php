@@ -63,18 +63,8 @@ function enqueue_OwlCarousel2_local() {
 }
 
 function enqueue_html2canvas() {
-	wp_register_script( 'html2canvas_local', themeStaticFile_URI . 'js/html2canvas.min.js', array(), 'v1.0.0-alpha.12', true );
-	wp_enqueue_script( 'html2canvas_local' );
-}
-
-function enqueue_html2canvas_bootcdn() {
-	wp_register_script( 'html2canvas', 'https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js', array(), 'BootCDN', true );
+	wp_register_script( 'html2canvas', themeStaticFile_URI . 'js/html2canvas.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'html2canvas' );
-}
-
-function enqueue_html2canvas_local() {
-	wp_register_script( 'html2canvas_local', themeStaticFile_URI . 'js/html2canvas.js', array(), THEME_STATIC_FILE_VERSION, true );
-	wp_enqueue_script( 'html2canvas_local' );
 }
 
 function enqueue_lozad() {

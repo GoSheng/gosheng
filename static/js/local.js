@@ -701,18 +701,20 @@ $(document).ready(function () {
 })();
 //密码样式
 (function () {
-    let modal_login_password = document.querySelector("#modal_login_password");
-    if (modal_login_password) {
-        modal_login_password.addEventListener("change", password_letter_spacing);
-        modal_login_password.addEventListener("input", password_letter_spacing);
+    let input_password_all = document.querySelectorAll("input[type=password]");
+    if (input_password_all) {
+        for (let input_password_all_length = input_password_all.length, i = 0; i < input_password_all_length; i++) {
+            input_password_all[i].addEventListener("change", input_password_style);
+            input_password_all[i].addEventListener("input", input_password_style);
+        }
 
-        function password_letter_spacing() {
-            switch (modal_login_password.value.length > 0) {
+        function input_password_style(e) {
+            switch (e.target.value.length > 0) {
                 case true:
-                    modal_login_password.classList.add("letter-spacing-2");
+                    e.target.classList.add("letter-spacing-2");
                     break;
                 default:
-                    modal_login_password.classList.remove("letter-spacing-2");
+                    e.target.classList.remove("letter-spacing-2");
                     break;
             }
         }

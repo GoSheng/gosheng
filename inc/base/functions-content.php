@@ -133,7 +133,7 @@ function GoSheng_editor_post_password() {
             <div class="card-header text-center text-black-50">这是一篇受密码保护的内容</div>
             <div class="card-body text-center">
                 <input type="hidden" name="redirect_to">
-                <input class="form-control" placeholder="请输入阅读密码" name="post_password" id="' . $label . '" type="password" size="20" autocomplete="off"  required="required">
+                <input class="form-control text-info" placeholder="请输入阅读密码" name="post_password" id="' . $label . '" type="password" size="20" autocomplete="off"  required="required">
                 <input value="确认" class="btn btn-outline-secondary text-dark" name="Submit" type="submit" formmethod="post" formaction="' . $url . '">
             </div>
         </div>
