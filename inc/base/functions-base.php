@@ -244,7 +244,19 @@ if ( ! function_exists( 'GoSheng_users_can_register' ) ) {
 		}
 	}
 }
+//自定义登录界面LOGO链接为任意链接
+add_filter( 'login_headerurl', 'custom_login_logo_url' );
+function custom_login_logo_url() {
+//	return 'https://gosheng.net';
+	return home_url();
+}
 
+//自定义登录页面LOGO提示为任意文本
+add_filter( 'login_headertitle', 'custom_login_logo_title' );
+function custom_login_logo_title( $url ) {
+//	return '狗剩主题';
+	return get_bloginfo( 'name' );
+}
 
 //获取主题信息
 $my_theme = wp_get_theme();
