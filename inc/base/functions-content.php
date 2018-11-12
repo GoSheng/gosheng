@@ -266,6 +266,11 @@ if ( ! function_exists( 'GoSheng_posted_title' ) ) {
 }
 if ( ! function_exists( 'GoSheng_posted_excerpt' ) ) {
 	function GoSheng_posted_excerpt( $num_words = '' ) {
+		if ( post_password_required() ) {
+			esc_html_e( '本文需要密码才能查看', 'GoSheng-framework' );
+
+			return;
+		}
 		if ( has_excerpt() ) {
 			echo the_excerpt();
 		} else {
