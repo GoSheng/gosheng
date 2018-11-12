@@ -472,16 +472,13 @@ function topControl(e) {
     }
 })();
 
-//移动端导航栏按钮
+//移动端导航回缩
 (function () {
     const mainBody = document.querySelector('main');
-    const navbarCollapse = document.querySelectorAll('.navbar-collapse');
     mainBody.addEventListener('click', navbarCollapseHide);
 
-    function navbarCollapseHide(e) {
-        for (let navbarCollapseLength = navbarCollapse.length, i = 0; i < navbarCollapseLength; i++) {
-            navbarCollapse[i].classList.remove('show');
-        }
+    function navbarCollapseHide() {
+        $("#GoSheng_NavMenu_Top").collapse("hide");
     }
 })();
 
