@@ -202,7 +202,14 @@ let notyf = new Notyf({
 
     }
 })();
-
+//侧边栏切换
+(function () {
+    let sidebar = document.querySelector("#sidebar");
+    if (sidebar) {
+        let floatToolSidebar = document.querySelector("#floatToolSidebar");
+        floatToolSidebar.classList.remove("d-none");
+    }
+})();
 //滚动监听
 (function () {
     let headerNav = document.querySelector("#headerNav");
@@ -211,7 +218,6 @@ let notyf = new Notyf({
     });
     if (headerNav) {
         let floatTools = document.querySelector("#floatTools");
-        let floatToolSidebar = document.querySelector("#floatToolSidebar");
         let floatToolQQ = document.querySelector("#floatToolQQ");
         let floatToolComment = document.querySelector("#floatToolComment");
         let floatToolBackTop = document.querySelector("#floatToolBackTop");
@@ -229,17 +235,17 @@ let notyf = new Notyf({
                 headerNav.classList.remove("slideDown");
                 headerNav.classList.add("slideUp", "fixed-top");
                 if (new_scroll_position < last_scroll_position && last_scroll_position > 400) {
-                    floatToolQQ ? floatToolQQ.classList.remove("invisible") : "";
-                    floatToolComment ? floatToolComment.classList.remove("invisible") : "";
-                    floatToolBackTop ? floatToolBackTop.classList.remove("invisible") : "";
+                    floatToolQQ ? floatToolQQ.classList.remove("d-none") : "";
+                    floatToolComment ? floatToolComment.classList.remove("d-none") : "";
+                    floatToolBackTop ? floatToolBackTop.classList.remove("d-none") : "";
                 }
             } else if (new_scroll_position > last_scroll_position) {
                 headerNav.classList.remove("slideUp");
                 headerNav.classList.add("slideDown", "fixed-top");
                 if (last_scroll_position < 400) {
-                    floatToolQQ ? floatToolQQ.classList.add("invisible") : "";
-                    floatToolComment ? floatToolComment.classList.add("invisible") : "";
-                    floatToolBackTop ? floatToolBackTop.classList.add("invisible") : "";
+                    floatToolQQ ? floatToolQQ.classList.add("d-none") : "";
+                    floatToolComment ? floatToolComment.classList.add("d-none") : "";
+                    floatToolBackTop ? floatToolBackTop.classList.add("d-none") : "";
                     if (last_scroll_position < 49) {
                         headerNav.classList.remove('slideDown', "fixed-top");
                     }
@@ -482,7 +488,7 @@ function topControl(e) {
     }
 })();
 
-//顶部日期时间
+//日期时间
 (function () {
     let timeElement = document.querySelector('#gosheng_time');
     if (timeElement) {
