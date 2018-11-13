@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $GoSheng;
 
 if ( is_user_logged_in() ) { ?>
-    <a href="<?php echo admin_url('admin.php?page=GoSheng_options'); ?>" title="狗剩主题" target="_blank"
+    <a href="<?php echo admin_url( 'admin.php?page=GoSheng_options' ); ?>" title="狗剩主题" target="_blank"
        class="btn btn-outline-primary border-secondary rounded-circle text-dark">
         <i class="fas fa-dog"></i>
     </a>
@@ -13,7 +13,7 @@ if ( is_user_logged_in() ) { ?>
        class="btn btn-outline-primary border-secondary rounded-circle text-dark">
         <i class="fas fa-cog"></i>
     </a>
-    <a href="<?php echo wp_logout_url(); ?>" title="退出" target="_blank"
+    <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="退出" target="_blank"
        class="btn btn-outline-primary border-secondary rounded-circle text-dark">
         <i class="fas fa-sign-out-alt"></i>
     </a>
