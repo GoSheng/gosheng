@@ -18,9 +18,9 @@ body::-webkit-scrollbar { display:none; }
 #oauth_login_list > span {cursor:pointer;}
 /*oauth登录*/
 /*文章内容区域*/
-#content > .content .entry-header {}
-#content > .content .entry-header {word-wrap:break-word;}
-#content > .content .entry-header iframe {max-width:100%;}
+#content > .content .entry-content {}
+#content > .content .entry-content {word-wrap:break-word;}
+#content > .content .entry-content iframe {max-width:100%;}
 /*文章内容区域*/
 .bg-input {background-color:#eeeeff;}
 /* 自定义简写 */
