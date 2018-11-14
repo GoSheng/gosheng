@@ -53,6 +53,7 @@ body::-webkit-scrollbar { display:none; }
 .bg-copyright { background-color:#1B1B1B; }
 .bg-footer { background-color:#222222; }
 .text-indent { text-indent:2rem; }
+.text-word-break {white-space:normal;word-break:break-all;}
 .z1 { z-index:1; }
 .z10000 { z-index:10000; }
 .z10001 { z-index:10001; }

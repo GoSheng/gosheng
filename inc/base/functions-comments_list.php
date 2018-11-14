@@ -62,7 +62,7 @@ if ( ! function_exists( 'GoSheng_comments_list_callback_start' ) ) {
 	                }
 	                ?>
                 </span>
-                <div class="text-truncate text-indent font-6 font-lg-8"><?php comment_text(); ?></div>
+                <div class="text-truncate text-indent text-word-break font-6 font-lg-8"><?php comment_text(); ?></div>
 				<?php
 				if ( $comment->comment_approved == '0' ) {
 					echo '<span class="waiting">' . __( '评论正在审核中...', 'GoSheng-framework' ) . '</span>';
