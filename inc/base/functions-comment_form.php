@@ -35,7 +35,7 @@ if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 		$user                   = wp_get_current_user();
 		$user_identity          = $user->exists() ? $user->display_name : '';
 		$logged_in_as           = '<p class="logged-in-as"><span>当前用户：%1$s</span><a class="float-right" href="%2$s">%3$s</a></p>';
-		$logged_in_as           = sprintf( $logged_in_as, $user_identity, wp_logout_url(), __( '退出', 'GoSheng-framework' ) );
+		$logged_in_as           = sprintf( $logged_in_as, $user_identity, wp_logout_url(get_permalink()), __( '退出', 'GoSheng-framework' ) );
 		$comment_notes_before   = '<span class="font-8">%1$s</span>';
 		$comment_notes_before   = sprintf( $comment_notes_before, __( '您的邮箱和QQ不会被公开显示。', 'GoSheng-framework' ) );
 		$comment_notes_after    = '<span class="font-8">%1$s</span>';
