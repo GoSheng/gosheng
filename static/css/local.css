@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* webkit内核滚动条 */
 body::-webkit-scrollbar { display:none; }
 #gosheng_smile > div::-webkit-scrollbar { display:none; }
@@ -8,22 +9,48 @@ body::-webkit-scrollbar { display:none; }
 /*body::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:focus {background:#999999; }*/
 
 /* webkit内核滚动条 */
+
 /* 选取状态 */
 ::selection { background-color:#343A40; color:#F8F9FA; }
 /* 选取状态 */
+
 /*谷歌reCAPTCHA*/
 .grecaptcha-badge {display:none;}
 /*谷歌reCAPTCHA*/
+
 /*oauth登录*/
 #oauth_login_list > span {cursor:pointer;}
 /*oauth登录*/
+
 /*文章内容区域*/
 #content > .content .entry-content {}
 #content > .content .entry-content {word-wrap:break-word;}
 #content > .content .entry-content iframe {max-width:100%;}
 /*文章内容区域*/
-.bg-input {background-color:#eeeeff;}
+
+/*侧边栏小工具*/
+#sidebar > .widget_media_image > a,
+#sidebar > .widget_media_image .image {display:flex;align-self:center;}
+#sidebar > .widget_recent_entries > ul,
+#sidebar > .widget_nav_menu > [class^="menu-"][class$="-container"] > ul.menu[id^="menu-"] {padding-left:0;list-style:none;}
+#sidebar > .widget_tag_cloud > .tagcloud > a {padding:.125rem .25rem;color:#f0f0f0;border-radius:3px;}
+#sidebar > .widget_tag_cloud > .tagcloud > a:nth-child(odd) {background-color:#a42722;}
+#sidebar > .widget_tag_cloud > .tagcloud > a:nth-child(even) {background-color:#488bff;}
+#sidebar > .widget_tag_cloud > .tagcloud > a:hover,
+#sidebar > .widget_tag_cloud > .tagcloud > a:focus {background-color:#f0f0f0;color:#2d2d2d;}
+#sidebar > .widget_nav_menu > [class^="menu-"][class$="-container"] > ul.menu[id^="menu-"] > li > a,
+#sidebar > .widget_tag_cloud > .tagcloud > a,
+#sidebar > .widget_recent_entries > ul > li > a,
+#sidebar > .widget_recent_entries > ul > li > .post-date{text-decoration:none;font-size:0.8rem !important;}
+#sidebar > .widget_recent_entries > ul > li > .post-date {}
+#sidebar > .widget_media_image .image,
+#sidebar > .widget_nav_menu > [class^="menu-"][class$="-container"],
+#sidebar > .widget_recent_entries > ul,
+#sidebar > .widget_tag_cloud > .tagcloud {padding:.25rem .5rem;}
+/*侧边栏小工具*/
+
 /* 自定义简写 */
+.bg-input {background-color:#eeeeff;}
 @media (min-width:576px) {
 }
 @media (min-width:768px) {
