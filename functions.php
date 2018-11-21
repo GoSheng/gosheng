@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 date_default_timezone_set( get_option( 'timezone_string' ) );
 
-get_template_part( 'inc/update' );
+get_template_part( 'inc/theme_update' );
 add_action( 'after_setup_theme', 'GoSheng_setup' );
 add_action( 'after_setup_theme', 'GoSheng_register_nav_menus' );
 
