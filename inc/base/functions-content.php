@@ -243,7 +243,7 @@ if ( ! function_exists( 'GoSheng_posted_time' ) ) {
 		);
 		switch ( $display_type ) {
 			case false:
-				$posted_on = '<span class="font-8 font-lg-9"><i class="far fa-clock mr-1 mr-lg-1"></i>' . $time_string . '</span>';
+				$posted_on = '<span class="font-5 font-lg-6"><i class="far fa-clock mr-1 mr-lg-1"></i>' . $time_string . '</span>';
 				break;
 			default:
 				$posted_on = $time_string;
@@ -285,7 +285,7 @@ if ( ! function_exists( 'GoSheng_posted_excerpt' ) ) {
 
 if ( ! function_exists( 'GoSheng_posted_author' ) ) {
 	function GoSheng_posted_author( $display_type = false ) {
-		$author_before = '<span class="font-8 font-lg-9 d-none d-lg-initial"><i class="far fa-user mr-1 mr-lg-1"></i>';
+		$author_before = '<span class="font-5 font-lg-6 d-none d-lg-initial"><i class="far fa-user mr-1 mr-lg-1"></i>';
 		$author_after  = '</span>';
 		$author        = get_the_author();
 		switch ( $display_type ) {
@@ -299,7 +299,7 @@ if ( ! function_exists( 'GoSheng_posted_author' ) ) {
 }
 if ( ! function_exists( 'GoSheng_posted_comment_number' ) ) {
 	function GoSheng_posted_comment_number( $display_type = false ) {
-		$comment_before = '<span class="font-8 font-lg-9"><i class="far fa-comment-dots mr-1 mr-lg-1"></i>';
+		$comment_before = '<span class="font-5 font-lg-6"><i class="far fa-comment-dots mr-1 mr-lg-1"></i>';
 		$comment_after  = '</span>';
 		$comment_number = get_comments_number();
 		switch ( $display_type ) {
@@ -313,7 +313,7 @@ if ( ! function_exists( 'GoSheng_posted_comment_number' ) ) {
 }
 if ( ! function_exists( 'GoSheng_posted_category' ) ) {
 	function GoSheng_posted_category( $display_type = false ) {
-		$category_before = '<span class="font-8 d-none d-lg-initial"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
+		$category_before = '<span class="font-5 font-lg-6 d-none d-lg-initial"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
 		$category_after  = '</span>';
 		if ( true === $display_type ) {
 			foreach ( get_the_category() as $item ) {
@@ -394,7 +394,7 @@ if ( ! function_exists( 'GoSheng_edit_post_link' ) ) {
 if ( ! function_exists( 'GoSheng_posted_views' ) ) {
 	function GoSheng_posted_views( $display_type = false ) {
 		if ( false === $display_type ) {
-			$views_before = '<span class="font-8 font-lg-9"><i class="far fa-eye mr-1 mr-lg-1"></i>';
+			$views_before = '<span class="font-5 font-lg-6"><i class="far fa-eye mr-1 mr-lg-1"></i>';
 			$views_after  = '</span>';
 			GoSheng_get_post_views( $views_before, $views_after );
 		} else {
@@ -432,7 +432,7 @@ if ( ! function_exists( 'GoSheng_get_post_views' ) ) {
 
 if ( ! function_exists( 'GoSheng_posted_thumbs_up_already' ) ) {
 	function GoSheng_posted_thumbs_up_already( $display_type = false ) {
-		$thumbs_up_before = '<span class="font-8 font-lg-9 d-none d-lg-initial"><i class="far fa-thumbs-up"></i>';
+		$thumbs_up_before = '<span class="font-5 font-lg-6 d-none d-lg-initial"><i class="far fa-thumbs-up"></i>';
 		$thumbs_up_after  = '</span>';
 		global $post;
 		$post_ID   = $post->ID;

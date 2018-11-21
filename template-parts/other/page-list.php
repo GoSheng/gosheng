@@ -14,24 +14,24 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
     <div class="col-9 p-1">
         <h5 class="p-absolute b-0 b-lg-4">
-            <a class="text-body font-8 font-lg-10" title="<?php GoSheng_posted_title( 100 ); ?>"
+            <a class="text-body font-8 font-lg-9" title="<?php GoSheng_posted_title( 100 ); ?>"
                href="<?php GoSheng_posted_permalink(); ?>"><?php GoSheng_posted_title(); ?></a>
         </h5>
-        <div class="p-absolute d-none d-lg-block b--2 text-indent text-muted font-8 font-lg-9">
+        <div class="p-absolute d-none d-lg-block b--2 text-indent text-muted font-6 font-lg-7">
             <span><?php GoSheng_posted_excerpt(80); ?></span>
         </div>
         <div class="p-absolute t-0 t-lg-4 d-flex justify-content-start align-items-center">
             <span class="mr-1 mr-lg-2">
-                <i class="text-dark text-muted font-8 font-lg-9 fas fa-clock"></i>
-                <span class="font-8 font-lg-9"><?php GoSheng_posted_time( 1 ); ?></span>
+                <i class="text-dark text-muted font-5 font-lg-6 fas fa-clock"></i>
+                <span class="font-5 font-lg-6"><?php GoSheng_posted_time( 1 ); ?></span>
             </span>
             <span class="mr-1 mr-lg-2">
-                <i class="text-dark text-muted font-8 font-lg-9 fas fa-eye"></i>
-                <span class="font-8 font-lg-9"><?php GoSheng_posted_views( 1 ); ?></span>
+                <i class="text-dark text-muted font-5 font-lg-6 fas fa-eye"></i>
+                <span class="font-5 font-lg-6"><?php GoSheng_posted_views( 1 ); ?></span>
             </span>
             <span class="mr-1 mr-lg-2">
-                <i class="text-dark text-muted font-8 font-lg-9 fas fa-comment-dots"></i>
-                <span class="font-8 font-lg-9"><?php GoSheng_posted_comment_number( 1 ); ?></span>
+                <i class="text-dark text-muted font-5 font-lg-6 fas fa-comment-dots"></i>
+                <span class="font-5 font-lg-6"><?php GoSheng_posted_comment_number( 1 ); ?></span>
             </span>
         </div>
     </div>
