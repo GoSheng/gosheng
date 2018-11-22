@@ -21,7 +21,22 @@ function GoSheng_get_sidebar() {
 	if ( is_home() && $GoSheng['sidebar_home'] ) {
 		GoSheng_get_sidebar();
 	} elseif ( is_single() && $GoSheng['sidebar_single'] ) {
-		GoSheng_get_sidebar();
+		$single_type = GoSheng_get_post_format();
+		switch ( $single_type ) {
+			case 'aside':
+			case 'standard':
+				GoSheng_get_sidebar();
+				break;
+			case 'audio':
+			case 'excerpt':
+			case 'gallery':
+			case 'image':
+			case 'link':
+			case 'quote':
+			case 'video':
+			default:
+				break;
+		}
 	} elseif ( is_page() && $GoSheng['sidebar_page'] ) {
 		GoSheng_get_sidebar();
 	} elseif ( is_search() && $GoSheng['sidebar_search'] ) {

@@ -29,7 +29,7 @@ get_header();
 			GoSheng_posted_share();
 		}
 		?>
-        <?php
+		<?php
 		if ( $GoSheng['posted_tags'] ) {
 			GoSheng_posted_tags();
 		}
@@ -37,8 +37,23 @@ get_header();
 
 		<?php GoSheng_post_nav(); ?>
 		<?php
-		if ( comments_open() || get_comments_number() ) {
-			comments_template();
+		if ( is_single() ) {
+			$single_type = GoSheng_get_post_format();
+			switch ( $single_type ) {
+				case 'standard':
+					GoSheng_get_comments();
+					break;
+				case 'aside':
+				case 'audio':
+				case 'excerpt':
+				case 'gallery':
+				case 'image':
+				case 'link':
+				case 'quote':
+				case 'video':
+				default:
+					break;
+			}
 		}
 		?>
 	<?php endwhile; ?>

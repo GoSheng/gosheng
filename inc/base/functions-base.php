@@ -168,7 +168,14 @@ if ( ! function_exists( 'GoSheng_setup' ) ) {
 		add_filter( 'pre_option_link_manager_enabled', '__return_true' );
 	}
 }
-
+//获取评论模板
+if ( ! function_exists( 'GoSheng_get_comments' ) ) {
+	function GoSheng_get_comments() {
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+	}
+}
 //静态文件目录转移
 if ( ! defined( 'themeStaticFile_URI' ) ) {
 	switch ( get_option( 'themeStaticDirectoryStatus' ) ) {
