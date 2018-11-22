@@ -37,6 +37,7 @@ get_header();
 
 		<?php GoSheng_post_nav(); ?>
 		<?php
+		//todo:在后台增加可控按类型进行评论功能的开启和关闭
 		if ( is_single() ) {
 			$single_type = GoSheng_get_post_format();
 			switch ( $single_type ) {
