@@ -3,4 +3,4 @@
 ＃随笔
 我最近心情不好，总是感觉活在一个重复的世界里，不知道该怎么才能让头脑清醒一些，我想顺利的活过2018年，那我将继续进行这个主题创作，如果不能健健康康的活到2019年，那么这个主题的最后更新时间就是我最后清醒的时间了。
 # 下载压缩包
-https://github.com/GoSheng/gosheng_update/raw/master/zip/1.x/v-1.04.01.zip
+https://github.com/GoSheng/gosheng_update/raw/master/zip/1.x/v-1.05.00.zip
