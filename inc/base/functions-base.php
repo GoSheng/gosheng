@@ -115,7 +115,7 @@ add_filter( 'nav_menu_css_class', 'GoSheng_menu_classes', 1, 3 );
 if ( ! function_exists( 'GoSheng_menu_classes' ) ) {
 	function GoSheng_menu_classes( $classes, $item, $args ) {
 		if ( $args->theme_location == 'GoSheng_NavMenu_Top' ) {
-			$classes[] = 'mx-lg-1 rounded d-flex justify-content-center btn-outline-warning';
+			$classes[] = 'mx-lg-1 rounded d-flex justify-content-center';
 		}
 
 		return $classes;

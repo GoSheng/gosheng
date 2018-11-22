@@ -3,8 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark z100000"
-     id="headerNav">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info z100000" id="headerNav">
     <div class="container">
         <div>
 			<?php if ( $GoSheng['mobile_sidebar_left'] ) {
