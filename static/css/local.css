@@ -26,6 +26,8 @@ body::-webkit-scrollbar { display:none; }
 #content > .content .entry-content {}
 #content > .content .entry-content {word-wrap:break-word;}
 #content > .content .entry-content iframe {max-width:100%;}
+#content > .content .entry-content .wp-video {min-width:100%;}
+/*#content > .content .entry-content .wp-audio-shortcode {min-width:100%;}*/
 /*文章内容区域*/
 
 /*侧边栏小工具*/

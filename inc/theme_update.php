@@ -2,8 +2,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-if ( file_exists( get_theme_file_path() . '/inc/theme-update/theme-update.php' ) ) {
-	get_template_part( 'inc/theme-update/theme-update' );
+if ( file_exists( get_theme_file_path() . '/inc/update/theme-update.php' ) ) {
+	get_template_part( 'inc/update/theme-update' );
 }
 
 $GoShengUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
