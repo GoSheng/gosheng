@@ -849,9 +849,9 @@ $(document).ready(function () {
     let simle_yan = document.querySelector("#simle_yan");
     if (simle_yan) {
         let comment_textarea = document.getElementById("comment_textarea");
-        simle_yan.addEventListener("click", input_simle);
+        simle_yan.addEventListener("click", input_yan_simle);
 
-        function input_simle(e) {
+        function input_yan_simle(e) {
             e.preventDefault();
             let simle = e.target;
             if (simle.localName === "span" || simle.nodeName === "SPAN" || simle.tagName === "SPAN") {
@@ -859,6 +859,21 @@ $(document).ready(function () {
                 let input_simle = simle_title + simle.innerHTML;
                 let input_old = comment_textarea.value;
                 comment_textarea.value = input_old + " " + input_simle + " ";
+            }
+        }
+    }
+    let simle_emoji = document.querySelector("#simle_emoji");
+    if (simle_emoji) {
+        let comment_textarea = document.getElementById("comment_textarea");
+        simle_emoji.addEventListener("click", input_emoji_simle);
+
+        function input_emoji_simle(e) {
+            e.preventDefault();
+            let simle = e.target;
+            if (simle.localName === "span" || simle.nodeName === "SPAN" || simle.tagName === "SPAN") {
+                let input_simle = simle.innerHTML;
+                let input_old = comment_textarea.value;
+                comment_textarea.value = input_old + input_simle;
             }
         }
     }
