@@ -55,6 +55,7 @@ if ( ! function_exists( 'GoSheng_comment_form' ) ) {
 			'logged_in_as'         => $logged_in_as,
 			'comment_notes_before' => $comment_notes_before,
 			'comment_notes_after'  => $comment_notes_after,
+			'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s"><i class="fas fa-paper-plane"> %4$s</i></button>',
 		);
 		comment_form( $args );
 	}
