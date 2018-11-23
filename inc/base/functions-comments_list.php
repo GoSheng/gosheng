@@ -31,7 +31,7 @@ if ( ! function_exists( 'GoSheng_comments_list_callback_start' ) ) {
 		?>
         <li id="comment-<?php comment_ID(); ?>" <?php comment_class( get_option( 'show_avatars' ) ? 'show-avatars list-unstyled' : 'list-unstyled' ); ?>>
         <article id="comment-box-<?php comment_ID(); ?>"
-                 class="comment-box border shadow-sm d-flex align-items-start mb-2">
+                 class="comment-box border rounded shadow-sm d-flex align-items-start mb-2">
             <div class="pl-1 py-2"><?php echo get_avatar( $comment, 60, '', esc_html__( '用户头像', 'GoSheng-framework' ), $arg ); ?></div>
             <div class="py-2">
                 <span class="comment-meta ml-2">
