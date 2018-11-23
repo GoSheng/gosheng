@@ -519,7 +519,7 @@ body::-webkit-scrollbar { display:none; }
 
 /* LOGO字体动画 */
 #logo {
-    background-image:-webkit-linear-gradient(90deg, #FF0000, #00FFFF);
+    background-image:-webkit-linear-gradient(90deg, #7f7f7f, #ffffff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     -webkit-animation:hue 10s infinite linear;

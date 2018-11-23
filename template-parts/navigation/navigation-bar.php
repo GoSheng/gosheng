@@ -25,14 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
 		<?php if ( ! has_custom_logo() ) { ?>
 	<?php if ( is_front_page() && is_home() ) : ?>
-        <h1 class="navbar-brand mb-0">
-            <a class=" mx-auto mr-lg-1 py-0 text-light text-uppercase font-weight-bold" id="logo" rel="home"
+        <h1 class="navbar-brand mb-0 mr-0 ml-5 ml-lg-0">
+            <a class="mx-auto mr-lg-1 py-0 text-light text-uppercase font-14 font-lg-19" id="logo" rel="home"
                href="<?php echo esc_url( home_url( '/' ) ); ?>"
                title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
                itemprop="url"><?php bloginfo( 'name' ); ?></a>
         </h1>
 	<?php else : ?>
-        <a class="navbar-brand  mx-auto mr-lg-1 py-0 text-light text-uppercase font-weight-bold" id="logo" rel="home"
+        <a class="mx-auto mr-lg-1 py-0 text-light text-uppercase font-14 font-lg-19" id="logo" rel="home"
            href="<?php echo esc_url( home_url( '/' ) ); ?>"
            title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
            itemprop="url"><?php bloginfo( 'name' ); ?></a>
