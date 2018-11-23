@@ -32,7 +32,7 @@ if ( ! class_exists( 'GoSheng_owl_carousel' ) ) {
 							$html .= '<a href="' . $slides[ $i ]['url'] . '" title="' . $slides[ $i ]['title'] . '" target="_blank">';
 							$html .= '<img class="img-fluid" src="' . $slides[ $i ]['image'] . '" alt="' . $slides[ $i ]['title'] . '">';
 							$html .= '</a>';
-							$html .= '<a href="' . $slides[ $i ]['url'] . '" class="bg-secondary px-1 text-black-50 w-100 b-0">';
+							$html .= '<a href="' . $slides[ $i ]['url'] . '" class="bg-black-50 px-1 text-black-50 w-100 b-0">';
 							$html .= $slides[ $i ]['title'];
 							$html .= '</a>';
 							$html .= '</div>';
