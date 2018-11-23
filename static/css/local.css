@@ -65,17 +65,17 @@ body::-webkit-scrollbar { display: none; }
 .letter-spacing-2 {letter-spacing: .5rem;}
 .letter-spacing-3 {letter-spacing: .75rem;}
 .letter-spacing-4 {letter-spacing: 1rem;}
-#gosheng_share .fa-qq {color: #0098e6;}
-#gosheng_share .fa-weibo {color: #ec0117;}
-#gosheng_share .fa-weixin {color: #33c433;}
-#gosheng_share .fa-google {color: #3182f6;}
-#gosheng_share .fa-github {color: #333333;}
-#gosheng_share .fa-facebook {color: #4862a3;}
-#gosheng_share .fa-twitter {color: #4baaf4;}
-#gosheng_share .fa-linkedin {color: #0077b9;}
-#gosheng_share .fa-google-plus {color: #cf4337;}
-#gosheng_share .fa-tencent-weibo {color: #65b452}
-#gosheng_share .fa-alipay {color: #00a0e9;}
+#GoSheng_oauth_login .fa-qq, #gosheng_share .fa-qq {color: #0098e6;}
+#GoSheng_oauth_login .fa-weibo, #gosheng_share .fa-weibo {color: #ec0117;}
+#GoSheng_oauth_login .fa-weixin, #gosheng_share .fa-weixin {color: #33c433;}
+#GoSheng_oauth_login .fa-google, #gosheng_share .fa-google {color: #3182f6;}
+#GoSheng_oauth_login .fa-github, #gosheng_share .fa-github {color: #333333;}
+#GoSheng_oauth_login .fa-facebook, #gosheng_share .fa-facebook {color: #4862a3;}
+#GoSheng_oauth_login .fa-twitter, #gosheng_share .fa-twitter {color: #4baaf4;}
+#GoSheng_oauth_login .fa-linkedin, #gosheng_share .fa-linkedin {color: #0077b9;}
+#GoSheng_oauth_login .fa-google-plus, #gosheng_share .fa-google-plus {color: #cf4337;}
+#GoSheng_oauth_login .fa-tencent-weibo, #gosheng_share .fa-tencent-weibo {color: #65b452}
+#GoSheng_oauth_login .fa-alipay, #gosheng_share .fa-alipay {color: #00a0e9;}
 .bg-black-50 {background-color: #6c757d80}
 .bg-top_header {background-color: antiquewhite;}
 .bg-header {background-color: #FFFFFF;}
@@ -728,7 +728,7 @@ body::-webkit-scrollbar { display: none; }
 
 /* LOGO字体动画 */
 #logo {
-    background-image: -webkit-linear-gradient(90deg, #7f7f7f, #ffffff);
+    background-image: -webkit-linear-gradient(90deg, #ababab, #ececec);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation: hue 10s infinite linear;
