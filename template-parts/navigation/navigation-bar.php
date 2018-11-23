@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                itemprop="url"><?php bloginfo( 'name' ); ?></a>
         </h1>
 	<?php else : ?>
-        <a class="mx-auto mr-lg-1 py-0 text-light text-uppercase font-14 font-lg-19" id="logo" rel="home"
+        <a class="mr-lg-1 ml-5 ml-lg-0 py-0 text-light text-uppercase font-14 font-lg-19" id="logo" rel="home"
            href="<?php echo esc_url( home_url( '/' ) ); ?>"
            title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
            itemprop="url"><?php bloginfo( 'name' ); ?></a>
