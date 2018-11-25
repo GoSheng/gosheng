@@ -79,16 +79,26 @@ let notyf = new Notyf({
                 foreach_history();
                 GoSheng_selection_value();
                 GoSheng_delete_value();
+                search_sytle();
             }
         });
         search.addEventListener("blur", function () {
             search_history.style.display = "none";
             GoSheng_del_history_list();
+            search_unsytle();
         });
         searchSubmit.addEventListener("click", GoSheng_search_value);
         searchSubmit.addEventListener("click", function () {
             search.placeholder = "";
         });
+
+        function search_sytle() {
+            search.style.borderBottomLeftRadius = "unset";
+        }
+
+        function search_unsytle() {
+            search.style.borderBottomLeftRadius = "0.25rem";
+        }
 
         function GoSheng_search_value() {
             GoSheng_set_history();

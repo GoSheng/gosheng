@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     formaction="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fas fa-search"></i></button>
         </span>
     </div>
-    <ul id="search_history" class="border border-secondary border-top-0"
+    <ul id="search_history" class="border border-secondary border-top-0 rounded-bottom"
         role="<?php esc_attr_e( '搜索记录', 'GoSheng-framework' ); ?>">
         <li><?php esc_html_e( '最近搜索:', 'GoSheng-framework' ) ?></li>
     </ul>
