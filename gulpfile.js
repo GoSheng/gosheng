@@ -68,6 +68,16 @@ gulp.task('script_gosheng_aplayer', function () {
         .pipe(gulp.dest('./static/js/'))
 });
 
+gulp.task('script_sidebar', function () {
+    gulp.src('./static/js/sidebar.js')
+        .pipe(uglify())
+        .on('error', function (err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename('sidebar.min.js'))
+        .pipe(gulp.dest('./static/js/'))
+});
+
 gulp.task('style_local', function () {
     gulp.src(['./static/css/local.css'])
         .pipe(cssnano())
