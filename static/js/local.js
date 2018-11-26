@@ -58,9 +58,7 @@ let notyf = new Notyf({
             modalHide(reward_modal);
         });
     }
-
 })();
-
 //搜索框
 (function () {
     if (document.body.querySelector("#Gosheng_searchForm")) {
