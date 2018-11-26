@@ -79,7 +79,6 @@ let notyf = new Notyf({
                 foreach_history();
                 GoSheng_selection_value();
                 GoSheng_delete_value();
-                search_sytle();
             }
         });
         search.addEventListener("blur", function () {
@@ -128,6 +127,7 @@ let notyf = new Notyf({
                 let search_history_array_old = JSON.parse(GoSheng_GetCookie("gosheng_search_history"));
                 if (search_history_array_old && search_history_array_old.length > 0) {
                     search_history.style.display = "block";
+                    search_sytle();
                     for (let i of Object.values(search_history_array_old)) {
                         GoSheng_create_history_list(i);
                     }
