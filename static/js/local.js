@@ -97,7 +97,7 @@ let notyf = new Notyf({
         }
 
         function search_unsytle() {
-            search.style.borderBottomLeftRadius = "0.25rem";
+            search.style.borderBottomLeftRadius = "";
         }
 
         function GoSheng_search_value() {
