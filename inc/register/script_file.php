@@ -115,7 +115,7 @@ function enqueue_theia_sticky_sidebar() {
 }
 
 function enqueue_sidebar() {
-	wp_register_script( 'sidebar', themeStaticFile_URI . 'js/sidebar.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'sidebar', themeStaticFile_URI . 'js/sidebar.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'sidebar' );
 }
 

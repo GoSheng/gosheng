@@ -198,27 +198,27 @@ function register_cards( $cards ) {
 }
 
 function add_alerts( $alerts_array ) {
-	$alerts_array['alert_primary']   = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_secondary'] = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_success']   = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_warning']   = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_danger']    = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_info']      = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_light']     = themeStaticFile_URI . 'js/more_btn.js';
-	$alerts_array['alert_dark']      = themeStaticFile_URI . 'js/more_btn.js';
+	$alerts_array['alert_primary']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_secondary'] = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_success']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_warning']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_danger']    = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_info']      = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_light']     = themeStaticFile_URI . 'js/more_btn.min.js';
+	$alerts_array['alert_dark']      = themeStaticFile_URI . 'js/more_btn.min.js';
 
 	return $alerts_array;
 }
 
 function add_cards( $cards_array ) {
-	$cards_array['card_primary']   = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_secondary'] = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_success']   = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_warning']   = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_danger']    = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_info']      = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_light']     = themeStaticFile_URI . 'js/more_btn.js';
-	$cards_array['card_dark']      = themeStaticFile_URI . 'js/more_btn.js';
+	$cards_array['card_primary']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_secondary'] = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_success']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_warning']   = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_danger']    = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_info']      = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_light']     = themeStaticFile_URI . 'js/more_btn.min.js';
+	$cards_array['card_dark']      = themeStaticFile_URI . 'js/more_btn.min.js';
 
 	return $cards_array;
 }

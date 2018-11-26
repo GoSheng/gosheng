@@ -78,6 +78,16 @@ gulp.task('script_sidebar', function () {
         .pipe(gulp.dest('./static/js/'))
 });
 
+gulp.task('script_more_btn', function () {
+    gulp.src('./static/js/more_btn.js')
+        .pipe(uglify())
+        .on('error', function (err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename('more_btn.min.js'))
+        .pipe(gulp.dest('./static/js/'))
+});
+
 gulp.task('style_local', function () {
     gulp.src(['./static/css/local.css'])
         .pipe(cssnano())
