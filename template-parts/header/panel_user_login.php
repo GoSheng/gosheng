@@ -73,14 +73,84 @@ global $GoSheng;
 <div id="GoSheng_oauth_login" class="text-center">
     <span class="my-2 btn text-muted font-6 font-lg-8" data-toggle="collapse" data-target="#oauth_login_list">更多登录方式</span>
     <div class="my-2 collapse" id="oauth_login_list">
-        <span class="mr-1" title="<?php esc_html_e( 'QQ登录', 'GoSheng-framework' ); ?>" id="oauth_qq"><i class="font-10 font-lg-12 fab fa-fw fa-qq"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '微博登录', 'GoSheng-framework' ); ?>" id="oauth_weibo"><i class="font-10 font-lg-12 fab fa-fw fa-weibo"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '微信登录', 'GoSheng-framework' ); ?>" id="oauth_weixin"><i class="font-10 font-lg-12 fab fa-fw fa-weixin"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '支付宝登录', 'GoSheng-framework' ); ?>" id="oauth_alipay"><i class="font-10 font-lg-12 fab fa-fw fa-alipay"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '谷歌登录', 'GoSheng-framework' ); ?>" id="oauth_google"><i class="font-10 font-lg-12 fab fa-fw fa-google"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( 'GitHub登录', 'GoSheng-framework' ); ?>" id="oauth_github"><i class="font-10 font-lg-12 fab fa-fw fa-github"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( 'Facebook登录', 'GoSheng-framework' ); ?>" id="oauth_facebook"><i class="font-10 font-lg-12 fab fa-fw fa-facebook"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '推特登录', 'GoSheng-framework' ); ?>" id="oauth_twitter"><i class="font-10 font-lg-12 fab fa-fw fa-twitter"></i></span>
-        <span class="mr-1" title="<?php esc_html_e( '领英登录', 'GoSheng-framework' ); ?>" id="oauth_linkedin"><i class="font-10 font-lg-12 fab fa-fw fa-linkedin"></i></span>
+        <?php
+        if ( $GoSheng['oauth_qq_switch'] ) {
+            ?>
+            <span class="mr-1" title="<?php esc_html_e( 'QQ登录', 'GoSheng-framework' ); ?>" id="oauth_qq"><i class="font-10 font-lg-12 fab fa-fw fa-qq"></i></span>
+	        <?php
+        }
+        ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_weibo_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '微博登录', 'GoSheng-framework' ); ?>" id="oauth_weibo"><i class="font-10 font-lg-12 fab fa-fw fa-weibo"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_weixin_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '微信登录', 'GoSheng-framework' ); ?>" id="oauth_weixin"><i class="font-10 font-lg-12 fab fa-fw fa-weixin"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_alipay_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '支付宝登录', 'GoSheng-framework' ); ?>" id="oauth_alipay"><i class="font-10 font-lg-12 fab fa-fw fa-alipay"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_google_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '谷歌登录', 'GoSheng-framework' ); ?>" id="oauth_google"><i class="font-10 font-lg-12 fab fa-fw fa-google"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_github_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( 'GitHub登录', 'GoSheng-framework' ); ?>" id="oauth_github"><i class="font-10 font-lg-12 fab fa-fw fa-github"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_facebook_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( 'Facebook登录', 'GoSheng-framework' ); ?>" id="oauth_facebook"><i class="font-10 font-lg-12 fab fa-fw fa-facebook"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_twitter_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '推特登录', 'GoSheng-framework' ); ?>" id="oauth_twitter"><i class="font-10 font-lg-12 fab fa-fw fa-twitter"></i></span>
+
+		    <?php
+	    }
+	    ?>
+
+	    <?php
+	    if ( $GoSheng['oauth_linkedin_switch'] ) {
+		    ?>
+            <span class="mr-1" title="<?php esc_html_e( '领英登录', 'GoSheng-framework' ); ?>" id="oauth_linkedin"><i class="font-10 font-lg-12 fab fa-fw fa-linkedin"></i></span>
+
+		    <?php
+	    }
+	    ?>
     </div>
 </div>
