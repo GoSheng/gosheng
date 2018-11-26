@@ -18,6 +18,21 @@ if ( ! function_exists( 'GoSheng_admin_notice' ) ) {
 		<?php
 	}
 }
+add_action( 'wp_head', 'GoSheng_404_mail' );
+if ( ! function_exists( 'GoSheng_404_mail' ) ) {
+	function GoSheng_404_mail() {
+		if ( ! is_404() ) {
+			return;
+		};
+		$to      = get_option( 'admin_email' );
+		$subject = __( '网站遇到404页面', 'GoSheng-framework' );
+		$message = __( '404页面的地址：', 'GoSheng-framework' ) . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . "\r\n";
+		$message .= __( '访问者IP为：', 'GoSheng-framework' ) . $_SERVER['REMOTE_ADDR'] . "\r\n";
+		$message .= __( '访问者UA为：', 'GoSheng-framework' ) . $_SERVER['HTTP_USER_AGENT'] . "\r\n";
+		$message .= __( 'REQUEST_METHOD：', 'GoSheng-framework' ) . $_SERVER['REQUEST_METHOD'] . "\r\n";
+		wp_mail( $to, $subject, $message );
+	}
+}
 add_action( 'wp_footer', 'GoSheng_wp_root_directory' );
 if ( ! function_exists( 'GoSheng_wp_root_directory' ) ) {
 	function GoSheng_wp_root_directory() {
