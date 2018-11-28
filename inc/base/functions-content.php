@@ -143,7 +143,6 @@ function GoSheng_editor_post_password() {
 }
 
 //todo:待完善研究特色图片尺寸
-add_filter( 'add_image_size', create_function( '', 'return 1;' ) );
 if ( ! function_exists( 'GoSheng_posted_thumbnail' ) ) {
 	function GoSheng_posted_thumbnail() {
 		$img_id  = get_post_thumbnail_id();
