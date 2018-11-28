@@ -30,7 +30,7 @@ if ( ! function_exists( 'GoSheng_404_mail' ) ) {
 		$message .= __( '访问者IP为：', 'GoSheng-framework' ) . $_SERVER['REMOTE_ADDR'] . "\r\n";
 		$message .= __( '访问者UA为：', 'GoSheng-framework' ) . $_SERVER['HTTP_USER_AGENT'] . "\r\n";
 		$message .= __( 'REQUEST_METHOD：', 'GoSheng-framework' ) . $_SERVER['REQUEST_METHOD'] . "\r\n";
-		$message .= __( '时间', 'GoSheng-framework' ) . date( 'Y-m-d H:i:s e' );
+		$message .= __( '时间：', 'GoSheng-framework' ) . date( 'Y-m-d H:i:s e' );
 		wp_mail( $to, $subject, $message );
 	}
 }
@@ -40,13 +40,17 @@ if ( ! function_exists( 'GoSheng_users_logs' ) ) {
 		if ( is_404() ) {
 			return;
 		};
-		$log  = date( 'Y-m-d H:i:s e' ) . '  ';
-		$log  .= $_SERVER['REMOTE_ADDR'] . '  ';
-		$log  .= $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '  ';
-		$log  .= $_SERVER['HTTP_USER_AGENT'] . '  ';
-		$log  .= "\r\n";
-		$time = date( 'Ymd' );
-		$txt  = fopen( $time . '.txt', 'a' );
+		$log       = date( 'Y-m-d H:i:s e' ) . '  ';
+		$log       .= $_SERVER['REMOTE_ADDR'] . '  ';
+		$log       .= $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '  ';
+		$log       .= $_SERVER['HTTP_USER_AGENT'] . '  ';
+		$log       .= "\r\n";
+		$date      = date( 'Ymd' );
+		$directory = 'GoSheng_users_access_logs/' . date( 'Ym' ) . '/';
+		if ( ! file_exists( $directory ) ) {
+			mkdir( $directory, 0750, true );
+		}
+		$txt = fopen( $directory . $date . '.txt', 'a' );
 		fwrite( $txt, $log );
 		fclose( $txt );
 	}
