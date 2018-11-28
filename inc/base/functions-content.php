@@ -144,10 +144,10 @@ function GoSheng_editor_post_password() {
 
 //todo:待完善研究特色图片尺寸
 add_filter( 'add_image_size', create_function( '', 'return 1;' ) );
-if ( ! function_exists( 'GoSheng_posted_thumbnail_url' ) ) {
+if ( ! function_exists( 'GoSheng_posted_thumbnail' ) ) {
 	function GoSheng_posted_thumbnail() {
 		$img_id  = get_post_thumbnail_id();
-		$img_url = wp_get_attachment_image_src( $img_id, 'GoSheng_thumbnails_entry' );
+		$img_url = wp_get_attachment_image_src( $img_id, 'GoSheng_thumbnails' );
 		$img_url = $img_url[0];
 		echo '<a href="javascript:;"><img class="img-fluid d-block mx-auto" src="' . $img_url . '" /></a>';
 	}
