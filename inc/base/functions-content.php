@@ -312,7 +312,7 @@ if ( ! function_exists( 'GoSheng_posted_comment_number' ) ) {
 }
 if ( ! function_exists( 'GoSheng_posted_category' ) ) {
 	function GoSheng_posted_category( $display_type = false ) {
-		$category_before = '<span class="d-flex py-1 font-5 font-lg-6"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
+		$category_before = '<span class="d-none d-lg-initial font-5 font-lg-6"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
 		$category_after  = '</span>';
 		if ( true === $display_type ) {
 			foreach ( get_the_category() as $item ) {
