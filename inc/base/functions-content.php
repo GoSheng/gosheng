@@ -312,7 +312,7 @@ if ( ! function_exists( 'GoSheng_posted_comment_number' ) ) {
 }
 if ( ! function_exists( 'GoSheng_posted_category' ) ) {
 	function GoSheng_posted_category( $display_type = false ) {
-		$category_before = '<span class="font-5 font-lg-6 d-none d-lg-initial"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
+		$category_before = '<span class="font-5 font-lg-6"><i class="far fa-calendar-alt mr-1 mr-lg-1"></i>';
 		$category_after  = '</span>';
 		if ( true === $display_type ) {
 			foreach ( get_the_category() as $item ) {
@@ -353,7 +353,7 @@ if ( ! function_exists( 'GoSheng_posted_share' ) ) {
 	function GoSheng_posted_share() {
 		$share_before      = '<div id="gosheng_share" class="mb-2 mb-lg-3 d-flex justify-content-start flex-wrap">';
 		$share_after       = '</div>';
-		$share_link_before = '<a href="javascript:;" id="gosheng_share_%1$s" rel="nofollow" title="分享到%2$s" class="btn rounded py-lg-3 border fab fa-lg fa-%3$s hvr-underline-reveal hvr-bob">';
+		$share_link_before = '<a href="javascript:;" id="gosheng_share_%1$s" rel="nofollow" title="分享到%2$s" class="btn rounded py-lg-3 border fab fa-lg fa-%3$s hvr-bob">';
 		$share_link_after  = '</a>';
 		$share_type        = array(
 			'weibo'         => __( '微博', 'GoSheng-framework' ),
