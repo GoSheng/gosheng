@@ -27,6 +27,7 @@ if ( ! function_exists( 'GoSheng_404_mail' ) ) {
 		$to      = get_option( 'admin_email' );
 		$subject = __( '网站遇到404页面', 'GoSheng-framework' );
 		$message = __( '404页面的地址：', 'GoSheng-framework' ) . $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . "\r\n";
+		$message .= __( 'HTTP_REFERER：', 'GoSheng-framework' ) . $_SERVER['HTTP_REFERER'] . "\r\n";
 		$message .= __( '访问者IP为：', 'GoSheng-framework' ) . $_SERVER['REMOTE_ADDR'] . "\r\n";
 		$message .= __( '访问者UA为：', 'GoSheng-framework' ) . $_SERVER['HTTP_USER_AGENT'] . "\r\n";
 		$message .= __( 'REQUEST_METHOD：', 'GoSheng-framework' ) . $_SERVER['REQUEST_METHOD'] . "\r\n";
