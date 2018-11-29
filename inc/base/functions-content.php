@@ -466,22 +466,24 @@ if ( ! function_exists( 'GoSheng_pagination' ) ) {
 			'prev_next'          => true,
 			'prev_text'          => __( '&laquo;', 'GoSheng-framework' ),
 			'next_text'          => __( '&raquo;', 'GoSheng-framework' ),
-			'screen_reader_text' => __( '帖子分页', 'GoSheng-framework' ),
+			'screen_reader_text' => __( '列表分页', 'GoSheng-framework' ),
 			'type'               => 'array',
 			'current'            => max( 1, get_query_var( 'paged' ) ),
 		) );
 		$links = paginate_links( $args );
 		?>
-        <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
-            <ul class="pagination">
-				<?php
-				foreach ( $links as $key => $link ) { ?>
-                    <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
-                    </li>
-				<?php } ?>
-            </ul>
-        </nav>
+        <div id="GoSheng_pagination" class="d-flex justify-content-center">
+            <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+                <ul class="pagination">
+					<?php
+					foreach ( $links as $key => $link ) { ?>
+                        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
+							<?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+                        </li>
+					<?php } ?>
+                </ul>
+            </nav>
+        </div>
 		<?php
 	}
 }
