@@ -200,7 +200,7 @@ if ( ! function_exists( 'GoSheng_setup' ) ) {
 //    add_theme_support('post-thumbnails', array('page'));
 //  //仅在 post 和 movies 中使用
 //    add_theme_support('post-thumbnails', array('post', 'movie'));
-		add_image_size( 'GoSheng_thumbnails', 680, 453 );
+		add_image_size( 'GoSheng_thumbnails', 800, 500 );
 		add_image_size( 'GoSheng_thumbnails_entry', 198, 115, true );
 
 		//恢复WP自带链接功能
