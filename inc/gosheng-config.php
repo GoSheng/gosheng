@@ -1578,7 +1578,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( 'FunDebug的版本', 'GoSheng-framework' ),
 			'desc'        => __( '查看FunDebug版本号：', 'GoSheng-framework' ) . '<a href="https://docs.fundebug.com/notifier/javascript/version.html?form=GoShengTheme" target="_blank">点这里</a>',
 			'placeholder' => __( '此项为必填项。', 'GoSheng-framework' ),
-			'default'     => '1.2.3',
+			'default'     => '1.4.0',
 		),
 		array(
 			'id'          => 'FunDebug_ApiKey',
