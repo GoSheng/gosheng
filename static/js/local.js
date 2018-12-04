@@ -15,10 +15,17 @@ const GoSheng_Window_Screen_Heigth = window.screen.height;//屏幕分辨率的�
 const GoSheng_Window_Screen_availWidth = window.screen.availWidth;//屏幕可用工作区高度
 const GoSheng_Window_Screen_availHeight = window.screen.availHeight;//屏幕可用工作区宽度
 let notyf = new Notyf({
-    delay: 7000,
+    delay: 8000,
     alertIcon: 'fas fa-exclamation-circle',
     confirmIcon: 'fas fa-check-circle'
 });
+(function () {
+    let body = document.querySelector("body");
+    let is_404 = body.classList.contains("error404");
+    if (is_404) {
+        fundebug.notify("theme_notify", "Hello GoSheng!");
+    }
+})();
 //登录模态框动画
 (function () {
     let modalLogin = document.querySelector("#modalLogin");
