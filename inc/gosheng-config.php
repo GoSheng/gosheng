@@ -1651,40 +1651,40 @@ Redux::setSection( $opt_name, array(
 		),
 	)
 ) );
-
-Redux::setSection( $opt_name, array(
-	'id'    => 'bei',
-	'title' => __( '备用', 'GoSheng-framework' ),
-	'desc'  => __( '介绍', 'GoSheng-framework' ),
-	'icon'  => 'el el-cog'
-) );
-Redux::setSection( $opt_name, array(
-	'id'         => 'bei_1',
-	'title'      => __( '备用', 'GoSheng-framework' ),
-	'desc'       => __( '', 'GoSheng-framework' ),
-	'subsection' => true,
-	'icon'       => 'el el-cogs',
-	'fields'     => array(
-		array(
-			'id'          => 'icon_select_field',
-			'type'        => 'select',
-			'data'        => 'elusive-icons',
-			'title'       => __( '图标演示', 'GoSheng-framework' ),
-			'subtitle'    => __( '', 'GoSheng-framework' ),
-			'desc'        => __( '', 'GoSheng-framework' ),
-			'placeholder' => __( '请选择一个图标', 'GoSheng-framework' ),
-		),
-		array(
-			'id'       => 'color',
-			'type'     => 'color',
-			'title'    => __( '颜色', 'GoSheng-framework' ),
-			'subtitle' => __( '', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
-			'default'  => '#FFFFFF',
-			'validate' => 'color',
-		),
-	),
-) );
+//
+//Redux::setSection( $opt_name, array(
+//	'id'    => 'bei',
+//	'title' => __( '备用', 'GoSheng-framework' ),
+//	'desc'  => __( '介绍', 'GoSheng-framework' ),
+//	'icon'  => 'el el-cog'
+//) );
+//Redux::setSection( $opt_name, array(
+//	'id'         => 'bei_1',
+//	'title'      => __( '备用', 'GoSheng-framework' ),
+//	'desc'       => __( '', 'GoSheng-framework' ),
+//	'subsection' => true,
+//	'icon'       => 'el el-cogs',
+//	'fields'     => array(
+//		array(
+//			'id'          => 'icon_select_field',
+//			'type'        => 'select',
+//			'data'        => 'elusive-icons',
+//			'title'       => __( '图标演示', 'GoSheng-framework' ),
+//			'subtitle'    => __( '', 'GoSheng-framework' ),
+//			'desc'        => __( '', 'GoSheng-framework' ),
+//			'placeholder' => __( '请选择一个图标', 'GoSheng-framework' ),
+//		),
+//		array(
+//			'id'       => 'color',
+//			'type'     => 'color',
+//			'title'    => __( '颜色', 'GoSheng-framework' ),
+//			'subtitle' => __( '', 'GoSheng-framework' ),
+//			'desc'     => __( '', 'GoSheng-framework' ),
+//			'default'  => '#FFFFFF',
+//			'validate' => 'color',
+//		),
+//	),
+//) );
 
 
 //注销仪表盘redux-framework新闻信息
