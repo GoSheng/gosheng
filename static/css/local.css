@@ -76,7 +76,7 @@ body::-webkit-scrollbar { display: none; }
 #GoSheng_oauth_login .fa-google-plus, #gosheng_share .fa-google-plus {color: #cf4337;}
 #GoSheng_oauth_login .fa-tencent-weibo, #gosheng_share .fa-tencent-weibo {color: #65b452}
 #GoSheng_oauth_login .fa-alipay, #gosheng_share .fa-alipay {color: #00a0e9;}
-.bg-black-50 {background-color: #6c757d80}
+.bg-black-50 {background-color: #a7a7a780}
 .bg-top_header {background-color: antiquewhite;}
 .bg-header {background-color: #FFFFFF;}
 .bg-body {background-color: #EFEFEF;}
