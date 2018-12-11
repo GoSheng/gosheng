@@ -19,7 +19,8 @@ if ( have_posts() ) :?>
 			echo ' 个结果。';
 			?></p></div>
 	<?php
-	while ( have_posts() ) : the_post();
+	while ( have_posts() ) :
+        the_post();
 		get_template_part( 'template-parts/other/page', 'list' );
 	endwhile;
 	?></div><?php
