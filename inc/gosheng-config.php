@@ -193,8 +193,8 @@ $theme_desc = sprintf(
 	__( '主机信息', 'GoSheng-framework' ),
 	sprintf( __( 'Redux Framework版本v%1$s', 'GoSheng-framework' ), esc_html( ReduxFramework::$_version ) ),
 	sprintf( __( '谷歌 reCAPTCHA版本%1$s', 'GoSheng-framework' ), 'v3' ),
-	sprintf( __( 'Bootstrap版本%1$s', 'GoSheng-framework' ), 'v4.2.1' ),
-	sprintf( __( 'Font Awesome版本%1$s', 'GoSheng-framework' ), 'v5.5.0' )
+	sprintf( __( 'Bootstrap版本%1$s', 'GoSheng-framework' ), 'v4.3.1' ),
+	sprintf( __( 'Font Awesome版本%1$s', 'GoSheng-framework' ), 'v5.7.2' )
 );
 
 // -> START Switch & Button Set

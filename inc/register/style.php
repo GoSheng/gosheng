@@ -13,8 +13,6 @@ add_action( 'wp_enqueue_scripts', 'enqueue_style_bootstrap' );
 
 add_action( 'wp_enqueue_scripts', 'enqueue_style_font_awesome5_all_fonts' );
 add_action( 'wp_enqueue_scripts', 'enqueue_style_font_awesome5' );
-//add_action('wp_enqueue_scripts', 'enqueue_style_font_awesome5_all_fonts_75cdn');
-//add_action('wp_enqueue_scripts', 'enqueue_style_font_awesome5_75cdn');
 
 add_action( 'wp_enqueue_scripts', 'enqueue_style_OwlCarousel2' );
 //add_action('wp_enqueue_scripts', 'enqueue_style_OwlCarousel2_bootcdn');

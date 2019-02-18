@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * 注册样式表
  */
 function enqueue_style_bootstrap() {
-	wp_register_style( 'bootstrap', themeStaticFile_URI . 'css/bootstrap.min.css', array(), '4.1.3', 'all' );
+	wp_register_style( 'bootstrap', themeStaticFile_URI . 'css/bootstrap.min.css', array(), '4.3.1', 'all' );
 	wp_enqueue_style( 'bootstrap' );
 }
 
@@ -26,38 +26,13 @@ function enqueue_style_bootstrap_75cdn() {
 }
 
 function enqueue_style_font_awesome5() {
-	wp_register_style( 'font_awesome5', themeStaticFile_URI . 'fonts/font_awesome5/css/fontawesome.min.css', array(), '5.5.0', 'all' );
+	wp_register_style( 'font_awesome5', themeStaticFile_URI . 'fonts/font_awesome5/css/fontawesome.min.css', array(), '5.7.2', 'all' );
 	wp_enqueue_style( 'font_awesome5' );
 }
 
 function enqueue_style_font_awesome5_all_fonts() {
-	wp_register_style( 'font_awesome5_all_fonts', themeStaticFile_URI . 'fonts/font_awesome5/css/all.min.css', array(), '5.3.1', 'all' );
+	wp_register_style( 'font_awesome5_all_fonts', themeStaticFile_URI . 'fonts/font_awesome5/css/all.min.css', array(), '5.7.2', 'all' );
 	wp_enqueue_style( 'font_awesome5_all_fonts' );
-}
-
-function enqueue_style_font_awesome5_75cdn() {
-	wp_register_style( 'font_awesome5', 'https://lib.baomitu.com/font-awesome/5.3.1/web-fonts-with-css/css/fontawesome.min.css', array(), '75CDN', 'all' );
-	wp_enqueue_style( 'font_awesome5' );
-}
-
-function enqueue_style_font_awesome5_all_fonts_75cdn() {
-	wp_register_style( 'font_awesome5_all_fonts', 'https://lib.baomitu.com/font-awesome/5.3.1/web-fonts-with-css/css/fontawesome-all.min.css', array(), '75CDN', 'all' );
-	wp_enqueue_style( 'font_awesome5_all_fonts' );
-}
-
-function enqueue_style_font_awesome5_brands_75cdn() {
-	wp_register_style( 'font_awesome5_brands', 'https://lib.baomitu.com/font-awesome/5.3.1/web-fonts-with-css/css/fa-brands.min.css', array(), '75CDN', 'all' );
-	wp_enqueue_style( 'font_awesome5_brands' );
-}
-
-function enqueue_style_font_awesome5_regular_75cdn() {
-	wp_register_style( 'font_awesome5_regular', 'https://lib.baomitu.com/font-awesome/5.3.1/web-fonts-with-css/css/fa-regular.min.css', array(), '75CDN', 'all' );
-	wp_enqueue_style( 'font_awesome5_regular' );
-}
-
-function enqueue_style_font_awesome5_solid_75cdn() {
-	wp_register_style( 'font_awesome5_solid', 'https://lib.baomitu.com/font-awesome/5.3.1/web-fonts-with-css/css/fa-solid.min.css', array(), '75CDN', 'all' );
-	wp_enqueue_style( 'font_awesome5_solid' );
 }
 
 function enqueue_style_animate() {

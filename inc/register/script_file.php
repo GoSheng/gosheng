@@ -18,7 +18,7 @@ function enqueue_jquery_bootcdn() {
 }
 
 function enqueue_popper() {
-	wp_register_script( 'popper', themeStaticFile_URI . 'js/popper.min.js', array( 'jquery' ), '1.14.5', true );
+	wp_register_script( 'popper', themeStaticFile_URI . 'js/popper.min.js', array( 'jquery' ), '1.14.7', true );
 	wp_enqueue_script( 'popper' );
 }
 
@@ -28,7 +28,7 @@ function enqueue_popper_bootcdn() {
 }
 
 function enqueue_bootstrap() {
-	wp_register_script( 'bootstrap', themeStaticFile_URI . 'js/bootstrap.min.js', array( 'jquery' ), '4.1.3', true );
+	wp_register_script( 'bootstrap', themeStaticFile_URI . 'js/bootstrap.min.js', array( 'jquery' ), '4.3.1', true );
 	wp_enqueue_script( 'bootstrap' );
 }
 
@@ -107,10 +107,7 @@ function enqueue_resizesensor() {
 }
 
 function enqueue_theia_sticky_sidebar() {
-	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array(
-		'resizesensor',
-		'jquery'
-	), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array('resizesensor','jquery'), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'theia_sticky_sidebar' );
 }
 
