@@ -7,7 +7,7 @@ if ( file_exists( get_theme_file_path() . '/inc/update/theme-update.php' ) ) {
 }
 
 $GoShengUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://gitee.com/GoSheng/gosheng_update/raw/master/theme_back.json',
+	'https://raw.githubusercontent.com/GoSheng/gosheng_update/master/theme.json',
 	dirname( dirname( __FILE__ ) ) . '/functions.php',
 	'gosheng'
 );
