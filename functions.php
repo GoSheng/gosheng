@@ -1,7 +1,6 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
+
 date_default_timezone_set( get_option( 'timezone_string' ) );
 
 get_template_part( 'inc/theme_update' );

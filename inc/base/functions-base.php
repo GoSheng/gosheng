@@ -2,6 +2,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+global $GoSheng;
+
 add_action( 'welcome_panel', 'GoSheng_admin_notice' );
 if ( ! function_exists( 'GoSheng_admin_notice' ) ) {
 	function GoSheng_admin_notice() {
@@ -217,7 +219,7 @@ if ( ! function_exists( 'GoSheng_get_comments' ) ) {
 }
 //静态文件目录转移
 if ( ! defined( 'themeStaticFile_URI' ) ) {
-	switch ( get_option( 'themeStaticDirectoryStatus' ) ) {
+	switch ( $GoSheng['themeStaticDirectoryStatus'] ) {
 		case true:
 			define( 'themeStaticFile_URI', site_url() . '/goshengstatic/' );
 			break;
@@ -328,7 +330,7 @@ $themeConfigs[] = array(
 	'THEME_FILE_VERSION'        => get_option( 'file_version_debug' ) ? date( 'Ymd' ) : '201801011',
 	'THEME_STATIC_FILE_VERSION' => get_option( 'static_file_version_debug' ) ? date( 'His' ) : '201801011',
 	'THEME_REQUIRED_WP'         => '4.8',
-	'THEME_SUPPORT_WP'          => '4.9.8',
+	'THEME_SUPPORT_WP'          => '5.1',
 );
 $themeConfig    = array_column( $themeConfigs, null, 'name' );
 //常量
