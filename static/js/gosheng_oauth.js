@@ -1,8 +1,8 @@
 (function () {
-    let oauth_login_list=document.querySelector("#oauth_login_list");
+    let oauth_login_list = document.querySelector("#oauth_login_list");
     let oauth_all = oauth_login_list.querySelectorAll("[id^=oauth_]");
     let ajax_url = gosheng_wp_root_directory + "wp-admin/admin-ajax.php";
-    if (oauth_all) {
+    if (oauth_login_list && oauth_all) {
         for (let oauth_all_length = oauth_all.length, i = 0; i < oauth_all_length; i++) {
             oauth_all[i].addEventListener("click", function (e) {
                 switch (e.target.parentElement.id) {
