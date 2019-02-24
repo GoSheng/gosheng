@@ -240,10 +240,14 @@ if ( ! function_exists( 'GoShengStatic' ) ) {
 }
 if ( ! function_exists( 'GoShengStaticRoot' ) ) {
 	function GoShengStaticRoot( $status ) {
+		$theme_root = get_theme_file_path() . 'static';
+		$wp_root = ABSPATH . 'goshengstatic';
 		switch ( $status ) {
 			case '0':
+				if (file_exists($wp_root)) rename($wp_root, $theme_root);
 				break;
 			case '1':
+				if (file_exists($theme_root)) rename($theme_root, $wp_root);
 				break;
 			case '2':
 				break;
