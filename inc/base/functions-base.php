@@ -22,7 +22,8 @@ if ( ! function_exists( 'GoSheng_admin_notice' ) ) {
 add_action( 'wp_head', 'GoSheng_404_mail' );
 if ( ! function_exists( 'GoSheng_404_mail' ) ) {
 	function GoSheng_404_mail() {
-		if ( ! is_404() ) {
+		global $GoSheng;
+		if ( ! is_404() || ! $GoSheng['404_mail'] ) {
 			return;
 		};
 		$to      = get_option( 'admin_email' );
@@ -39,7 +40,8 @@ if ( ! function_exists( 'GoSheng_404_mail' ) ) {
 add_action( 'wp_head', 'GoSheng_users_logs' );
 if ( ! function_exists( 'GoSheng_users_logs' ) ) {
 	function GoSheng_users_logs() {
-		if ( is_404() ) {
+		global $GoSheng;
+		if ( is_404() || ! $GoSheng['users_access_logs'] ) {
 			return;
 		};
 		$log       = date( 'Y-m-d H:i:s e' ) . '  ';
