@@ -623,9 +623,9 @@ Redux::setSection( $opt_name, array(
 		array(
 			'id'       => 'themeStaticDirectoryStatus',
 			'type'     => 'switch',
-			'title'    => __( '主题静态文件目录位置（待完善）', 'GoSheng-framework' ),
+			'title'    => __( '主题静态文件目录位置', 'GoSheng-framework' ),
 			'subtitle' => __( '是否移动主题静态文件目录到站点根目录。', 'GoSheng-framework' ),
-			'desc'     => __( '', 'GoSheng-framework' ),
+			'desc'     => __( '将主题目录下的static文件夹移动到WP根目录下，并重命名为goshengstatic', 'GoSheng-framework' ),
 			'on'       => __( '开启', 'GoSheng-framework' ),
 			'off'      => __( '关闭', 'GoSheng-framework' ),
 			'default'  => false,
@@ -1495,9 +1495,9 @@ Redux::setSection( $opt_name, array(
 			'validate'    => 'html',
 			'title'       => __( '底部版权信息', 'GoSheng-framework' ),
 			'subtitle'    => __( '支持HTML代码', 'GoSheng-framework' ),
-			'desc'        => __( '例如：CopyRight 狗剩 2018 &copy; https://GoSheng.net', 'GoSheng-framework' ),
+			'desc'        => __( '例如：CopyRight 狗剩 2019 &copy; https://GoSheng.net', 'GoSheng-framework' ),
 			'placeholder' => __( '', 'GoSheng-framework' ),
-			'default'     => 'Copyright 狗剩 2018 &copy; https://GoSheng.net 基于 WordPress 托管于阿里云',
+			'default'     => 'Copyright 狗剩 2019 &copy; https://GoSheng.net 基于 WordPress 托管于阿里云',
 		),
 		array(
 			'id'       => 'ICP',
@@ -1537,7 +1537,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( '公安部的备案号', 'GoSheng-framework' ),
 			'desc'        => __( '例如：11000002000001', 'GoSheng-framework' ),
 			'placeholder' => __( '请输入您的公安备案号', 'GoSheng-framework' ),
-			'default'     => '示例：11000002000001',
+			'default'     => '11000002000001',
 		),
 		array(
 			'id'          => 'recordcode_text',
@@ -1588,7 +1588,7 @@ Redux::setSection( $opt_name, array(
 			'subtitle'    => __( 'FunDebug的版本', 'GoSheng-framework' ),
 			'desc'        => __( '查看FunDebug版本号：', 'GoSheng-framework' ) . '<a href="https://docs.fundebug.com/notifier/javascript/version.html?form=GoShengTheme" target="_blank">点这里</a>',
 			'placeholder' => __( '此项为必填项。', 'GoSheng-framework' ),
-			'default'     => '1.4.0',
+			'default'     => '1.6.0',
 		),
 		array(
 			'id'          => 'FunDebug_ApiKey',

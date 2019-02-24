@@ -227,11 +227,11 @@ if ( ! function_exists( 'GoShengStatic' ) ) {
 		switch ( $GoSheng['themeStaticDirectoryStatus'] ) {
 			case true:
 				update_option( 'GoShengStatic', '1' );
-				GoShengStaticRoot( 1 );
+				GoShengStaticRoot();
 				break;
 			case false:
 				update_option( 'GoShengStatic', '0' );
-				GoShengStaticRoot( 0 );
+				GoShengStaticRoot();
 				break;
 			default:
 				update_option( 'GoShengStatic', '0' );
@@ -239,17 +239,16 @@ if ( ! function_exists( 'GoShengStatic' ) ) {
 	}
 }
 if ( ! function_exists( 'GoShengStaticRoot' ) ) {
-	function GoShengStaticRoot( $status ) {
-		$theme_root = get_theme_file_path() . 'static';
-		$wp_root = ABSPATH . 'goshengstatic';
+	function GoShengStaticRoot() {
+		$theme_root = get_theme_file_path() . '/static';
+		$wp_root    = ABSPATH . 'goshengstatic';
+		$status     = get_option( 'GoShengStatic' );
 		switch ( $status ) {
-			case '0':
-				if (file_exists($wp_root)) rename($wp_root, $theme_root);
+			case 0:
+				file_exists( $wp_root ) ? rename( $wp_root, $theme_root ) : '';
 				break;
-			case '1':
-				if (file_exists($theme_root)) rename($theme_root, $wp_root);
-				break;
-			case '2':
+			case 1:
+				file_exists( $theme_root ) ? rename( $theme_root, $wp_root ) : '';
 				break;
 			default:
 		}
