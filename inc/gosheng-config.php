@@ -621,6 +621,16 @@ Redux::setSection( $opt_name, array(
 			'default'  => false,
 		),
 		array(
+			'id'       => 'themeStaticDirectoryStatus',
+			'type'     => 'switch',
+			'title'    => __( '主题静态文件目录位置（待完善）', 'GoSheng-framework' ),
+			'subtitle' => __( '是否移动主题静态文件目录到站点根目录。', 'GoSheng-framework' ),
+			'desc'     => __( '', 'GoSheng-framework' ),
+			'on'       => __( '开启', 'GoSheng-framework' ),
+			'off'      => __( '关闭', 'GoSheng-framework' ),
+			'default'  => false,
+		),
+		array(
 			'id'       => 'gosheng_user_login',
 			'type'     => 'switch',
 			'title'    => __( '用户登录功能', 'GoSheng-framework' ),

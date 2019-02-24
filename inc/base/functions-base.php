@@ -2,7 +2,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-global $GoSheng;
 
 add_action( 'welcome_panel', 'GoSheng_admin_notice' );
 if ( ! function_exists( 'GoSheng_admin_notice' ) ) {
@@ -217,20 +216,41 @@ if ( ! function_exists( 'GoSheng_get_comments' ) ) {
 		}
 	}
 }
-//静态文件目录转移
+//todo:静态文件目录转移
 if ( ! defined( 'themeStaticFile_URI' ) ) {
-	switch ( $GoSheng['themeStaticDirectoryStatus'] ) {
-		case true:
-			define( 'themeStaticFile_URI', site_url() . '/goshengstatic/' );
-			break;
-		case false:
-			define( 'themeStaticFile_URI', get_theme_file_uri() . '/static/' );
-			break;
-		default:
-			define( 'themeStaticFile_URI', get_theme_file_uri() . '/static/' );
+	get_option( 'GoShengStatic' ) ? define( 'themeStaticFile_URI', site_url() . '/goshengstatic/' ) : define( 'themeStaticFile_URI', get_theme_file_uri() . '/static/' );
+}
+add_action( 'redux/options/GoSheng/saved', 'GoShengStatic' );
+if ( ! function_exists( 'GoShengStatic' ) ) {
+	function GoShengStatic() {
+		global $GoSheng;
+		switch ( $GoSheng['themeStaticDirectoryStatus'] ) {
+			case true:
+				update_option( 'GoShengStatic', '1' );
+				GoShengStaticRoot( 1 );
+				break;
+			case false:
+				update_option( 'GoShengStatic', '0' );
+				GoShengStaticRoot( 0 );
+				break;
+			default:
+				update_option( 'GoShengStatic', '0' );
+		}
 	}
 }
-
+if ( ! function_exists( 'GoShengStaticRoot' ) ) {
+	function GoShengStaticRoot( $status ) {
+		switch ( $status ) {
+			case '0':
+				break;
+			case '1':
+				break;
+			case '2':
+				break;
+			default:
+		}
+	}
+}
 
 if ( ! function_exists( 'GoSheng_remove_privacy_policy_link' ) ) {
 	function GoSheng_remove_privacy_policy_link() {
