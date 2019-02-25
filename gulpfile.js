@@ -5,6 +5,38 @@ var uglify = require('gulp-uglify-es').default;
 var rename = require('gulp-rename');
 var util = require('gulp-util');
 
+//翻译相关
+var wpPot = require('gulp-wp-pot');
+var sort = require('gulp-sort');
+var text_domain = 'GoSheng-framework';                 //你的文字域在这里。
+var destFile = 'GoSheng.pot ';                         //转换文件的名称。
+var packageName = 'GoSheng';                           //包名称
+var bugReport = 'https://gosheng.net';                 //用户可以在哪里报告错误。
+var lastTranslator = '张成林<469946668@qq.com>';       //上次翻译电子邮件ID。
+var team = '狗剩<admin@gosheng.net>';                  //团队的电子邮件ID。
+var translatePath = './languages/';                    //保存翻译文件的位置。
+var projectPHPWatchFiles = './**/*.php';
+
+function translate() {
+    'use strict';
+    return gulp.src(projectPHPWatchFiles)
+        .pipe(sort())
+        .pipe(
+            wpPot(
+                {
+                    domain: text_domain,
+                    destFile: destFile,
+                    package: packageName,
+                    bugReport: bugReport,
+                    lastTranslator: lastTranslator,
+                    team: team
+                }
+            )
+        )
+        .pipe(gulp.dest(translatePath + '/' + destFile));
+}
+
+
 gulp.task("clean", function () {
     return del(['./dist']);
 });
@@ -122,3 +154,5 @@ gulp.task('watch', function () {
     gulp.watch('static/js/google_reCaptcha.js', ['script_google_reCaptcha']);
     gulp.watch('static/js/gosheng_oauth.js', ['script_gosheng_oauth']);
 });
+
+gulp.task('translate', translate);
