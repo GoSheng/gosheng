@@ -1,0 +1,1527 @@
+# Copyright (C) 2019 GoSheng
+# This file is distributed under the same license as the GoSheng package.
+msgid ""
+msgstr ""
+"Project-Id-Version: GoSheng\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: 狗剩<admin@gosheng.net>\n"
+"Last-Translator: 张成林<469946668@qq.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/GoSheng/gosheng/issues\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: comments.php:18
+msgid "评论已经关闭"
+msgstr ""
+
+#: inc/base/functions-base.php:30
+msgid "网站遇到404页面"
+msgstr ""
+
+#: inc/base/functions-base.php:31
+msgid "404页面的地址："
+msgstr ""
+
+#: inc/base/functions-base.php:32
+msgid "HTTP_REFERER："
+msgstr ""
+
+#: inc/base/functions-base.php:33
+msgid "访问者IP为："
+msgstr ""
+
+#: inc/base/functions-base.php:34
+msgid "访问者UA为："
+msgstr ""
+
+#: inc/base/functions-base.php:35
+msgid "REQUEST_METHOD："
+msgstr ""
+
+#: inc/base/functions-base.php:36
+msgid "时间："
+msgstr ""
+
+#: inc/base/functions-base.php:79, inc/base/functions-base.php:82
+msgid "设置轮播图"
+msgstr ""
+
+#: inc/base/functions-base.php:101
+msgid "设置菜单"
+msgstr ""
+
+#: inc/base/functions-base.php:108
+msgid "顶部主菜单"
+msgstr ""
+
+#: inc/base/functions-base.php:109
+msgid "左侧菜单"
+msgstr ""
+
+#: inc/base/functions-base.php:110
+msgid "右侧菜单"
+msgstr ""
+
+#: inc/base/functions-base.php:111
+msgid "友情链接"
+msgstr ""
+
+#: inc/base/functions-base.php:112
+msgid "页脚菜单"
+msgstr ""
+
+#: inc/base/functions-base.php:113
+msgid "底部菜单"
+msgstr ""
+
+#: inc/base/functions-breadcrumb.php:75
+msgid "搜索结果：%s"
+msgstr ""
+
+#: inc/base/functions-breadcrumb.php:79
+msgid "标签：%s"
+msgstr ""
+
+#: inc/base/functions-breadcrumb.php:85
+msgid "作者： %s"
+msgstr ""
+
+#: inc/base/functions-breadcrumb.php:89
+msgid "没有找到您要的页面"
+msgstr ""
+
+#: inc/base/functions-breadcrumb.php:94
+msgid "( %s 页)"
+msgstr ""
+
+#: inc/base/functions-comments_list.php:13, inc/base/functions-comments_list.php:59
+msgid "回复"
+msgstr ""
+
+#: inc/base/functions-comments_list.php:35
+msgid "用户头像"
+msgstr ""
+
+#: inc/base/functions-comments_list.php:53
+msgid "编辑"
+msgstr ""
+
+#: inc/base/functions-comments_list.php:68
+msgid "评论正在审核中..."
+msgstr ""
+
+#: inc/base/functions-comment_form.php:25
+msgid "记住我的信息，下次直接发布评论。"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:27
+msgid "点击这里登录后发布评论"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:34
+msgid "请输入您对本文的评论内容"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:38
+msgid "退出"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:40
+msgid "您的邮箱和QQ不会被公开显示。"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:42
+msgid "最后一步，马上评论。"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:48
+msgid "取消回复"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:49
+msgid "评论一下"
+msgstr ""
+
+#: inc/base/functions-comment_form.php:50
+msgid "当前是给%s回复"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:7, inc/base/functions-content.php:180, inc/base/functions-content.php:198, inc/base/functions-content.php:199
+msgid "文章导航"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:11
+msgid "评论导航"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:13
+msgid "&larr; 旧的评论"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:16
+msgid "没有旧的评论了"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:20
+msgid "新的评论&rarr;"
+msgstr ""
+
+#: inc/base/functions-comment_navigation.php:23
+msgid "没有新的评论了"
+msgstr ""
+
+#: inc/base/functions-comment_simle.php:7
+msgid "表情"
+msgstr ""
+
+#: inc/base/functions-comment_simle.php:8
+msgid "清空内容"
+msgstr ""
+
+#: inc/base/functions-content.php:8
+msgid "上淘宝购买狗剩主题"
+msgstr ""
+
+#: inc/base/functions-content.php:8
+msgid "淘宝店铺"
+msgstr ""
+
+#: inc/base/functions-content.php:184
+msgctxt "上一篇"
+msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
+msgstr ""
+
+#: inc/base/functions-content.php:187
+msgctxt "下一篇"
+msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: inc/base/functions-content.php:210
+msgid "没有旧的文章了"
+msgstr ""
+
+#: inc/base/functions-content.php:221
+msgid "没有新的文章了"
+msgstr ""
+
+#: inc/base/functions-content.php:269
+msgid "本文需要密码才能查看"
+msgstr ""
+
+#: inc/base/functions-content.php:347, inc/base/functions-content.php:347
+msgid "无标签"
+msgstr ""
+
+#: inc/base/functions-content.php:359, inc/base/functions-user_meta.php:8
+msgid "微博"
+msgstr ""
+
+#: inc/base/functions-content.php:360, inc/gosheng-config.php:1135
+msgid "微信"
+msgstr ""
+
+#: inc/base/functions-content.php:361
+msgid "QQ好友"
+msgstr ""
+
+#: inc/base/functions-content.php:362, inc/base/functions-user_meta.php:9, inc/gosheng-config.php:1097
+msgid "支付宝"
+msgstr ""
+
+#: inc/base/functions-content.php:363
+msgid "腾讯微博"
+msgstr ""
+
+#: inc/base/functions-content.php:364, inc/base/functions-user_meta.php:14
+msgid "Facebook"
+msgstr ""
+
+#: inc/base/functions-content.php:365, inc/base/functions-user_meta.php:11
+msgid "推特"
+msgstr ""
+
+#: inc/base/functions-content.php:366
+msgid "谷歌 Plus"
+msgstr ""
+
+#: inc/base/functions-content.php:380
+msgid "文章不错，奖励一下作者"
+msgstr ""
+
+#: inc/base/functions-content.php:389
+msgid "编辑本文"
+msgstr ""
+
+#: inc/base/functions-content.php:455
+msgid "文章不错，点个赞吧。"
+msgstr ""
+
+#: inc/base/functions-content.php:455
+msgid " "
+msgstr ""
+
+#: inc/base/functions-content.php:467
+msgid "&laquo;"
+msgstr ""
+
+#: inc/base/functions-content.php:468
+msgid "&raquo;"
+msgstr ""
+
+#: inc/base/functions-content.php:469
+msgid "列表分页"
+msgstr ""
+
+#: inc/base/functions-content.php:559
+msgid "QQ号"
+msgstr ""
+
+#: inc/base/functions-content.php:560
+msgid "用户UA"
+msgstr ""
+
+#: inc/base/functions-content.php:610
+msgid "狗剩主题"
+msgstr ""
+
+#: inc/base/functions-content.php:612
+msgid "换一个"
+msgstr ""
+
+#: inc/base/functions-user_meta.php:7
+msgid "QQ"
+msgstr ""
+
+#: inc/base/functions-user_meta.php:10, inc/gosheng-config.php:1249
+msgid "PayPal"
+msgstr ""
+
+#: inc/base/functions-user_meta.php:12
+msgid "GitHub"
+msgstr ""
+
+#: inc/base/functions-user_meta.php:13
+msgid "Google +"
+msgstr ""
+
+#: inc/class/class-gosheng_owl_carousel.php:16
+msgid "您还没有设置轮播图，多于3张图。"
+msgstr ""
+
+#: inc/class/class-gosheng_owl_carousel.php:20
+msgid "图片数量设置太少，请设置不少于3张图片。"
+msgstr ""
+
+#: inc/class/class-gosheng_owl_carousel.php:44
+msgid "图片数量大于10张，图片数量过多会拖慢网站加载速度。"
+msgstr ""
+
+#: inc/class/class-wp-bootstrap-navwalker.php:374, inc/class/class-wp-bootstrap-navwalker.php:374
+msgid "添加菜单"
+msgstr ""
+
+#: inc/class/widgets/class-gosheng_widget_text.php:12
+msgid "纯文本"
+msgstr ""
+
+#: inc/class/widgets/class-gosheng_widget_text.php:15
+msgid "纯文本 - 狗剩"
+msgstr ""
+
+#: inc/class/widgets/class-gosheng_widget_text.php:60
+msgid "标题："
+msgstr ""
+
+#: inc/class/widgets/class-gosheng_widget_text.php:68
+msgid "文本内容："
+msgstr ""
+
+#: inc/class/widgets/class-gosheng_widget_text.php:75
+msgid "页脚文本："
+msgstr ""
+
+#: inc/class/widgets/notes.php:12
+msgid "狗剩文本"
+msgstr ""
+
+#: inc/class/widgets/notes.php:15
+msgid "文本 - 狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:38, inc/gosheng-config.php:39
+msgid "狗剩主题选项"
+msgstr ""
+
+#: inc/gosheng-config.php:146, inc/gosheng-config.php:151, inc/gosheng-config.php:157
+msgid "<p></p>"
+msgstr ""
+
+#: inc/gosheng-config.php:173
+msgid "主题功能扩展，务必通过子主题方式，避免主题更新时覆盖您的修改，要从代码中访问任何已保存的选项，您可以使用全局变量： <strong>$%1$s</strong>"
+msgstr ""
+
+#: inc/gosheng-config.php:175
+msgid "您还没有设置全局变量。"
+msgstr ""
+
+#: inc/gosheng-config.php:179
+msgid "狗剩官方网站"
+msgstr ""
+
+#: inc/gosheng-config.php:179
+msgid "GoSheng.net"
+msgstr ""
+
+#: inc/gosheng-config.php:180
+msgid "<p>感谢使用狗剩主题</p>"
+msgstr ""
+
+#: inc/gosheng-config.php:191
+msgid "感谢您使用狗剩主题，主题后台使用 ReduxFramework 框架，前台使用Bootstrap框架。支持子主题扩展,支持后台一键升级版本。如需技术支持，请联系QQ"
+msgstr ""
+
+#: inc/gosheng-config.php:193
+msgid "主机信息"
+msgstr ""
+
+#: inc/gosheng-config.php:194
+msgid "Redux Framework版本v%1$s"
+msgstr ""
+
+#: inc/gosheng-config.php:195
+msgid "谷歌 reCAPTCHA版本%1$s"
+msgstr ""
+
+#: inc/gosheng-config.php:196
+msgid "Bootstrap版本%1$s"
+msgstr ""
+
+#: inc/gosheng-config.php:197
+msgid "Font Awesome版本%1$s"
+msgstr ""
+
+#: inc/gosheng-config.php:203
+msgid "主题说明"
+msgstr ""
+
+#: inc/gosheng-config.php:211
+msgid "链接推送"
+msgstr ""
+
+#: inc/gosheng-config.php:217
+msgid "百度"
+msgstr ""
+
+#: inc/gosheng-config.php:225
+msgid "启用百度自动推送。"
+msgstr ""
+
+#: inc/gosheng-config.php:226
+msgid "文章发布时自动推送文章给百度搜索引擎，利于文章被收录。"
+msgstr ""
+
+#: inc/gosheng-config.php:228, inc/gosheng-config.php:273, inc/gosheng-config.php:295, inc/gosheng-config.php:305, inc/gosheng-config.php:315, inc/gosheng-config.php:325, inc/gosheng-config.php:335, inc/gosheng-config.php:345, inc/gosheng-config.php:371, inc/gosheng-config.php:410, inc/gosheng-config.php:449, inc/gosheng-config.php:488, inc/gosheng-config.php:527, inc/gosheng-config.php:573, inc/gosheng-config.php:619, inc/gosheng-config.php:629, inc/gosheng-config.php:639, inc/gosheng-config.php:654, inc/gosheng-config.php:664, inc/gosheng-config.php:674, inc/gosheng-config.php:684, inc/gosheng-config.php:694, inc/gosheng-config.php:704, inc/gosheng-config.php:714, inc/gosheng-config.php:724, inc/gosheng-config.php:734, inc/gosheng-config.php:763, inc/gosheng-config.php:1089, inc/gosheng-config.php:1100, inc/gosheng-config.php:1138, inc/gosheng-config.php:1176, inc/gosheng-config.php:1214, inc/gosheng-config.php:1252, inc/gosheng-config.php:1316, inc/gosheng-config.php:1343, inc/gosheng-config.php:1377, inc/gosheng-config.php:1465, inc/gosheng-config.php:1486, inc/gosheng-config.php:1507, inc/gosheng-config.php:1528, inc/gosheng-config.php:1548, inc/gosheng-config.php:1578, inc/gosheng-config.php:1599, inc/gosheng-config.php:1645
+msgid "开启"
+msgstr ""
+
+#: inc/gosheng-config.php:229, inc/gosheng-config.php:274, inc/gosheng-config.php:296, inc/gosheng-config.php:306, inc/gosheng-config.php:316, inc/gosheng-config.php:326, inc/gosheng-config.php:336, inc/gosheng-config.php:346, inc/gosheng-config.php:372, inc/gosheng-config.php:411, inc/gosheng-config.php:450, inc/gosheng-config.php:489, inc/gosheng-config.php:528, inc/gosheng-config.php:574, inc/gosheng-config.php:620, inc/gosheng-config.php:630, inc/gosheng-config.php:640, inc/gosheng-config.php:655, inc/gosheng-config.php:665, inc/gosheng-config.php:675, inc/gosheng-config.php:685, inc/gosheng-config.php:695, inc/gosheng-config.php:705, inc/gosheng-config.php:715, inc/gosheng-config.php:725, inc/gosheng-config.php:735, inc/gosheng-config.php:764, inc/gosheng-config.php:1090, inc/gosheng-config.php:1101, inc/gosheng-config.php:1139, inc/gosheng-config.php:1177, inc/gosheng-config.php:1215, inc/gosheng-config.php:1253, inc/gosheng-config.php:1317, inc/gosheng-config.php:1344, inc/gosheng-config.php:1378, inc/gosheng-config.php:1466, inc/gosheng-config.php:1487, inc/gosheng-config.php:1508, inc/gosheng-config.php:1529, inc/gosheng-config.php:1549, inc/gosheng-config.php:1579, inc/gosheng-config.php:1600, inc/gosheng-config.php:1646
+msgid "关闭"
+msgstr ""
+
+#: inc/gosheng-config.php:236
+msgid "site"
+msgstr ""
+
+#: inc/gosheng-config.php:237
+msgid "您站点的域名"
+msgstr ""
+
+#: inc/gosheng-config.php:238
+msgid "例如：www.gosheng.net"
+msgstr ""
+
+#: inc/gosheng-config.php:246
+msgid "token"
+msgstr ""
+
+#: inc/gosheng-config.php:247
+msgid "您站点在百度站长平台的token值"
+msgstr ""
+
+#: inc/gosheng-config.php:257
+msgid "侧边栏"
+msgstr ""
+
+#: inc/gosheng-config.php:263
+msgid "侧边栏设置"
+msgstr ""
+
+#: inc/gosheng-config.php:271
+msgid "启用侧边栏。"
+msgstr ""
+
+#: inc/gosheng-config.php:281
+msgid "侧边栏模式。"
+msgstr ""
+
+#: inc/gosheng-config.php:284
+msgid "统一侧边栏"
+msgstr ""
+
+#: inc/gosheng-config.php:285
+msgid "单独侧边栏（待开发,支持子主题开启）"
+msgstr ""
+
+#: inc/gosheng-config.php:293
+msgid "首页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:303
+msgid "文章页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:313
+msgid "页面页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:323
+msgid "搜索页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:333
+msgid "分类页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:343
+msgid "404页侧边栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:354
+msgid "社会化登录"
+msgstr ""
+
+#: inc/gosheng-config.php:360, inc/gosheng-config.php:368, template-parts/header/panel_user_login.php:119
+msgid "GitHub登录"
+msgstr ""
+
+#: inc/gosheng-config.php:369
+msgid "使用GitHub登录站点"
+msgstr ""
+
+#: inc/gosheng-config.php:379
+msgid "GitHub登录站点Client ID"
+msgstr ""
+
+#: inc/gosheng-config.php:389
+msgid "GitHub登录站点Client Secret"
+msgstr ""
+
+#: inc/gosheng-config.php:399, inc/gosheng-config.php:407, template-parts/header/panel_user_login.php:79
+msgid "QQ登录"
+msgstr ""
+
+#: inc/gosheng-config.php:408
+msgid "使用QQ登录站点"
+msgstr ""
+
+#: inc/gosheng-config.php:418
+msgid "QQ登录站点Client ID"
+msgstr ""
+
+#: inc/gosheng-config.php:428
+msgid "QQ登录站点Client Secret"
+msgstr ""
+
+#: inc/gosheng-config.php:438, inc/gosheng-config.php:446, template-parts/header/panel_user_login.php:87
+msgid "微博登录"
+msgstr ""
+
+#: inc/gosheng-config.php:447
+msgid "使用微博登录站点"
+msgstr ""
+
+#: inc/gosheng-config.php:457
+msgid "微博登录站点Client ID"
+msgstr ""
+
+#: inc/gosheng-config.php:467
+msgid "微博登录站点Client Secret"
+msgstr ""
+
+#: inc/gosheng-config.php:477, inc/gosheng-config.php:485, template-parts/header/panel_user_login.php:95
+msgid "微信登录"
+msgstr ""
+
+#: inc/gosheng-config.php:486
+msgid "使用微信登录站点"
+msgstr ""
+
+#: inc/gosheng-config.php:496
+msgid "微信登录站点Client ID"
+msgstr ""
+
+#: inc/gosheng-config.php:506
+msgid "微信登录站点Client Secret"
+msgstr ""
+
+#: inc/gosheng-config.php:516, inc/gosheng-config.php:524, template-parts/header/panel_user_login.php:103
+msgid "支付宝登录"
+msgstr ""
+
+#: inc/gosheng-config.php:525
+msgid "使用支付宝登录站点"
+msgstr ""
+
+#: inc/gosheng-config.php:535
+msgid "支付宝登录站点Client ID"
+msgstr ""
+
+#: inc/gosheng-config.php:545
+msgid "支付宝登录站点Client Secret"
+msgstr ""
+
+#: inc/gosheng-config.php:556
+msgid "验证"
+msgstr ""
+
+#: inc/gosheng-config.php:557, inc/gosheng-config.php:603, inc/gosheng-config.php:837, inc/gosheng-config.php:1300, inc/gosheng-config.php:1397, inc/gosheng-config.php:1449
+msgid "介绍"
+msgstr ""
+
+#: inc/gosheng-config.php:562
+msgid "Google reCAPTCHA"
+msgstr ""
+
+#: inc/gosheng-config.php:563
+msgid "谷歌 reCAPTCHA"
+msgstr ""
+
+#: inc/gosheng-config.php:570
+msgid "谷歌reCaptcha"
+msgstr ""
+
+#: inc/gosheng-config.php:571
+msgid "V3版本"
+msgstr ""
+
+#: inc/gosheng-config.php:572
+msgid "异常信息记录需开启funDebug功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:581
+msgid "Site key"
+msgstr ""
+
+#: inc/gosheng-config.php:582
+msgid "谷歌reCAPTCHA申请地址"
+msgstr ""
+
+#: inc/gosheng-config.php:591
+msgid "Secret key"
+msgstr ""
+
+#: inc/gosheng-config.php:602
+msgid "功能开关"
+msgstr ""
+
+#: inc/gosheng-config.php:608
+msgid "工具箱"
+msgstr ""
+
+#: inc/gosheng-config.php:609
+msgid "WordPress中的一些小功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:616
+msgid "打开所有设置。"
+msgstr ""
+
+#: inc/gosheng-config.php:617
+msgid "点击这里直接查看所有设置。"
+msgstr ""
+
+#: inc/gosheng-config.php:626
+msgid "主题静态文件目录位置"
+msgstr ""
+
+#: inc/gosheng-config.php:627
+msgid "是否移动主题静态文件目录到站点根目录。"
+msgstr ""
+
+#: inc/gosheng-config.php:628
+msgid "将主题目录下的static文件夹移动到WP根目录下，并重命名为goshengstatic"
+msgstr ""
+
+#: inc/gosheng-config.php:636
+msgid "用户登录功能"
+msgstr ""
+
+#: inc/gosheng-config.php:637
+msgid "是否开启前台用户登录功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:651
+msgid "用户注册功能（待完善）"
+msgstr ""
+
+#: inc/gosheng-config.php:652
+msgid "是否开启前台用户注册功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:661
+msgid "用户找回密码功能（待完善）"
+msgstr ""
+
+#: inc/gosheng-config.php:662
+msgid "是否开启前台用户找回密码功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:671
+msgid "文章点赞功能"
+msgstr ""
+
+#: inc/gosheng-config.php:672
+msgid "是否开启文章和页面点赞功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:681
+msgid "文章分享功能"
+msgstr ""
+
+#: inc/gosheng-config.php:682
+msgid "是否开启文章分享功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:691
+msgid "文章标签功能"
+msgstr ""
+
+#: inc/gosheng-config.php:692
+msgid "是否开启文章标签功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:701
+msgid "日志记录"
+msgstr ""
+
+#: inc/gosheng-config.php:702
+msgid "是否开启站点访客记录功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:703
+msgid "WP根目录下GoSheng_users_access_logs文件夹下是记录文件，按月按日进行文件存储整理。"
+msgstr ""
+
+#: inc/gosheng-config.php:711
+msgid "404页面通知"
+msgstr ""
+
+#: inc/gosheng-config.php:712
+msgid "是否开启站点404页面访问记录功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:713
+msgid "发送邮件到管理员邮箱，每次404页面访问都发送一封邮件通知。"
+msgstr ""
+
+#: inc/gosheng-config.php:721
+msgid "地理位置功能（待完善）"
+msgstr ""
+
+#: inc/gosheng-config.php:722
+msgid "是否开启获取用户地理位置功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:731
+msgid "Cookie技术"
+msgstr ""
+
+#: inc/gosheng-config.php:732
+msgid "是否开启询问访客关于Cookie技术使用问题。"
+msgstr ""
+
+#: inc/gosheng-config.php:742
+msgid "Cookie提示内容"
+msgstr ""
+
+#: inc/gosheng-config.php:744
+msgid "提示信息在单独的客户端，每隔30天出现一次。"
+msgstr ""
+
+#: inc/gosheng-config.php:746
+msgid "本站采用cookie技术获取您的部分浏览信息，点击同意将表示您同意我们这么做，如果您不同意本站使用cookie技术获取您的浏览信息，请关闭浏览器窗口。"
+msgstr ""
+
+#: inc/gosheng-config.php:753
+msgid "消息通知（待完善）"
+msgstr ""
+
+#: inc/gosheng-config.php:760
+msgid "消息通知功能（待完善）"
+msgstr ""
+
+#: inc/gosheng-config.php:761
+msgid "是否开启消息通知功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:771
+msgid "通知内容"
+msgstr ""
+
+#: inc/gosheng-config.php:781
+msgid "通知链接"
+msgstr ""
+
+#: inc/gosheng-config.php:791
+msgid "消息图片。"
+msgstr ""
+
+#: inc/gosheng-config.php:793
+msgid "图片尺寸"
+msgstr ""
+
+#: inc/gosheng-config.php:809
+msgid "SEO"
+msgstr ""
+
+#: inc/gosheng-config.php:810
+msgid "首页keyword和description设置。"
+msgstr ""
+
+#: inc/gosheng-config.php:816
+msgid "KeyWord"
+msgstr ""
+
+#: inc/gosheng-config.php:817
+msgid "首页关键词"
+msgstr ""
+
+#: inc/gosheng-config.php:818
+msgid "每个关键词之间用英文逗号（ , ）隔开，否则搜索引擎将会认为是一个关键词。"
+msgstr ""
+
+#: inc/gosheng-config.php:819
+msgid "示例：关键词1,关键词2,关键词3,关键词4,关键词5"
+msgstr ""
+
+#: inc/gosheng-config.php:825
+msgid "Description"
+msgstr ""
+
+#: inc/gosheng-config.php:826
+msgid "首页简介设置。"
+msgstr ""
+
+#: inc/gosheng-config.php:828
+msgid "示例：本站为狗剩主题官网，致力于为草根提供一个基于WordPress的简单高效的自媒体网站，狗剩主题前端采用Bootstrap最新的版本搭建，后台拥有灵活可控的自定义选项，让不了解网站代码的草根自媒体客户可以及时的使用上最新的技术来增强网站的互动性和用户体验，让SEO不再是困扰自媒体网站的问题，客户可以专心致志的做内容。"
+msgstr ""
+
+#: inc/gosheng-config.php:836
+msgid "头部head标签"
+msgstr ""
+
+#: inc/gosheng-config.php:842
+msgid "head标签（本功能暂停使用，设置已经直接生效。）"
+msgstr ""
+
+#: inc/gosheng-config.php:843
+msgid "&lt;head&gt;标签内容控制"
+msgstr ""
+
+#: inc/gosheng-config.php:850
+msgid "版本号"
+msgstr ""
+
+#: inc/gosheng-config.php:851
+msgid "是否显示在head标签中显示WordPress版本号"
+msgstr ""
+
+#: inc/gosheng-config.php:853, inc/gosheng-config.php:863, inc/gosheng-config.php:873, inc/gosheng-config.php:883, inc/gosheng-config.php:893, inc/gosheng-config.php:903, inc/gosheng-config.php:913, inc/gosheng-config.php:923, inc/gosheng-config.php:933, inc/gosheng-config.php:943, inc/gosheng-config.php:953, inc/gosheng-config.php:963, inc/gosheng-config.php:973
+msgid "隐藏"
+msgstr ""
+
+#: inc/gosheng-config.php:854, inc/gosheng-config.php:864, inc/gosheng-config.php:874, inc/gosheng-config.php:884, inc/gosheng-config.php:894, inc/gosheng-config.php:904, inc/gosheng-config.php:914, inc/gosheng-config.php:924, inc/gosheng-config.php:934, inc/gosheng-config.php:944, inc/gosheng-config.php:954, inc/gosheng-config.php:964, inc/gosheng-config.php:974
+msgid "显示"
+msgstr ""
+
+#: inc/gosheng-config.php:860
+msgid "RSD EditURI"
+msgstr ""
+
+#: inc/gosheng-config.php:861
+msgid "离线编辑器开放接口 RSD EditURI"
+msgstr ""
+
+#: inc/gosheng-config.php:870
+msgid "wlwmanifest"
+msgstr ""
+
+#: inc/gosheng-config.php:871
+msgid "离线编辑器开放接口 wlwmanifest"
+msgstr ""
+
+#: inc/gosheng-config.php:880, inc/gosheng-config.php:881
+msgid "Feed (1)"
+msgstr ""
+
+#: inc/gosheng-config.php:890, inc/gosheng-config.php:891
+msgid "Feed （分类）"
+msgstr ""
+
+#: inc/gosheng-config.php:900, inc/gosheng-config.php:901
+msgid "动态链接地址（head标签中的shortlink）"
+msgstr ""
+
+#: inc/gosheng-config.php:910, inc/gosheng-config.php:911
+msgid "动态链接地址2 shortlink"
+msgstr ""
+
+#: inc/gosheng-config.php:920, inc/gosheng-config.php:921
+msgid "中文地址 canonical"
+msgstr ""
+
+#: inc/gosheng-config.php:930, inc/gosheng-config.php:931
+msgid "禁用所有dns_prefetch预读"
+msgstr ""
+
+#: inc/gosheng-config.php:940, inc/gosheng-config.php:941
+msgid "emoji表情相关代码（脚本、样式表、dns预读）"
+msgstr ""
+
+#: inc/gosheng-config.php:950, inc/gosheng-config.php:951
+msgid "REST API链接"
+msgstr ""
+
+#: inc/gosheng-config.php:960, inc/gosheng-config.php:961
+msgid "工具栏-WordPress徽标"
+msgstr ""
+
+#: inc/gosheng-config.php:970, inc/gosheng-config.php:971
+msgid "工具栏-主题快捷菜单"
+msgstr ""
+
+#: inc/gosheng-config.php:981
+msgid "head标签元素"
+msgstr ""
+
+#: inc/gosheng-config.php:982
+msgid "head标签中的元素设置"
+msgstr ""
+
+#: inc/gosheng-config.php:989
+msgid "theme-color"
+msgstr ""
+
+#: inc/gosheng-config.php:990
+msgid "移动端浏览器颜色"
+msgstr ""
+
+#: inc/gosheng-config.php:999
+msgid "msapplication-navbutton-color"
+msgstr ""
+
+#: inc/gosheng-config.php:1000
+msgid "Windows Phone移动端颜色"
+msgstr ""
+
+#: inc/gosheng-config.php:1011
+msgid "加载代码"
+msgstr ""
+
+#: inc/gosheng-config.php:1017
+msgid "CSS样式代码"
+msgstr ""
+
+#: inc/gosheng-config.php:1025, inc/gosheng-config.php:1052
+msgid "head标签中"
+msgstr ""
+
+#: inc/gosheng-config.php:1026, inc/gosheng-config.php:1053
+msgid "代码将在&lt;head&gt;标签中出现。"
+msgstr ""
+
+#: inc/gosheng-config.php:1027
+msgid "代码将会在主题自带的CSS文件加载之后出现。"
+msgstr ""
+
+#: inc/gosheng-config.php:1034, inc/gosheng-config.php:1061
+msgid "页面代码底部"
+msgstr ""
+
+#: inc/gosheng-config.php:1035, inc/gosheng-config.php:1062
+msgid "&lt;/body&gt;标签之前"
+msgstr ""
+
+#: inc/gosheng-config.php:1044
+msgid "JavaScript样式代码"
+msgstr ""
+
+#: inc/gosheng-config.php:1054
+msgid "出于页面加载性能考虑，建议在底部加载JavaScript代码。"
+msgstr ""
+
+#: inc/gosheng-config.php:1072, inc/gosheng-config.php:1078
+msgid "打赏"
+msgstr ""
+
+#: inc/gosheng-config.php:1073
+msgid "打赏功能"
+msgstr ""
+
+#: inc/gosheng-config.php:1079
+msgid "文章和页面内容中显示打赏组件。"
+msgstr ""
+
+#: inc/gosheng-config.php:1086
+msgid "打赏功能开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1087
+msgid "是否开启打赏功能。"
+msgstr ""
+
+#: inc/gosheng-config.php:1108
+msgid "支付宝打赏提示语"
+msgstr ""
+
+#: inc/gosheng-config.php:1109
+msgid "在支付宝收款二维码下面的文字说明。"
+msgstr ""
+
+#: inc/gosheng-config.php:1110, inc/gosheng-config.php:1148, inc/gosheng-config.php:1186, inc/gosheng-config.php:1224, inc/gosheng-config.php:1262
+msgid "例如：收款人姓名为狗剩。"
+msgstr ""
+
+#: inc/gosheng-config.php:1111
+msgid "我的支付宝收款人姓名是狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:1118
+msgid "支付宝收款二维码图片。"
+msgstr ""
+
+#: inc/gosheng-config.php:1121
+msgid "请输入二维码图片地址或者上传二维码图片文件。"
+msgstr ""
+
+#: inc/gosheng-config.php:1146
+msgid "微信打赏提示语"
+msgstr ""
+
+#: inc/gosheng-config.php:1147
+msgid "在微信收款二维码下面的文字说明。"
+msgstr ""
+
+#: inc/gosheng-config.php:1149
+msgid "我的微信收款人姓名是狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:1156
+msgid "微信收款二维码图片。"
+msgstr ""
+
+#: inc/gosheng-config.php:1159, inc/gosheng-config.php:1197, inc/gosheng-config.php:1235
+msgid "请输入二维码图片地址或者上传二维码图片文件"
+msgstr ""
+
+#: inc/gosheng-config.php:1173
+msgid "QQ钱包"
+msgstr ""
+
+#: inc/gosheng-config.php:1184
+msgid "QQ钱包打赏提示语"
+msgstr ""
+
+#: inc/gosheng-config.php:1185
+msgid "在QQ钱包收款二维码下面的文字说明。"
+msgstr ""
+
+#: inc/gosheng-config.php:1187
+msgid "我的QQ钱包收款人姓名是狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:1194
+msgid "QQ钱包收款二维码图片。"
+msgstr ""
+
+#: inc/gosheng-config.php:1211
+msgid "百度钱包"
+msgstr ""
+
+#: inc/gosheng-config.php:1222
+msgid "百度钱包打赏提示语"
+msgstr ""
+
+#: inc/gosheng-config.php:1223
+msgid "在百度钱包收款二维码下面的文字说明。"
+msgstr ""
+
+#: inc/gosheng-config.php:1225
+msgid "我的百度钱包收款人姓名是狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:1232
+msgid "百度钱包收款二维码图片。"
+msgstr ""
+
+#: inc/gosheng-config.php:1260
+msgid "PayPal打赏提示语"
+msgstr ""
+
+#: inc/gosheng-config.php:1261
+msgid "在PayPal.Me链接下面的文字说明。"
+msgstr ""
+
+#: inc/gosheng-config.php:1263
+msgid "我的PayPal.Me链接收款人姓名是狗剩"
+msgstr ""
+
+#: inc/gosheng-config.php:1271
+msgid "PayPal.Me链接账户名"
+msgstr ""
+
+#: inc/gosheng-config.php:1273
+msgid "例如：zhangchenglin"
+msgstr ""
+
+#: inc/gosheng-config.php:1299
+msgid "轮播图"
+msgstr ""
+
+#: inc/gosheng-config.php:1305
+msgid "顶部轮播图"
+msgstr ""
+
+#: inc/gosheng-config.php:1313
+msgid "顶部全宽轮播图开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1324
+msgid "顶部全宽轮播图"
+msgstr ""
+
+#: inc/gosheng-config.php:1325
+msgid "2张以上"
+msgstr ""
+
+#: inc/gosheng-config.php:1326
+msgid "宽度1920px，高度自定义，最好效果是统一的高度，太高影响页面效果，建议450px—650px"
+msgstr ""
+
+#: inc/gosheng-config.php:1332
+msgid "顶部轮播图3小"
+msgstr ""
+
+#: inc/gosheng-config.php:1340
+msgid "小轮播图开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1351
+msgid "小轮播图"
+msgstr ""
+
+#: inc/gosheng-config.php:1352
+msgid "三张以上"
+msgstr ""
+
+#: inc/gosheng-config.php:1360
+msgid "虚拟Robots.txt"
+msgstr ""
+
+#: inc/gosheng-config.php:1366
+msgid "虚拟Robots.txt设置"
+msgstr ""
+
+#: inc/gosheng-config.php:1374
+msgid "虚拟Robots.txt开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1385
+msgid "虚拟Robots内容"
+msgstr ""
+
+#: inc/gosheng-config.php:1386
+msgid "内容将会出现在站点根目录下robots.txt中，会替换掉WordPress默认虚拟robots.txt文件内容，所以您的（对搜索引擎的可见性）设置将会失效。"
+msgstr ""
+
+#: inc/gosheng-config.php:1387
+msgid "点击这里查看本站robots.txt"
+msgstr ""
+
+#: inc/gosheng-config.php:1396
+msgid "小工具"
+msgstr ""
+
+#: inc/gosheng-config.php:1402
+msgid "小组件"
+msgstr ""
+
+#: inc/gosheng-config.php:1410
+msgid "导航栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1419
+msgid "导航栏分隔符"
+msgstr ""
+
+#: inc/gosheng-config.php:1420
+msgid "每一级之间的字符样式"
+msgstr ""
+
+#: inc/gosheng-config.php:1421, inc/gosheng-config.php:1422
+msgid "例如：&raquo;"
+msgstr ""
+
+#: inc/gosheng-config.php:1428
+msgid "公告栏消息栏开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1429
+msgid "在文章和页面的导航栏下面增加一个可由用户关闭的消息通知。"
+msgstr ""
+
+#: inc/gosheng-config.php:1437
+msgid "消息通知内容"
+msgstr ""
+
+#: inc/gosheng-config.php:1438
+msgid "消息内容支持HTML代码，消息在被访客关闭后，12小时不会再次出现，12小时后会再次出现。"
+msgstr ""
+
+#: inc/gosheng-config.php:1439
+msgid "比如：您在设置了一条消息，用户访问网站后看到这条消息，然后关闭了这条消息，关闭的时间是12点34分，那么在这个时间往后的12个小时之内，用户再次用这个电脑访问网站，用户是不会再次看到这个消息的，但如果用户没有手动关闭，那么这个消息会一直存在。"
+msgstr ""
+
+#: inc/gosheng-config.php:1441
+msgid "这是一条消息通知，内容可在后台主题选项中的<b>小组件</b>中设置。"
+msgstr ""
+
+#: inc/gosheng-config.php:1448
+msgid "底部"
+msgstr ""
+
+#: inc/gosheng-config.php:1454
+msgid "底部小工具"
+msgstr ""
+
+#: inc/gosheng-config.php:1462, inc/gosheng-config.php:1474
+msgid "顶部欢迎语"
+msgstr ""
+
+#: inc/gosheng-config.php:1475, inc/gosheng-config.php:1517
+msgid "支持HTML代码"
+msgstr ""
+
+#: inc/gosheng-config.php:1476, inc/gosheng-config.php:1477
+msgid "例如：欢迎访问。"
+msgstr ""
+
+#: inc/gosheng-config.php:1483
+msgid "右侧联系QQ"
+msgstr ""
+
+#: inc/gosheng-config.php:1495
+msgid "右侧联系QQ号码"
+msgstr ""
+
+#: inc/gosheng-config.php:1497
+msgid "例如：469946668"
+msgstr ""
+
+#: inc/gosheng-config.php:1504, inc/gosheng-config.php:1516
+msgid "底部版权信息"
+msgstr ""
+
+#: inc/gosheng-config.php:1518
+msgid "例如：CopyRight 狗剩 2019 &copy; https://GoSheng.net"
+msgstr ""
+
+#: inc/gosheng-config.php:1525
+msgid "ICP备案"
+msgstr ""
+
+#: inc/gosheng-config.php:1536
+msgid "ICP备案号"
+msgstr ""
+
+#: inc/gosheng-config.php:1537
+msgid "工信部的备案号"
+msgstr ""
+
+#: inc/gosheng-config.php:1538
+msgid "例如：闽ICP备15012807号-1"
+msgstr ""
+
+#: inc/gosheng-config.php:1539
+msgid "请输入ICP备案号。"
+msgstr ""
+
+#: inc/gosheng-config.php:1545
+msgid "公安备案"
+msgstr ""
+
+#: inc/gosheng-config.php:1556
+msgid "公安备案号"
+msgstr ""
+
+#: inc/gosheng-config.php:1557
+msgid "公安部的备案号"
+msgstr ""
+
+#: inc/gosheng-config.php:1558
+msgid "例如：11000002000001"
+msgstr ""
+
+#: inc/gosheng-config.php:1559
+msgid "请输入您的公安备案号"
+msgstr ""
+
+#: inc/gosheng-config.php:1566
+msgid "公安备案文字"
+msgstr ""
+
+#: inc/gosheng-config.php:1567
+msgid "公安部的备案文字信息"
+msgstr ""
+
+#: inc/gosheng-config.php:1568
+msgid "例如：京公网安备11000002000001号"
+msgstr ""
+
+#: inc/gosheng-config.php:1569
+msgid "请输入您的公安备案文字信息"
+msgstr ""
+
+#: inc/gosheng-config.php:1575, inc/gosheng-config.php:1586
+msgid "统计代码"
+msgstr ""
+
+#: inc/gosheng-config.php:1588
+msgid "包含&lt;script&gt;标签"
+msgstr ""
+
+#: inc/gosheng-config.php:1589
+msgid "例如：<script src=\"https://s22.cnzz.com/z_stat.php?id=1270287786&web_id=1270287786\" language=\"JavaScript\"></script>"
+msgstr ""
+
+#: inc/gosheng-config.php:1596
+msgid "FunDebug功能"
+msgstr ""
+
+#: inc/gosheng-config.php:1607
+msgid "FunDebug版本："
+msgstr ""
+
+#: inc/gosheng-config.php:1608
+msgid "FunDebug的版本"
+msgstr ""
+
+#: inc/gosheng-config.php:1609
+msgid "查看FunDebug版本号："
+msgstr ""
+
+#: inc/gosheng-config.php:1610, inc/gosheng-config.php:1620
+msgid "此项为必填项。"
+msgstr ""
+
+#: inc/gosheng-config.php:1617
+msgid "ApiKey："
+msgstr ""
+
+#: inc/gosheng-config.php:1618
+msgid "funDebug的ApiKey"
+msgstr ""
+
+#: inc/gosheng-config.php:1619
+msgid "查看FunDebug的apikey："
+msgstr ""
+
+#: inc/gosheng-config.php:1628
+msgid "一言"
+msgstr ""
+
+#: inc/gosheng-config.php:1634
+msgid "一言设置"
+msgstr ""
+
+#: inc/gosheng-config.php:1642
+msgid "一言开关"
+msgstr ""
+
+#: inc/gosheng-config.php:1653
+msgid "一言API地址"
+msgstr ""
+
+#: inc/gosheng-config.php:1654
+msgid "使用的一言API地址"
+msgstr ""
+
+#: inc/gosheng-config.php:1655, inc/gosheng-config.php:1668
+msgid "."
+msgstr ""
+
+#: inc/gosheng-config.php:1657
+msgid "官方v1 API"
+msgstr ""
+
+#: inc/gosheng-config.php:1666
+msgid "语句类型"
+msgstr ""
+
+#: inc/gosheng-config.php:1667
+msgid "一言语句类型"
+msgstr ""
+
+#: inc/gosheng-config.php:1670
+msgid "随机"
+msgstr ""
+
+#: inc/gosheng-config.php:1671
+msgid "动画"
+msgstr ""
+
+#: inc/gosheng-config.php:1672
+msgid "漫画"
+msgstr ""
+
+#: inc/gosheng-config.php:1673
+msgid "游戏"
+msgstr ""
+
+#: inc/gosheng-config.php:1674
+msgid "小说"
+msgstr ""
+
+#: inc/gosheng-config.php:1675
+msgid "原创"
+msgstr ""
+
+#: inc/gosheng-config.php:1676
+msgid "网络"
+msgstr ""
+
+#: inc/gosheng-config.php:1677
+msgid "其他"
+msgstr ""
+
+#: inc/register/sidebar.php:9
+msgid "狗剩-页面侧边栏"
+msgstr ""
+
+#: inc/register/sidebar.php:11
+msgid "页面侧边栏小工具"
+msgstr ""
+
+#: inc/register/sidebar.php:23
+msgid "狗剩-页底边栏"
+msgstr ""
+
+#: inc/register/sidebar.php:25
+msgid "页面底部边栏"
+msgstr ""
+
+#: page-templates/validate.php:3
+msgid "validate"
+msgstr ""
+
+#: search.php:37
+msgid "没有搜索到结果。"
+msgstr ""
+
+#: searchform.php:6, searchform.php:7
+msgid "搜索"
+msgstr ""
+
+#: searchform.php:13
+msgid "要搜索的内容"
+msgstr ""
+
+#: searchform.php:20
+msgid "搜索记录"
+msgstr ""
+
+#: searchform.php:21
+msgid "最近搜索:"
+msgstr ""
+
+#: sidebar.php:39
+msgid "侧边栏异常加载"
+msgstr ""
+
+#: template-parts/footer/footer-cookie.php:13
+msgid "同意使用cookie"
+msgstr ""
+
+#: template-parts/footer/footer-cookie.php:15
+msgid "不同意使用cookie"
+msgstr ""
+
+#: template-parts/header/header-notice.php:11
+msgid "公告信息"
+msgstr ""
+
+#: template-parts/header/header-notice.php:14
+msgid "关闭公告信息"
+msgstr ""
+
+#: template-parts/header/panel_tab_content.php:9
+msgid "登录标签"
+msgstr ""
+
+#: template-parts/header/panel_tab_content.php:17
+msgid "注册标签"
+msgstr ""
+
+#: template-parts/header/panel_tab_content.php:25
+msgid "找回密码标签"
+msgstr ""
+
+#: template-parts/header/panel_user.php:10
+msgid "登录模态框"
+msgstr ""
+
+#: template-parts/header/panel_user_login.php:111
+msgid "谷歌登录"
+msgstr ""
+
+#: template-parts/header/panel_user_login.php:127
+msgid "Facebook登录"
+msgstr ""
+
+#: template-parts/header/panel_user_login.php:135
+msgid "推特登录"
+msgstr ""
+
+#: template-parts/header/panel_user_login.php:143
+msgid "领英登录"
+msgstr ""
+
+#: template-parts/navigation/navigation-bar.php:13
+msgid "左侧边栏按钮:"
+msgstr ""
+
+#: template-parts/navigation/navigation-bar.php:21
+msgid "右侧边栏按钮:"
+msgstr ""
+
+#: template-parts/navigation/navigation-bar.php:46
+msgid "导航按钮:"
+msgstr ""
+
+#: template-parts/other/reward.php:117
+msgid "PayPal.Me链接地址"
+msgstr ""
+
+#: template-parts/other/reward.php:118
+msgid "给我PayPal转账"
+msgstr ""
+
+#: template-parts/single/single-standard.php:28, template-parts/single/single-video.php:28
+msgid "页:"
+msgstr ""

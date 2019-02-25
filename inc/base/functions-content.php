@@ -377,7 +377,7 @@ if ( ! function_exists( 'GoSheng_posted_reward' ) ) {
 		$reward_before = '<div id="gosheng_reward" class="mb-2 mb-lg-3 text-center">';
 		$reward_after  = '</div>';
 		$reward_link   = '<a href="#" class="btn btn-sm btn-outline-danger border font-11 font-lg-12 text-dark hvr-icon-pulse-grow" data-toggle="modal" data-target="#reward_modal" data-modaltab="alipay" title="%1$s"><i class="fas fa-yen-sign hvr-icon"></i>%2$s</a>';
-		$reward        = $reward_before . sprintf( $reward_link, __( '文章不错，奖励一下作者', 'GoSheng-framework' ), __( '', 'GoSheng-framework' ) ) . $reward_after;
+		$reward        = $reward_before . sprintf( $reward_link, __( '文章不错，奖励一下作者', 'GoSheng-framework' ), '' ) . $reward_after;
 		echo $reward;
 	}
 }
