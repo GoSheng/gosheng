@@ -1,5 +1,8 @@
 <?php
 defined( 'ABSPATH' ) || exit;
+if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
+	return;
+}
 
 date_default_timezone_set( get_option( 'timezone_string' ) );
 
