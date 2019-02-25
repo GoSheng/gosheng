@@ -1,6 +1,6 @@
 {
   "name": "gosheng_theme_static_file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "狗剩主题静态文件压缩混淆",
   "main": "index.js",
   "scripts": {
@@ -8,17 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "https://github.com/GoSheng/gosheng.git"
   },
   "author": "张成林",
   "license": "MIT",
   "devDependencies": {
     "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sort": "^2.0.0",
     "gulp-uglify-es": "^1.0.4",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "gulp-wp-pot": "^2.3.4"
   }
 }
