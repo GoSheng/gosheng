@@ -8,13 +8,13 @@ var util = require('gulp-util');
 //翻译相关
 var wpPot = require('gulp-wp-pot');
 var sort = require('gulp-sort');
-var text_domain = 'GoSheng-framework';                 //你的文字域在这里。
-var destFile = 'GoSheng.pot ';                         //转换文件的名称。
-var packageName = 'GoSheng';                           //包名称
-var bugReport = 'https://gosheng.net';                 //用户可以在哪里报告错误。
-var lastTranslator = '张成林<469946668@qq.com>';       //上次翻译电子邮件ID。
-var team = '狗剩<admin@gosheng.net>';                  //团队的电子邮件ID。
-var translatePath = './languages/';                    //保存翻译文件的位置。
+var text_domain = 'GoSheng-framework';                                      //文字域。
+var destFile = 'GoSheng.pot';                                               //转换文件的名称。
+var packageName = 'GoSheng';                                                //包名称
+var bugReport = 'https://github.com/GoSheng/gosheng/issues';                //用户可以在哪里报告错误。
+var lastTranslator = '张成林<469946668@qq.com>';                            //上次翻译电子邮件ID。
+var team = '狗剩<admin@gosheng.net>';                                       //团队的电子邮件ID。
+var translatePath = './languages/';                                         //保存翻译文件的位置。
 var projectPHPWatchFiles = './**/*.php';
 
 function translate() {
