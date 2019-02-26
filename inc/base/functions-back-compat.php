@@ -21,7 +21,7 @@ if ( ! function_exists( 'GoSheng_customize' ) ) {
 	function GoSheng_customize() {
 		wp_die(
 			sprintf(
-				__( '狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，我们已经为您切换为WordPress默认主题，请在更新WordPress后重新启用狗剩主题即可。', 'GoSheng-framework' ),
+				__( '狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，请在更新WordPress后重新启用狗剩主题即可。', 'GoSheng-framework' ),
 				$GLOBALS['wp_version']
 			),
 			'',
