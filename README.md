@@ -77,4 +77,4 @@
 
 
 # 下载压缩包
-https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.3.zip
+https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.4.zip
