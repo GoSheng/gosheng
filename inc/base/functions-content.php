@@ -145,6 +145,9 @@ function GoSheng_editor_post_password() {
 //todo:待完善研究特色图片尺寸
 if ( ! function_exists( 'GoSheng_posted_thumbnail' ) ) {
 	function GoSheng_posted_thumbnail() {
+		if ( post_password_required() ) {
+			return;
+		}
 		$img_id  = get_post_thumbnail_id();
 		$img_url = wp_get_attachment_image_src( $img_id, 'GoSheng_thumbnails' );
 		$img_url = $img_url[0];
