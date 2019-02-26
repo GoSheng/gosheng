@@ -20,8 +20,12 @@ msgstr ""
 msgid "评论已经关闭"
 msgstr ""
 
-#: inc/base/functions-back-compat.php:14, inc/base/functions-back-compat.php:24, inc/base/functions-back-compat.php:39
-msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，请在更新WordPress后重试。"
+#: inc/base/functions-back-compat.php:14, inc/base/functions-back-compat.php:24
+msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，我们已经为您切换为WordPress默认主题，请在更新WordPress后重新启用狗剩主题即可。"
+msgstr ""
+
+#: inc/base/functions-back-compat.php:39
+msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，请在更新WordPress后重新启用狗剩主题即可。"
 msgstr ""
 
 #: inc/base/functions-base.php:28
@@ -156,7 +160,7 @@ msgstr ""
 msgid "当前是给%s回复"
 msgstr ""
 
-#: inc/base/functions-comment_navigation.php:7, inc/base/functions-content.php:180, inc/base/functions-content.php:198, inc/base/functions-content.php:199
+#: inc/base/functions-comment_navigation.php:7, inc/base/functions-content.php:183, inc/base/functions-content.php:201, inc/base/functions-content.php:202
 msgid "文章导航"
 msgstr ""
 
@@ -196,106 +200,110 @@ msgstr ""
 msgid "淘宝店铺"
 msgstr ""
 
-#: inc/base/functions-content.php:184
+#: inc/base/functions-content.php:187
 msgctxt "上一篇"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr ""
 
-#: inc/base/functions-content.php:187
+#: inc/base/functions-content.php:190
 msgctxt "下一篇"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr ""
 
-#: inc/base/functions-content.php:210
+#: inc/base/functions-content.php:213
 msgid "没有旧的文章了"
 msgstr ""
 
-#: inc/base/functions-content.php:221
+#: inc/base/functions-content.php:224
 msgid "没有新的文章了"
 msgstr ""
 
-#: inc/base/functions-content.php:269
+#: inc/base/functions-content.php:272
 msgid "本文需要密码才能查看"
 msgstr ""
 
-#: inc/base/functions-content.php:347, inc/base/functions-content.php:347
+#: inc/base/functions-content.php:350, inc/base/functions-content.php:350
 msgid "无标签"
 msgstr ""
 
-#: inc/base/functions-content.php:359, inc/base/functions-user_meta.php:8
+#: inc/base/functions-content.php:362, inc/base/functions-user_meta.php:8
 msgid "微博"
 msgstr ""
 
-#: inc/base/functions-content.php:360, inc/gosheng-config.php:1135
+#: inc/base/functions-content.php:363, inc/gosheng-config.php:1135
 msgid "微信"
 msgstr ""
 
-#: inc/base/functions-content.php:361
+#: inc/base/functions-content.php:364
 msgid "QQ好友"
 msgstr ""
 
-#: inc/base/functions-content.php:362, inc/base/functions-user_meta.php:9, inc/gosheng-config.php:1097
+#: inc/base/functions-content.php:365, inc/base/functions-user_meta.php:9, inc/gosheng-config.php:1097
 msgid "支付宝"
 msgstr ""
 
-#: inc/base/functions-content.php:363
+#: inc/base/functions-content.php:366
 msgid "腾讯微博"
 msgstr ""
 
-#: inc/base/functions-content.php:364, inc/base/functions-user_meta.php:14
+#: inc/base/functions-content.php:367, inc/base/functions-user_meta.php:14
 msgid "Facebook"
 msgstr ""
 
-#: inc/base/functions-content.php:365, inc/base/functions-user_meta.php:11
+#: inc/base/functions-content.php:368, inc/base/functions-user_meta.php:11
 msgid "推特"
 msgstr ""
 
-#: inc/base/functions-content.php:366
+#: inc/base/functions-content.php:369
 msgid "谷歌 Plus"
 msgstr ""
 
-#: inc/base/functions-content.php:380
+#: inc/base/functions-content.php:383
 msgid "文章不错，奖励一下作者"
 msgstr ""
 
-#: inc/base/functions-content.php:389
+#: inc/base/functions-content.php:392
 msgid "编辑本文"
 msgstr ""
 
-#: inc/base/functions-content.php:455
+#: inc/base/functions-content.php:458
 msgid "文章不错，点个赞吧。"
 msgstr ""
 
-#: inc/base/functions-content.php:455
+#: inc/base/functions-content.php:458
 msgid " "
 msgstr ""
 
-#: inc/base/functions-content.php:467
+#: inc/base/functions-content.php:470
 msgid "&laquo;"
 msgstr ""
 
-#: inc/base/functions-content.php:468
+#: inc/base/functions-content.php:471
 msgid "&raquo;"
 msgstr ""
 
-#: inc/base/functions-content.php:469
+#: inc/base/functions-content.php:472
 msgid "列表分页"
 msgstr ""
 
-#: inc/base/functions-content.php:559
+#: inc/base/functions-content.php:562
 msgid "QQ号"
 msgstr ""
 
-#: inc/base/functions-content.php:560
+#: inc/base/functions-content.php:563
 msgid "用户UA"
 msgstr ""
 
-#: inc/base/functions-content.php:610
+#: inc/base/functions-content.php:613
 msgid "狗剩主题"
 msgstr ""
 
-#: inc/base/functions-content.php:612
+#: inc/base/functions-content.php:615
 msgid "换一个"
+msgstr ""
+
+#: inc/base/functions-php-version.php:15
+msgid "狗剩主题需要PHP 7.0或更高版本。您当前的PHP版本是%s，我们已经为您切换为WordPress默认主题，请在升级PHP版本后重新启用狗剩主题即可。"
 msgstr ""
 
 #: inc/base/functions-user_meta.php:7
