@@ -1,6 +1,8 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
+	get_template_part( 'inc/base/functions', 'back-compat' );
+
 	return;
 }
 

@@ -1,7 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 add_action( 'welcome_panel', 'GoSheng_admin_notice' );
 if ( ! function_exists( 'GoSheng_admin_notice' ) ) {

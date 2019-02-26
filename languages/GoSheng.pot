@@ -20,63 +20,67 @@ msgstr ""
 msgid "评论已经关闭"
 msgstr ""
 
-#: inc/base/functions-base.php:30
+#: inc/base/functions-back-compat.php:14, inc/base/functions-back-compat.php:24, inc/base/functions-back-compat.php:39
+msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，请在更新WordPress后重试。"
+msgstr ""
+
+#: inc/base/functions-base.php:28
 msgid "网站遇到404页面"
 msgstr ""
 
-#: inc/base/functions-base.php:31
+#: inc/base/functions-base.php:29
 msgid "404页面的地址："
 msgstr ""
 
-#: inc/base/functions-base.php:32
+#: inc/base/functions-base.php:30
 msgid "HTTP_REFERER："
 msgstr ""
 
-#: inc/base/functions-base.php:33
+#: inc/base/functions-base.php:31
 msgid "访问者IP为："
 msgstr ""
 
-#: inc/base/functions-base.php:34
+#: inc/base/functions-base.php:32
 msgid "访问者UA为："
 msgstr ""
 
-#: inc/base/functions-base.php:35
+#: inc/base/functions-base.php:33
 msgid "REQUEST_METHOD："
 msgstr ""
 
-#: inc/base/functions-base.php:36
+#: inc/base/functions-base.php:34
 msgid "时间："
 msgstr ""
 
-#: inc/base/functions-base.php:79, inc/base/functions-base.php:82
+#: inc/base/functions-base.php:77, inc/base/functions-base.php:80
 msgid "设置轮播图"
 msgstr ""
 
-#: inc/base/functions-base.php:101
+#: inc/base/functions-base.php:99
 msgid "设置菜单"
 msgstr ""
 
-#: inc/base/functions-base.php:108
+#: inc/base/functions-base.php:106
 msgid "顶部主菜单"
 msgstr ""
 
-#: inc/base/functions-base.php:109
+#: inc/base/functions-base.php:107
 msgid "左侧菜单"
 msgstr ""
 
-#: inc/base/functions-base.php:110
+#: inc/base/functions-base.php:108
 msgid "右侧菜单"
 msgstr ""
 
-#: inc/base/functions-base.php:111
+#: inc/base/functions-base.php:109
 msgid "友情链接"
 msgstr ""
 
-#: inc/base/functions-base.php:112
+#: inc/base/functions-base.php:110
 msgid "页脚菜单"
 msgstr ""
 
-#: inc/base/functions-base.php:113
+#: inc/base/functions-base.php:111
 msgid "底部菜单"
 msgstr ""
 
