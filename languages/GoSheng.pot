@@ -20,11 +20,11 @@ msgstr ""
 msgid "评论已经关闭"
 msgstr ""
 
-#: inc/base/functions-back-compat.php:14, inc/base/functions-back-compat.php:24
+#: inc/base/functions-back-compat.php:14
 msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，我们已经为您切换为WordPress默认主题，请在更新WordPress后重新启用狗剩主题即可。"
 msgstr ""
 
-#: inc/base/functions-back-compat.php:39
+#: inc/base/functions-back-compat.php:24, inc/base/functions-back-compat.php:39
 msgid "狗剩主题需要WordPress 4.7或更高版本。您正在运行%s版，请在更新WordPress后重新启用狗剩主题即可。"
 msgstr ""
 
