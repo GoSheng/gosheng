@@ -12,7 +12,7 @@ if ( ! function_exists( 'GoSheng_php_version_notice' ) ) {
 
 if ( ! function_exists( 'GoSheng_php_upgrade_notice' ) ) {
 	function GoSheng_php_upgrade_notice() {
-		$message = sprintf( __( '狗剩主题需要PHP 7.0或更高版本。您当前的PHP版本是%s，我们已经为您切换为WordPress默认主题，请在升级PHP版本后重新启用狗剩主题即可。', 'GoSheng-framework' ), phpversion );
+		$message = sprintf( __( '狗剩主题需要PHP 7.0或更高版本。您当前的PHP版本是%s，我们已经为您切换为WordPress默认主题，请在升级PHP版本后重新启用狗剩主题即可。', 'GoSheng-framework' ), PHP_VERSION );
 		printf( '<div class="error"><p>%s</p></div>', $message );
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) || exit;
-define( 'phpversion', phpversion() );
-if ( version_compare( phpversion, '7.0', '<' ) ) {
+
+if ( version_compare( PHP_VERSION, '7.0', '<' ) ) {
 	get_template_part( 'inc/base/functions', 'php-version' );
 
 	return;
