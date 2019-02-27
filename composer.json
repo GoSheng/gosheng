@@ -1,5 +1,5 @@
 {
-    "name": "lin/gosheng",
+    "name": "GoSheng/gosheng",
     "description": "GoSheng theme",
     "type": "wordpress-theme",
     "license": "MIT",
@@ -9,5 +9,7 @@
             "email": "469946668@qq.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php" : ">=7.0.0"
+    }
 }
