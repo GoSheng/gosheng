@@ -9,6 +9,8 @@
 <a href="https://opensource.org/licenses/MIT"><img alt="GitHub" src="https://img.shields.io/github/license/gosheng/gosheng.svg" title="https://opensource.org/licenses/MIT"></a>
 <a href="https://github.com/GoSheng/gosheng/archive/master.zip" title="download GoSheng master"><img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/gosheng/gosheng.svg"></a>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gosheng/gosheng.svg">
+<img alt="GitHub Release-Pre" title="GitHub Release-Pre" src="https://img.shields.io/github/release-pre/gosheng/gosheng.svg">
+<img alt="GitHub release" title="GitHub release" src="https://img.shields.io/github/release/gosheng/gosheng.svg">
 </p>
 
 # 安装
