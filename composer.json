@@ -1,0 +1,13 @@
+{
+    "name": "lin/gosheng",
+    "description": "GoSheng theme",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lin",
+            "email": "469946668@qq.com"
+        }
+    ],
+    "require": {}
+}
