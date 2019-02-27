@@ -13,12 +13,12 @@
 
 # 安装
 
-**Composer：**
+**Composer**
 ```
 composer require gosheng/gosheng
 ```
 
-**Github:**
+**Github**
 ```
 https://github.com/GoSheng/gosheng.git
 ```
