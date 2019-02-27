@@ -1,7 +1,7 @@
 {
   "name": "gosheng/gosheng",
   "version": "2.0.5",
-  "description": "GoSheng theme",
+  "description": "GoSheng is a WordPress theme",
   "type": "wordpress-theme",
   "license": "MIT",
   "keywords": [
@@ -12,11 +12,12 @@
   ],
   "authors": [
     {
-      "name": "zhangchenglin",
+      "name": "张成林",
       "email": "469946668@qq.com"
     }
   ],
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "gulp": ">=4.0.0"
   }
 }

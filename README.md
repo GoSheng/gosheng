@@ -1,5 +1,18 @@
 # gosheng
-这是一个由Bootstrap 4.3.1搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
+这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
+
+# 安装
+**Composer：**
+
+composer require gosheng/gosheng
+
+**Github:**
+
+https://github.com/GoSheng/gosheng.git
+
+**ZIP**
+
+https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
 
 # 随笔
 
@@ -76,5 +89,3 @@
 评论区支持表情符号，颜文字
 
 
-# 下载压缩包
-https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.4.zip
