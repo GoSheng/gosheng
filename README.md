@@ -2,15 +2,26 @@
 这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
 
 <p align="center">
-<a href="https://packagist.org/packages/gosheng/gosheng"><img alt="Packagist" title="https://packagist.org/packages/gosheng/gosheng" src="https://img.shields.io/packagist/v/gosheng/gosheng.svg"></a>
+<b>Composer</b><br><br>
 <a href="https://opensource.org/licenses/MIT"><img alt="Packagist" title="https://opensource.org/licenses/MIT" src="https://img.shields.io/packagist/l/gosheng/gosheng.svg"></a>
+<a href="https://packagist.org/packages/gosheng/gosheng"><img alt="Packagist" title="https://packagist.org/packages/gosheng/gosheng" src="https://img.shields.io/packagist/v/gosheng/gosheng.svg"></a>
+<br>
+<img alt="Packagist" src="https://img.shields.io/packagist/dt/gosheng/gosheng.svg">
+<img alt="Packagist" src="https://img.shields.io/packagist/dm/gosheng/gosheng.svg">
+<img alt="Packagist" src="https://img.shields.io/packagist/dd/gosheng/gosheng.svg">
 </p>
 <p align="center">
+<b>GitHub</b><br><br>
 <a href="https://opensource.org/licenses/MIT"><img alt="GitHub" title="https://opensource.org/licenses/MIT" src="https://img.shields.io/github/license/gosheng/gosheng.svg"></a>
 <a href="https://github.com/GoSheng/gosheng/archive/master.zip"><img alt="GitHub repo size in bytes" title="download GoSheng master" src="https://img.shields.io/github/repo-size/gosheng/gosheng.svg"></a>
 <img alt="GitHub last commit" title="GitHub last commit" src="https://img.shields.io/github/last-commit/gosheng/gosheng.svg">
-<img alt="GitHub Release-Pre" title="GitHub Release-Pre" src="https://img.shields.io/github/release-pre/gosheng/gosheng.svg">
+<img alt="GitHub Pre-Releases" title="GitHub Pre-Releases" src="https://img.shields.io/github/release-pre/gosheng/gosheng.svg">
 <img alt="GitHub release" title="GitHub Release" src="https://img.shields.io/github/release/gosheng/gosheng.svg">
+</p>
+<p align="center">
+<img alt="GitHub All Releases" title="GitHub All Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/total.svg">
+<img alt="GitHub Pre-Releases" title="GitHub Pre-Releases download quantity" src="https://img.shields.io/github/downloads-pre/gosheng/gosheng/2.0.5/total.svg">
+<img alt="GitHub Releases download quantity" title="GitHub Releases" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
 </p>
 
 # 安装
