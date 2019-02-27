@@ -42,7 +42,7 @@ https://github.com/GoSheng/gosheng.git
 
 **ZIP**
 ```url
-https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
+https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 ```
 
 
