@@ -28,7 +28,11 @@
 
 **Composer**
 ```
+Releases:
 composer create-project gosheng/gosheng
+
+Master:
+composer create-project gosheng/gosheng gosheng dev-master
 ```
 
 **Github**
