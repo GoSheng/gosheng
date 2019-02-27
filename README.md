@@ -6,9 +6,9 @@
 <a href="https://opensource.org/licenses/MIT"><img alt="Packagist" title="https://opensource.org/licenses/MIT" src="https://img.shields.io/packagist/l/gosheng/gosheng.svg"></a>
 <a href="https://packagist.org/packages/gosheng/gosheng"><img alt="Packagist" title="https://packagist.org/packages/gosheng/gosheng" src="https://img.shields.io/packagist/v/gosheng/gosheng.svg"></a>
 <br>
-<img alt="Packagist" src="https://img.shields.io/packagist/dt/gosheng/gosheng.svg">
-<img alt="Packagist" src="https://img.shields.io/packagist/dm/gosheng/gosheng.svg">
-<img alt="Packagist" src="https://img.shields.io/packagist/dd/gosheng/gosheng.svg">
+<img alt="Packagist" title="download quantity" src="https://img.shields.io/packagist/dt/gosheng/gosheng.svg">
+<img alt="Packagist" title="month download quantity" src="https://img.shields.io/packagist/dm/gosheng/gosheng.svg">
+<img alt="Packagist" title="today download quantity" src="https://img.shields.io/packagist/dd/gosheng/gosheng.svg">
 </p>
 <p align="center">
 <b>GitHub</b><br><br>
@@ -21,7 +21,7 @@
 <p align="center">
 <img alt="GitHub All Releases" title="GitHub All Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/total.svg">
 <img alt="GitHub Pre-Releases" title="GitHub Pre-Releases download quantity" src="https://img.shields.io/github/downloads-pre/gosheng/gosheng/2.0.5/total.svg">
-<img alt="GitHub Releases download quantity" title="GitHub Releases" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
+<img alt="GitHub Releases" title="GitHub Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
 </p>
 
 # 安装
