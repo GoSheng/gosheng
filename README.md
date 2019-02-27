@@ -28,7 +28,7 @@
 
 **Composer**
 ```
-composer require gosheng/gosheng
+composer create-project gosheng/gosheng
 ```
 
 **Github**
