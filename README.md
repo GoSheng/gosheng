@@ -4,6 +4,8 @@
 <p align="center">
 <a href="https://packagist.org/packages/gosheng/gosheng" title="https://packagist.org/packages/gosheng/gosheng"><img alt="Packagist" src="https://img.shields.io/packagist/v/gosheng/gosheng.svg"></a>
 <a href="https://opensource.org/licenses/MIT"><img alt="Packagist" src="https://img.shields.io/packagist/l/gosheng/gosheng.svg" title="https://opensource.org/licenses/MIT"></a>
+</p>
+<p align="center">
 <a href="https://opensource.org/licenses/MIT"><img alt="GitHub" src="https://img.shields.io/github/license/gosheng/gosheng.svg" title="https://opensource.org/licenses/MIT"></a>
 <a href="https://github.com/GoSheng/gosheng/archive/master.zip" title="download GoSheng master"><img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/gosheng/gosheng.svg"></a>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/gosheng/gosheng.svg">
@@ -22,7 +24,7 @@ https://github.com/GoSheng/gosheng.git
 ```
 
 **ZIP**
-```
+```url
 https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
 ```
 
@@ -32,6 +34,7 @@ https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
 我最近心情不好，总是感觉活在一个重复的世界里，不知道该怎么才能让头脑清醒一些，我想顺利的活过2018年，那我将继续进行这个主题创作，如果不能健健康康的活到2019年，那么这个主题的最后更新时间就是我最后清醒的时间了。
 
 # 功能介绍
+---
 
 注册、登录、找回密码，可控开关
 
@@ -86,7 +89,8 @@ https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
 文章类型除标准形式外，其他形式都没有评论功能，可自行调整。
 
 
-**针对用户的设计**
+**针对访客的设计**
+---
 
 仿谷歌搜索记录（Cookie记录），可自定义删除
 
