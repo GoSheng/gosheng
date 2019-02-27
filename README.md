@@ -1,18 +1,23 @@
-# gosheng
+# 狗剩
 这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
 
 # 安装
-**Composer：**
 
+**Composer：**
+```
 composer require gosheng/gosheng
+```
 
 **Github:**
-
+```
 https://github.com/GoSheng/gosheng.git
+```
 
 **ZIP**
-
+```
 https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
+```
+
 
 # 随笔
 
@@ -71,7 +76,6 @@ https://github.com/GoSheng/gosheng_update/raw/master/zip/2.x/v-2.0.5.zip
 计划支持浏览器消息通知功能（计划中）
 
 文章类型除标准形式外，其他形式都没有评论功能，可自行调整。
-
 
 
 **针对用户的设计**
