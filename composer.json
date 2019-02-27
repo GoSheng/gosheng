@@ -1,15 +1,22 @@
 {
-    "name": "gosheng/gosheng",
-    "description": "GoSheng theme",
-    "type": "wordpress-theme",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "lin",
-            "email": "469946668@qq.com"
-        }
-    ],
-    "require": {
-        "php" : ">=7.0.0"
+  "name": "gosheng/gosheng",
+  "version": "2.0.5",
+  "description": "GoSheng theme",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "keywords": [
+    "WordPress",
+    "Bootstrap",
+    "Redux-framework",
+    "theme"
+  ],
+  "authors": [
+    {
+      "name": "zhangchenglin",
+      "email": "469946668@qq.com"
     }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  }
 }
