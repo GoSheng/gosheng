@@ -42,11 +42,6 @@ composer create-project gosheng/gosheng gosheng dev-master
 https://github.com/GoSheng/gosheng.git
 ```
 
-**ZIP**
-```
-https://github.com/GoSheng/gosheng/archive/2.0.5.zip
-```
-
 
 ## 随笔
 
