@@ -53,7 +53,6 @@ https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 我最近心情不好，总是感觉活在一个重复的世界里，不知道该怎么才能让头脑清醒一些，我想顺利的活过2018年，那我将继续进行这个主题创作，如果不能健健康康的活到2019年，那么这个主题的最后更新时间就是我最后清醒的时间了。
 
 # 功能介绍
----
 
 注册、登录、找回密码，可控开关
 
@@ -122,8 +121,3 @@ https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 文章页面支持隐藏侧边栏（没有Cookie记录）
 
 评论区支持表情符号，颜文字
-
-
-
-
-[]: https://github.com/GoSheng/gosheng/blob/master/README.md
