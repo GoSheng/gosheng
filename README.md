@@ -1,6 +1,6 @@
 [English](https://github.com/GoSheng/gosheng/blob/master/README.EN.md) | 简体中文
 
-# 狗剩
+## 狗剩
 这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
 
 <p align="center">
@@ -26,7 +26,7 @@
 <img alt="GitHub Releases" title="GitHub Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
 </p>
 
-# 安装
+## 安装
 
 **Composer**
 ```
@@ -48,11 +48,11 @@ https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 ```
 
 
-# 随笔
+## 随笔
 
 我最近心情不好，总是感觉活在一个重复的世界里，不知道该怎么才能让头脑清醒一些，我想顺利的活过2018年，那我将继续进行这个主题创作，如果不能健健康康的活到2019年，那么这个主题的最后更新时间就是我最后清醒的时间了。
 
-# 功能介绍
+## 功能介绍
 
 注册、登录、找回密码，可控开关
 

@@ -1,6 +1,6 @@
 English | [简体中文](https://github.com/GoSheng/gosheng/blob/master/README.md)
 
-# GoSheng
+## GoSheng
 This is a WordPress theme built by Bootstrap 4.3.1.
 
 <p align="center">
@@ -26,7 +26,7 @@ This is a WordPress theme built by Bootstrap 4.3.1.
 <img alt="GitHub Releases" title="GitHub Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
 </p>
 
-# Install
+## Install
 
 **Composer**
 ```
