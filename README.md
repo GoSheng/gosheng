@@ -1,3 +1,5 @@
+[English](https://github.com/GoSheng/gosheng/blob/master/README.EN.md) | 简体中文
+
 # 狗剩
 这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
 
@@ -31,7 +33,7 @@
 Releases:
 composer create-project gosheng/gosheng
 
-Master:
+Dev-Master:
 composer create-project gosheng/gosheng gosheng dev-master
 ```
 
@@ -41,7 +43,7 @@ https://github.com/GoSheng/gosheng.git
 ```
 
 **ZIP**
-```url
+```
 https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 ```
 
@@ -122,3 +124,6 @@ https://github.com/GoSheng/gosheng/archive/2.0.5.zip
 评论区支持表情符号，颜文字
 
 
+
+
+[]: https://github.com/GoSheng/gosheng/blob/master/README.md
