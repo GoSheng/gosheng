@@ -22,8 +22,8 @@ This is a WordPress theme built by Bootstrap 4.3.1.
 </p>
 <p align="center">
 <img alt="GitHub All Releases" title="GitHub All Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/total.svg">
-<img alt="GitHub Pre-Releases" title="GitHub Pre-Releases download quantity" src="https://img.shields.io/github/downloads-pre/gosheng/gosheng/2.0.5/total.svg">
-<img alt="GitHub Releases" title="GitHub Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.5/total.svg">
+<img alt="GitHub Pre-Releases" title="GitHub Pre-Releases download quantity" src="https://img.shields.io/github/downloads-pre/gosheng/gosheng/2.0.6/total.svg">
+<img alt="GitHub Releases" title="GitHub Releases download quantity" src="https://img.shields.io/github/downloads/gosheng/gosheng/2.0.6/total.svg">
 </p>
 
 ## Install
