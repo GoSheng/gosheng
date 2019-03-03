@@ -904,7 +904,6 @@ $(document).ready(function () {
 })();
 
 (function () {
-
     function toast(title, body, time, delay, position, messageType) {
         let Time = new Date().getTime();
         let toastID = "toast_" + Time;

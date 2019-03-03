@@ -1,21 +1,20 @@
-var gulp = require('gulp');
-var del = require('del');
-var cssnano = require('gulp-cssnano');
-var uglify = require('gulp-uglify-es').default;
-var rename = require('gulp-rename');
-var util = require('gulp-util');
+const del = require('del');
+const gulp = require('gulp');
+const cssnano = require('gulp-cssnano');
+const rename = require('gulp-rename');
+const terser = require('gulp-terser');
 
 //翻译相关
-var wpPot = require('gulp-wp-pot');
-var sort = require('gulp-sort');
-var text_domain = 'GoSheng-framework';                                      //文字域。
-var destFile = 'GoSheng.pot';                                               //转换文件的名称。
-var packageName = 'GoSheng';                                                //包名称
-var bugReport = 'https://github.com/GoSheng/gosheng/issues';                //用户可以在哪里报告错误。
-var lastTranslator = '张成林<469946668@qq.com>';                            //上次翻译电子邮件ID。
-var team = '狗剩<admin@gosheng.net>';                                       //团队的电子邮件ID。
-var translatePath = './languages/';                                         //保存翻译文件的位置。
-var projectPHPWatchFiles = './**/*.php';
+const wpPot = require('gulp-wp-pot');
+const sort = require('gulp-sort');
+const text_domain = 'GoSheng-framework';                                      //文字域。
+const destFile = 'GoSheng.pot';                                               //转换文件的名称。
+const packageName = 'GoSheng';                                                //包名称
+const bugReport = 'https://github.com/GoSheng/gosheng/issues';                //用户可以在哪里报告错误。
+const lastTranslator = '张成林<469946668@qq.com>';                            //上次翻译电子邮件ID。
+const team = '狗剩<admin@gosheng.net>';                                       //团队的电子邮件ID。
+const translatePath = './languages/';                                         //保存翻译文件的位置。
+const projectPHPWatchFiles = './**/*.php';
 
 function translate() {
     'use strict';
@@ -41,85 +40,63 @@ gulp.task("clean", function () {
     return del(['./dist']);
 });
 gulp.task('script_local', function (done) {
+    'use strict';
     gulp.src('./static/js/local.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('local.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
 });
 
-gulp.task('script_notyf', function () {
+gulp.task('script_notyf', function (done) {
     gulp.src('./static/js/notyf.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('notyf.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
-gulp.task('script_cookie', function () {
+gulp.task('script_cookie', function (done) {
     gulp.src('./static/js/cookie.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('cookie.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
-gulp.task('script_google_reCaptcha', function () {
+gulp.task('script_google_reCaptcha', function (done) {
     gulp.src('./static/js/google_reCaptcha.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('google_reCaptcha.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
-gulp.task('script_gosheng_oauth', function () {
+gulp.task('script_gosheng_oauth', function (done) {
     gulp.src('./static/js/gosheng_oauth.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('gosheng_oauth.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
-gulp.task('script_gosheng_aplayer', function () {
-    gulp.src('./static/js/gosheng_aplayer.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
-        .pipe(rename('gosheng_aplayer.min.js'))
-        .pipe(gulp.dest('./static/js/'))
-});
-
-gulp.task('script_sidebar', function () {
+gulp.task('script_sidebar', function (done) {
     gulp.src('./static/js/sidebar.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('sidebar.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
-gulp.task('script_more_btn', function () {
+gulp.task('script_more_btn', function (done) {
     gulp.src('./static/js/more_btn.js')
-        .pipe(uglify())
-        .on('error', function (err) {
-            util.log(util.colors.red('[Error]'), err.toString());
-        })
+        .pipe(terser())
         .pipe(rename('more_btn.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
+
+
 
 gulp.task('style_local', function () {
     gulp.src(['./static/css/local.css'])
