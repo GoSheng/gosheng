@@ -40,14 +40,15 @@ function translate() {
 gulp.task("clean", function () {
     return del(['./dist']);
 });
-gulp.task('script_local', function () {
+gulp.task('script_local', function (done) {
     gulp.src('./static/js/local.js')
         .pipe(uglify())
         .on('error', function (err) {
             util.log(util.colors.red('[Error]'), err.toString());
         })
         .pipe(rename('local.min.js'))
-        .pipe(gulp.dest('./static/js/'))
+        .pipe(gulp.dest('./static/js/'));
+    done();
 });
 
 gulp.task('script_notyf', function () {
