@@ -36,17 +36,16 @@ function translate() {
 }
 
 
-gulp.task("clean", function () {
-    return del(['./dist']);
-});
-gulp.task('script_local', function (done) {
-    'use strict';
-    gulp.src('./static/js/local.js')
+gulp.task('script_local', script_local);
+
+function script_local(done) {
+    // 'use strict';
+    gulp.src(['./static/js/local.js'])
         .pipe(terser())
         .pipe(rename('local.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
 gulp.task('script_notyf', function (done) {
     gulp.src('./static/js/notyf.js')
@@ -95,7 +94,6 @@ gulp.task('script_more_btn', function (done) {
         .pipe(gulp.dest('./static/js/'));
     done();
 });
-
 
 
 gulp.task('style_local', function () {
