@@ -35,9 +35,6 @@ function translate() {
         .pipe(gulp.dest(translatePath + '/' + destFile));
 }
 
-
-gulp.task('script_local', script_local);
-
 function script_local(done) {
     // 'use strict';
     gulp.src(['./static/js/local.js'])
@@ -47,73 +44,83 @@ function script_local(done) {
     done();
 }
 
-gulp.task('script_notyf', function (done) {
+function script_toast(done) {
+    gulp.src(['./static/js/toast.js'])
+        .pipe(terser())
+        .pipe(rename('toast.min.js'))
+        .pipe(gulp.dest('./static/js'));
+    done();
+}
+
+function script_notyf(done) {
     gulp.src('./static/js/notyf.js')
         .pipe(terser())
         .pipe(rename('notyf.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-gulp.task('script_cookie', function (done) {
+function script_cookie(done) {
     gulp.src('./static/js/cookie.js')
         .pipe(terser())
         .pipe(rename('cookie.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-gulp.task('script_google_reCaptcha', function (done) {
+function script_google_reCaptcha(done) {
     gulp.src('./static/js/google_reCaptcha.js')
         .pipe(terser())
         .pipe(rename('google_reCaptcha.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-gulp.task('script_gosheng_oauth', function (done) {
+function script_gosheng_oauth(done) {
     gulp.src('./static/js/gosheng_oauth.js')
         .pipe(terser())
         .pipe(rename('gosheng_oauth.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-gulp.task('script_sidebar', function (done) {
+function script_sidebar(done) {
     gulp.src('./static/js/sidebar.js')
         .pipe(terser())
         .pipe(rename('sidebar.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-gulp.task('script_more_btn', function (done) {
+function script_more_btn(done) {
     gulp.src('./static/js/more_btn.js')
         .pipe(terser())
         .pipe(rename('more_btn.min.js'))
         .pipe(gulp.dest('./static/js/'));
     done();
-});
+}
 
-
-gulp.task('style_local', function () {
+function style_local(done) {
     gulp.src(['./static/css/local.css'])
         .pipe(cssnano())
         .pipe(rename('local.min.css'))
-        .pipe(gulp.dest('./static/css/'))
-});
+        .pipe(gulp.dest('./static/css/'));
+    done();
+}
 
-gulp.task('style_notyf', function () {//修改过样式，注意保存
+function style_notyf(done) {//修改过样式，注意保存
     gulp.src(['./static/css/notyf.css'])
         .pipe(cssnano())
         .pipe(rename('notyf.min.css'))
-        .pipe(gulp.dest('./static/css/'))
+        .pipe(gulp.dest('./static/css/'));
+    done();
+}
+
+gulp.task('default', function (done) {
+    done();
 });
 
-gulp.task('default', function () {
-});
-
-gulp.task('watch', function () {
+gulp.task('watch', function (done) {
     gulp.watch('static/css/local.css', ['style_local']);
     gulp.watch('static/css/notyf.css', ['style_notyf']);
     gulp.watch('static/js/local.js', ['script_local']);
@@ -121,6 +128,19 @@ gulp.task('watch', function () {
     gulp.watch('static/js/cookie.js', ['script_cookie']);
     gulp.watch('static/js/google_reCaptcha.js', ['script_google_reCaptcha']);
     gulp.watch('static/js/gosheng_oauth.js', ['script_gosheng_oauth']);
+    done();
 });
 
+
 gulp.task('translate', translate);
+
+gulp.task('script_local', script_local);
+gulp.task('script_toast', script_toast);
+gulp.task('script_notyf', script_notyf);
+gulp.task('script_cookie', script_cookie);
+gulp.task('script_google_reCaptcha', script_google_reCaptcha);
+gulp.task('script_gosheng_oauth', script_gosheng_oauth);
+gulp.task('script_sidebar', script_sidebar);
+gulp.task('script_more_btn', script_more_btn);
+gulp.task('style_local', style_local);
+gulp.task('style_notyf', style_notyf);

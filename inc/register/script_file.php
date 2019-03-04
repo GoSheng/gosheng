@@ -76,6 +76,7 @@ function enqueue_layer() {
 	wp_register_script( 'layer', themeStaticFile_URI . 'js/layer.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'layer' );
 }
+
 function enqueue_notyf() {
 	wp_register_script( 'notyf', themeStaticFile_URI . 'js/notyf.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'notyf' );
@@ -84,6 +85,11 @@ function enqueue_notyf() {
 function enqueue_local() {
 	wp_register_script( 'local', themeStaticFile_URI . 'js/local.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'local' );
+}
+
+function enqueue_toast() {
+	wp_register_script( 'toast', themeStaticFile_URI . 'js/toast.min.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_enqueue_script( 'toast' );
 }
 
 function enqueue_oauth() {
@@ -107,7 +113,10 @@ function enqueue_resizesensor() {
 }
 
 function enqueue_theia_sticky_sidebar() {
-	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array('resizesensor','jquery'), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'theia_sticky_sidebar', themeStaticFile_URI . 'js/theia_sticky_sidebar.min.js', array(
+		'resizesensor',
+		'jquery'
+	), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'theia_sticky_sidebar' );
 }
 
