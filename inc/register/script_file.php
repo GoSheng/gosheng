@@ -88,7 +88,7 @@ function enqueue_local() {
 }
 
 function enqueue_toast() {
-	wp_register_script( 'toast', themeStaticFile_URI . 'js/toast.min.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_register_script( 'toast', themeStaticFile_URI . 'js/bootstrap-toasts.min.js', array(), THEME_STATIC_FILE_VERSION, true );
 	wp_enqueue_script( 'toast' );
 }
 
