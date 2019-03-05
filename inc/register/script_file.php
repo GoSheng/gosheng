@@ -87,9 +87,9 @@ function enqueue_local() {
 	wp_enqueue_script( 'local' );
 }
 
-function enqueue_toast() {
-	wp_register_script( 'toast', themeStaticFile_URI . 'js/bootstrap-toasts.min.js', array(), THEME_STATIC_FILE_VERSION, true );
-	wp_enqueue_script( 'toast' );
+function enqueue_bootstrap_toast() {
+	wp_register_script( 'bootstrap_toast', themeStaticFile_URI . 'js/bootstrap-toasts.min.js', array(), THEME_STATIC_FILE_VERSION, true );
+	wp_enqueue_script( 'bootstrap_toast' );
 }
 
 function enqueue_oauth() {
