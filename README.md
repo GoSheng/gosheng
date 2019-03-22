@@ -1,4 +1,4 @@
-[English](https://github.com/GoSheng/gosheng/blob/master/README.EN.md) | 简体中文
+[English](/README.EN.md) | 简体中文
 
 ## 狗剩
 这是一个由 Bootstrap 4.3.1 搭建的WordPress主题。我得了抑郁症，希望能在好之后再进行创作，如果一直好不了了，希望这些代码能对您有所帮助。
